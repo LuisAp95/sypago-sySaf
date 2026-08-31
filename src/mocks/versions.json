@@ -1,0 +1,149 @@
+[
+  {
+    "id": "rel-1-3-1-1",
+    "version": "Release 1.3.1.1",
+    "isLatest": true,
+    "defaultExpanded": true,
+    "sections": [
+      {
+        "id": "sec-nuevas-1-3-1-1",
+        "title": "Nuevas características y mejoras",
+        "items": [
+          {
+            "id": "item-1-1",
+            "title": "Customización de Filtro Principal",
+            "description": "Ahora es posible seleccionar rangos superiores a 7 días. Se mejoró la persistencia de datos históricos para mantener el detalle de transacciones por hora incluso en consultas de fechas antiguas."
+          },
+          {
+            "id": "item-1-2",
+            "title": "Optimización de Scroll en Modales",
+            "description": "Se modificó el comportamiento del scroll para que actúe específicamente sobre el contenido de los modales y no sobre la pantalla completa de fondo."
+          },
+          {
+            "id": "item-1-3",
+            "title": "Reportes con Contexto de Filtro",
+            "description": "Los reportes generados ahora incluyen el detalle de los filtros aplicados y se ha estandarizado el nombre de los archivos para incluir la fecha de generación."
+          },
+          {
+            "id": "item-1-4",
+            "title": "Operador 'Diferente de' en Filtros",
+            "description": "Se añadió la capacidad de excluir valores específicos en las consultas, permitiendo un filtrado más flexible mediante el operador 'No es igual a'."
+          }
+        ]
+      },
+      {
+        "id": "sec-correcciones-1-3-1-1",
+        "title": "Correcciones",
+        "items": [
+          {
+            "id": "item-1-5",
+            "title": "Ordenamiento por Defecto",
+            "description": "Se corrigió el comportamiento del ordenamiento automático en las tablas para asegurar que la data se presente de forma consistente al cargar la vista."
+          },
+          {
+            "id": "item-1-6",
+            "title": "Mensaje cuando no hay registros en mobile",
+            "description": "Al igual que en la web, se mostrará un mensaje indicando cuando no hay registros que mostrar."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rel-1-3-0-5",
+    "version": "Release 1.3.0.5",
+    "defaultExpanded": false,
+    "sections": [
+      {
+        "id": "sec-nuevas-1-3-0-5",
+        "title": "Nuevas características y mejoras",
+        "items": [
+          {
+            "id": "item-2-1",
+            "title": "Exportación Avanzada a PDF",
+            "description": "Se integró el motor de exportación PDF corporativo con marca de agua y resumen ejecutivo de transacciones."
+          },
+          {
+            "id": "item-2-2",
+            "title": "Filtro por Canal en Cuarentena",
+            "description": "Se agregó la capacidad de filtrar transacciones detenidas según el canal de origen (P2P, P2C, C2P)."
+          }
+        ]
+      },
+      {
+        "id": "sec-correcciones-1-3-0-5",
+        "title": "Correcciones",
+        "items": [
+          {
+            "id": "item-2-3",
+            "title": "Ajuste de Concurrencia en Logs",
+            "description": "Optimización en la renderización del log inmutable de auditoría durante cargas elevadas de datos."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rel-1-2-7-3",
+    "version": "Release 1.2.7.3",
+    "defaultExpanded": false,
+    "sections": [
+      {
+        "id": "sec-nuevas-1-2-7-3",
+        "title": "Nuevas características y mejoras",
+        "items": [
+          {
+            "id": "item-3-1",
+            "title": "Ofuscación de Cuentas Bancarias",
+            "description": "Implementación de enmascaramiento automático de números de cuenta y datos sensibles en vistas de detalle y consultas."
+          },
+          {
+            "id": "item-3-2",
+            "title": "Gestión de Excepciones por Usuario",
+            "description": "Añadido módulo para la administración granular de reglas de excepción asociadas a clientes específicos."
+          }
+        ]
+      },
+      {
+        "id": "sec-correcciones-1-2-7-3",
+        "title": "Correcciones",
+        "items": [
+          {
+            "id": "item-3-3",
+            "title": "Persistencia de Roles y Permisos",
+            "description": "Solución al problema de desincronización de checklist de permisos en la ventana modal de edición de roles."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rel-1-2-2-1",
+    "version": "Release 1.2.2.1",
+    "defaultExpanded": false,
+    "sections": [
+      {
+        "id": "sec-nuevas-1-2-2-1",
+        "title": "Nuevas características y mejoras",
+        "items": [
+          {
+            "id": "item-4-1",
+            "title": "Visor Interactivo de Reglas Antifraude",
+            "description": "Lanzamiento de la primera versión del visor de reglas con gráfico de ponderación e histogramas de efectividad."
+          }
+        ]
+      },
+      {
+        "id": "sec-correcciones-1-2-2-1",
+        "title": "Correcciones",
+        "items": [
+          {
+            "id": "item-4-2",
+            "title": "Renovación de Tokens de Sesión",
+            "description": "Mejora en la refrescamiento silencioso de sesión de usuario sin interrumpir formularios en progreso."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1656 @@
+{
+  "filters": {
+    "periods": [
+      {
+        "label": "Últimas 24 horas",
+        "value": "24h"
+      },
+      {
+        "label": "Últimos 7 días",
+        "value": "7d"
+      },
+      {
+        "label": "Último mes",
+        "value": "30d"
+      }
+    ],
+    "metricTypes": [
+      {
+        "label": "Cantidades",
+        "value": "cantidades"
+      },
+      {
+        "label": "Montos",
+        "value": "montos"
+      }
+    ]
+  },
+  "stats": {
+    "24h_cantidades": {
+      "periods": [
+        {
+          "label": "Últimas 24 horas",
+          "value": "24h"
+        }
+      ],
+      "metricTypes": [
+        {
+          "label": "Cantidades",
+          "value": "cantidades"
+        }
+      ],
+      "chartLegend": [
+        {
+          "label": "Total",
+          "colorClass": "bg-chart-blue"
+        },
+        {
+          "label": "En proceso",
+          "colorClass": "bg-chart-yellow"
+        },
+        {
+          "label": "Válidas",
+          "colorClass": "bg-chart-green"
+        },
+        {
+          "label": "Retenidas",
+          "colorClass": "bg-chart-orange"
+        },
+        {
+          "label": "Bloqueadas",
+          "colorClass": "bg-chart-blocked"
+        }
+      ],
+      "metricCards": [
+        {
+          "id": "total_operaciones",
+          "title": "Total de operaciones",
+          "icon": "Layers",
+          "iconBg": "bg-chart-blue/15",
+          "iconColor": "text-chart-blue",
+          "iconBorder": "border-chart-blue/30",
+          "value": "26,07 K",
+          "total": "/ 19,74 M Bs.",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "items": [
+                {
+                  "label": "Operaciones entregadas",
+                  "value": "95.30%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "95.3%"
+                },
+                {
+                  "label": "Operaciones en proceso",
+                  "value": "3.24%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "3.24%"
+                },
+                {
+                  "label": "Errores",
+                  "value": "0.00%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "0%"
+                }
+              ]
+            },
+            {
+              "title": "Tiempos de proceso",
+              "isTable": true,
+              "headers": [
+                "Intervalo",
+                "Prom",
+                "Mín",
+                "Máx"
+              ],
+              "rows": [
+                {
+                  "interval": "5 min",
+                  "prom": "4.2 ms",
+                  "min": "4.2 ms",
+                  "max": "4.2 ms"
+                },
+                {
+                  "interval": "15 min",
+                  "prom": "4.8 ms",
+                  "min": "4.8 ms",
+                  "max": "4.8 ms"
+                },
+                {
+                  "interval": "1 hora",
+                  "prom": "5.1 ms",
+                  "min": "5.1 ms",
+                  "max": "5.1 ms"
+                },
+                {
+                  "interval": "4 horas",
+                  "prom": "5.4 ms",
+                  "min": "5.4 ms",
+                  "max": "5.4 ms"
+                }
+              ],
+              "highlightRows": true
+            }
+          ]
+        },
+        {
+          "id": "operaciones_retenidas",
+          "title": "Operaciones retenidas",
+          "icon": "AlertTriangle",
+          "iconBg": "bg-chart-orange/15",
+          "iconColor": "text-chart-orange",
+          "iconBorder": "border-chart-orange/30",
+          "value": "170",
+          "total": "/ 379,02 K Bs.",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "stacked": true,
+              "items": [
+                {
+                  "label": "Tiempo promedio de revisión",
+                  "value": "15.4 min"
+                },
+                {
+                  "label": "Operaciones retenidas",
+                  "value": "35"
+                }
+              ]
+            },
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Monto excedido",
+                  "value": "47.65%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "47.65%"
+                },
+                {
+                  "label": "Frecuencia inusual",
+                  "value": "35.52%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "35.52%"
+                },
+                {
+                  "label": "Dispositivo nuevo",
+                  "value": "16.83%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "16.83%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "operaciones_bloqueadas",
+          "title": "Operaciones bloqueadas",
+          "icon": "ShieldAlert",
+          "iconBg": "bg-chart-blocked/15",
+          "iconColor": "text-chart-blocked",
+          "iconBorder": "border-chart-blocked/30",
+          "value": "52",
+          "total": "/ 192,00 K Bs.",
+          "sections": [
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Lista negra",
+                  "value": "38.40%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "38.4%"
+                },
+                {
+                  "label": "Reglas de IP",
+                  "value": "36.53%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "36.53%"
+                },
+                {
+                  "label": "Alto Riesgo",
+                  "value": "25.00%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "25%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "notifications": [
+        {
+          "id": 1,
+          "title": "Operaciones retenidas pendientes esperando por revisión",
+          "description": "Hay 3 operaciones que se encuentran esperando por revisión desde hace más de 2 horas",
+          "iconBg": "bg-chart-orange/10",
+          "iconColor": "text-chart-orange",
+          "iconType": "Info"
+        },
+        {
+          "id": 2,
+          "title": "Actualización de reglas de la Blacklist exitosa",
+          "description": "Se agregó una nueva regla a la Blacklist para bloquear operaciones al documento V-123456789",
+          "iconBg": "bg-chart-blue/10",
+          "iconColor": "text-chart-blue",
+          "iconType": "Info"
+        }
+      ],
+      "chartData": {
+        "gridLines": [
+          20,
+          50,
+          80,
+          110,
+          140,
+          170
+        ],
+        "xAxisLabels": [
+          "14:00",
+          "15:00",
+          "17:00",
+          "19:00",
+          "21:00",
+          "23:00",
+          "01:00",
+          "03:00",
+          "05:00",
+          "07:00",
+          "09:00",
+          "11:00",
+          "14:00"
+        ],
+        "series": [
+          {
+            "id": "total",
+            "label": "Total",
+            "colorClass": "text-chart-blue",
+            "stroke": "#12679A",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 95 C 100 100, 100 50, 166 50 C 230 50, 230 135, 300 135 C 350 135, 380 135, 416 135 C 470 135, 480 165, 540 165 C 600 165, 610 165, 666 165 C 720 165, 750 100, 800 100 C 850 100, 870 120, 916 120 C 960 120, 980 30, 1000 30"
+          },
+          {
+            "id": "validas",
+            "label": "Válidas",
+            "colorClass": "text-chart-green",
+            "stroke": "#0F9949",
+            "strokeWidth": 3,
+            "isDashed": false,
+            "hasGlow": true,
+            "path": "M 0 110 C 100 115, 100 65, 166 65 C 230 65, 230 145, 300 145 C 350 145, 380 145, 416 145 C 470 145, 480 175, 540 175 C 600 175, 610 175, 666 175 C 720 175, 750 110, 800 110 C 850 110, 870 130, 916 130 C 960 130, 980 40, 1000 40"
+          },
+          {
+            "id": "retenidas",
+            "label": "Retenidas",
+            "colorClass": "text-chart-orange",
+            "stroke": "#CE6733",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 195 C 120 195, 140 185, 166 185 C 190 185, 220 198, 250 198 C 270 198, 300 190, 315 190 C 330 190, 360 198, 416 198 C 500 198, 600 198, 666 198 C 720 198, 760 185, 800 185 C 840 185, 880 198, 916 198 C 960 198, 980 198, 1000 198"
+          },
+          {
+            "id": "bloqueadas",
+            "label": "Bloqueadas",
+            "colorClass": "text-chart-blocked",
+            "stroke": "#CC3233",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 198 C 120 198, 140 190, 166 190 C 190 190, 220 199, 250 199 C 270 199, 300 195, 315 195 C 330 195, 360 199, 416 199 C 500 199, 600 199, 666 199 C 720 199, 760 190, 800 190 C 840 190, 880 199, 916 199 C 960 199, 980 199, 1000 199"
+          }
+        ]
+      }
+    },
+    "7d_cantidades": {
+      "periods": [
+        {
+          "label": "Últimas 24 horas",
+          "value": "24h"
+        }
+      ],
+      "metricTypes": [
+        {
+          "label": "Cantidades",
+          "value": "cantidades"
+        }
+      ],
+      "chartLegend": [
+        {
+          "label": "Total",
+          "colorClass": "bg-chart-blue"
+        },
+        {
+          "label": "En proceso",
+          "colorClass": "bg-chart-yellow"
+        },
+        {
+          "label": "Válidas",
+          "colorClass": "bg-chart-green"
+        },
+        {
+          "label": "Retenidas",
+          "colorClass": "bg-chart-orange"
+        },
+        {
+          "label": "Bloqueadas",
+          "colorClass": "bg-chart-blocked"
+        }
+      ],
+      "metricCards": [
+        {
+          "id": "total_operaciones",
+          "title": "Total de operaciones",
+          "icon": "Layers",
+          "iconBg": "bg-chart-blue/15",
+          "iconColor": "text-chart-blue",
+          "iconBorder": "border-chart-blue/30",
+          "value": "182,5 K",
+          "total": "/ 138,18 M Bs.",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "items": [
+                {
+                  "label": "Operaciones entregadas",
+                  "value": "95.30%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "95.3%"
+                },
+                {
+                  "label": "Operaciones en proceso",
+                  "value": "3.24%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "3.24%"
+                },
+                {
+                  "label": "Errores",
+                  "value": "0.00%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "0%"
+                }
+              ]
+            },
+            {
+              "title": "Tiempos de proceso",
+              "isTable": true,
+              "headers": [
+                "Intervalo",
+                "Prom",
+                "Mín",
+                "Máx"
+              ],
+              "rows": [
+                {
+                  "interval": "5 min",
+                  "prom": "4.2 ms",
+                  "min": "4.2 ms",
+                  "max": "4.2 ms"
+                },
+                {
+                  "interval": "15 min",
+                  "prom": "4.8 ms",
+                  "min": "4.8 ms",
+                  "max": "4.8 ms"
+                },
+                {
+                  "interval": "1 hora",
+                  "prom": "5.1 ms",
+                  "min": "5.1 ms",
+                  "max": "5.1 ms"
+                },
+                {
+                  "interval": "4 horas",
+                  "prom": "5.4 ms",
+                  "min": "5.4 ms",
+                  "max": "5.4 ms"
+                }
+              ],
+              "highlightRows": true
+            }
+          ]
+        },
+        {
+          "id": "operaciones_retenidas",
+          "title": "Operaciones retenidas",
+          "icon": "AlertTriangle",
+          "iconBg": "bg-chart-orange/15",
+          "iconColor": "text-chart-orange",
+          "iconBorder": "border-chart-orange/30",
+          "value": "1,190",
+          "total": "/ 2,65 M Bs.",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "stacked": true,
+              "items": [
+                {
+                  "label": "Tiempo promedio de revisión",
+                  "value": "15.4 min"
+                },
+                {
+                  "label": "Operaciones retenidas",
+                  "value": "35"
+                }
+              ]
+            },
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Monto excedido",
+                  "value": "47.65%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "47.65%"
+                },
+                {
+                  "label": "Frecuencia inusual",
+                  "value": "35.52%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "35.52%"
+                },
+                {
+                  "label": "Dispositivo nuevo",
+                  "value": "16.83%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "16.83%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "operaciones_bloqueadas",
+          "title": "Operaciones bloqueadas",
+          "icon": "ShieldAlert",
+          "iconBg": "bg-chart-blocked/15",
+          "iconColor": "text-chart-blocked",
+          "iconBorder": "border-chart-blocked/30",
+          "value": "364",
+          "total": "/ 1,34 M Bs.",
+          "sections": [
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Lista negra",
+                  "value": "38.40%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "38.4%"
+                },
+                {
+                  "label": "Reglas de IP",
+                  "value": "36.53%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "36.53%"
+                },
+                {
+                  "label": "Alto Riesgo",
+                  "value": "25.00%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "25%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "notifications": [
+        {
+          "id": 1,
+          "title": "Operaciones retenidas pendientes esperando por revisión",
+          "description": "Hay 3 operaciones que se encuentran esperando por revisión desde hace más de 2 horas",
+          "iconBg": "bg-chart-orange/10",
+          "iconColor": "text-chart-orange",
+          "iconType": "Info"
+        },
+        {
+          "id": 2,
+          "title": "Actualización de reglas de la Blacklist exitosa",
+          "description": "Se agregó una nueva regla a la Blacklist para bloquear operaciones al documento V-123456789",
+          "iconBg": "bg-chart-blue/10",
+          "iconColor": "text-chart-blue",
+          "iconType": "Info"
+        }
+      ],
+      "chartData": {
+        "gridLines": [
+          20,
+          50,
+          80,
+          110,
+          140,
+          170
+        ],
+        "xAxisLabels": [
+          "Lun",
+          "Mar",
+          "Mié",
+          "Jue",
+          "Vie",
+          "Sáb",
+          "Dom"
+        ],
+        "series": [
+          {
+            "id": "total",
+            "label": "Total",
+            "colorClass": "text-chart-blue",
+            "stroke": "#12679A",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 90 C 100 130, 100 50, 166 70 C 230 70, 230 150, 300 150 C 350 150, 380 130, 416 130 C 470 130, 480 170, 540 170 C 600 170, 610 90, 666 90 C 720 90, 750 50, 800 50 C 850 50, 870 70, 916 70 C 960 70, 980 50, 1000 50"
+          },
+          {
+            "id": "validas",
+            "label": "Válidas",
+            "colorClass": "text-chart-green",
+            "stroke": "#0F9949",
+            "strokeWidth": 3,
+            "isDashed": false,
+            "hasGlow": true,
+            "path": "M 0 100 C 100 130, 100 70, 166 85 C 230 85, 230 145, 300 145 C 350 145, 380 130, 416 130 C 470 130, 480 160, 540 160 C 600 160, 610 100, 666 100 C 720 100, 750 70, 800 70 C 850 70, 870 85, 916 85 C 960 85, 980 70, 1000 70"
+          },
+          {
+            "id": "retenidas",
+            "label": "Retenidas",
+            "colorClass": "text-chart-orange",
+            "stroke": "#CE6733",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 180 C 100 190, 100 170, 166 175 C 230 175, 230 195, 300 195 C 350 195, 380 190, 416 190 C 470 190, 480 200, 540 200 C 600 200, 610 180, 666 180 C 720 180, 750 170, 800 170 C 850 170, 870 175, 916 175 C 960 175, 980 170, 1000 170"
+          },
+          {
+            "id": "bloqueadas",
+            "label": "Bloqueadas",
+            "colorClass": "text-chart-blocked",
+            "stroke": "#CC3233",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 190 C 100 195, 100 185, 166 187.5 C 230 187.5, 230 197.5, 300 197.5 C 350 197.5, 380 195, 416 195 C 470 195, 480 200, 540 200 C 600 200, 610 190, 666 190 C 720 190, 750 185, 800 185 C 850 185, 870 187.5, 916 187.5 C 960 187.5, 980 185, 1000 185"
+          }
+        ]
+      }
+    },
+    "30d_cantidades": {
+      "periods": [
+        {
+          "label": "Últimas 24 horas",
+          "value": "24h"
+        }
+      ],
+      "metricTypes": [
+        {
+          "label": "Cantidades",
+          "value": "cantidades"
+        }
+      ],
+      "chartLegend": [
+        {
+          "label": "Total",
+          "colorClass": "bg-chart-blue"
+        },
+        {
+          "label": "En proceso",
+          "colorClass": "bg-chart-yellow"
+        },
+        {
+          "label": "Válidas",
+          "colorClass": "bg-chart-green"
+        },
+        {
+          "label": "Retenidas",
+          "colorClass": "bg-chart-orange"
+        },
+        {
+          "label": "Bloqueadas",
+          "colorClass": "bg-chart-blocked"
+        }
+      ],
+      "metricCards": [
+        {
+          "id": "total_operaciones",
+          "title": "Total de operaciones",
+          "icon": "Layers",
+          "iconBg": "bg-chart-blue/15",
+          "iconColor": "text-chart-blue",
+          "iconBorder": "border-chart-blue/30",
+          "value": "780,2 K",
+          "total": "/ 590,84 M Bs.",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "items": [
+                {
+                  "label": "Operaciones entregadas",
+                  "value": "95.30%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "95.3%"
+                },
+                {
+                  "label": "Operaciones en proceso",
+                  "value": "3.24%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "3.24%"
+                },
+                {
+                  "label": "Errores",
+                  "value": "0.00%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "0%"
+                }
+              ]
+            },
+            {
+              "title": "Tiempos de proceso",
+              "isTable": true,
+              "headers": [
+                "Intervalo",
+                "Prom",
+                "Mín",
+                "Máx"
+              ],
+              "rows": [
+                {
+                  "interval": "5 min",
+                  "prom": "4.2 ms",
+                  "min": "4.2 ms",
+                  "max": "4.2 ms"
+                },
+                {
+                  "interval": "15 min",
+                  "prom": "4.8 ms",
+                  "min": "4.8 ms",
+                  "max": "4.8 ms"
+                },
+                {
+                  "interval": "1 hora",
+                  "prom": "5.1 ms",
+                  "min": "5.1 ms",
+                  "max": "5.1 ms"
+                },
+                {
+                  "interval": "4 horas",
+                  "prom": "5.4 ms",
+                  "min": "5.4 ms",
+                  "max": "5.4 ms"
+                }
+              ],
+              "highlightRows": true
+            }
+          ]
+        },
+        {
+          "id": "operaciones_retenidas",
+          "title": "Operaciones retenidas",
+          "icon": "AlertTriangle",
+          "iconBg": "bg-chart-orange/15",
+          "iconColor": "text-chart-orange",
+          "iconBorder": "border-chart-orange/30",
+          "value": "5,200",
+          "total": "/ 11,59 M Bs.",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "stacked": true,
+              "items": [
+                {
+                  "label": "Tiempo promedio de revisión",
+                  "value": "15.4 min"
+                },
+                {
+                  "label": "Operaciones retenidas",
+                  "value": "35"
+                }
+              ]
+            },
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Monto excedido",
+                  "value": "47.65%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "47.65%"
+                },
+                {
+                  "label": "Frecuencia inusual",
+                  "value": "35.52%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "35.52%"
+                },
+                {
+                  "label": "Dispositivo nuevo",
+                  "value": "16.83%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "16.83%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "operaciones_bloqueadas",
+          "title": "Operaciones bloqueadas",
+          "icon": "ShieldAlert",
+          "iconBg": "bg-chart-blocked/15",
+          "iconColor": "text-chart-blocked",
+          "iconBorder": "border-chart-blocked/30",
+          "value": "1,500",
+          "total": "/ 5,53 M Bs.",
+          "sections": [
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Lista negra",
+                  "value": "38.40%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "38.4%"
+                },
+                {
+                  "label": "Reglas de IP",
+                  "value": "36.53%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "36.53%"
+                },
+                {
+                  "label": "Alto Riesgo",
+                  "value": "25.00%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "25%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "notifications": [
+        {
+          "id": 1,
+          "title": "Operaciones retenidas pendientes esperando por revisión",
+          "description": "Hay 3 operaciones que se encuentran esperando por revisión desde hace más de 2 horas",
+          "iconBg": "bg-chart-orange/10",
+          "iconColor": "text-chart-orange",
+          "iconType": "Info"
+        },
+        {
+          "id": 2,
+          "title": "Actualización de reglas de la Blacklist exitosa",
+          "description": "Se agregó una nueva regla a la Blacklist para bloquear operaciones al documento V-123456789",
+          "iconBg": "bg-chart-blue/10",
+          "iconColor": "text-chart-blue",
+          "iconType": "Info"
+        }
+      ],
+      "chartData": {
+        "gridLines": [
+          20,
+          50,
+          80,
+          110,
+          140,
+          170
+        ],
+        "xAxisLabels": [
+          "Sem 1",
+          "Sem 2",
+          "Sem 3",
+          "Sem 4"
+        ],
+        "series": [
+          {
+            "id": "total",
+            "label": "Total",
+            "colorClass": "text-chart-blue",
+            "stroke": "#12679A",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 80 C 100 60, 100 100, 166 90 C 230 90, 230 50, 300 50 C 350 50, 380 60, 416 60 C 470 60, 480 40, 540 40 C 600 40, 610 80, 666 80 C 720 80, 750 100, 800 100 C 850 100, 870 70, 916 70 C 960 70, 980 60, 1000 60"
+          },
+          {
+            "id": "validas",
+            "label": "Válidas",
+            "colorClass": "text-chart-green",
+            "stroke": "#0F9949",
+            "strokeWidth": 3,
+            "isDashed": false,
+            "hasGlow": true,
+            "path": "M 0 90 C 100 75, 100 105, 166 97.5 C 230 97.5, 230 67.5, 300 67.5 C 350 67.5, 380 75, 416 75 C 470 75, 480 60, 540 60 C 600 60, 610 90, 666 90 C 720 90, 750 105, 800 105 C 850 105, 870 82.5, 916 82.5 C 960 82.5, 980 75, 1000 75"
+          },
+          {
+            "id": "retenidas",
+            "label": "Retenidas",
+            "colorClass": "text-chart-orange",
+            "stroke": "#CE6733",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 170 C 100 165, 100 175, 166 172.5 C 230 172.5, 230 162.5, 300 162.5 C 350 162.5, 380 165, 416 165 C 470 165, 480 160, 540 160 C 600 160, 610 170, 666 170 C 720 170, 750 175, 800 175 C 850 175, 870 167.5, 916 167.5 C 960 167.5, 980 165, 1000 165"
+          },
+          {
+            "id": "bloqueadas",
+            "label": "Bloqueadas",
+            "colorClass": "text-chart-blocked",
+            "stroke": "#CC3233",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 185 C 100 183, 100 187, 166 186 C 230 186, 230 182, 300 182 C 350 182, 380 183, 416 183 C 470 183, 480 181, 540 181 C 600 181, 610 185, 666 185 C 720 185, 750 187, 800 187 C 850 187, 870 184, 916 184 C 960 184, 980 183, 1000 183"
+          }
+        ]
+      }
+    },
+    "24h_montos": {
+      "periods": [
+        {
+          "label": "Últimas 24 horas",
+          "value": "24h"
+        }
+      ],
+      "metricTypes": [
+        {
+          "label": "Montos",
+          "value": "montos"
+        }
+      ],
+      "chartLegend": [
+        {
+          "label": "Total",
+          "colorClass": "bg-chart-blue"
+        },
+        {
+          "label": "En proceso",
+          "colorClass": "bg-chart-yellow"
+        },
+        {
+          "label": "Válidas",
+          "colorClass": "bg-chart-green"
+        },
+        {
+          "label": "Retenidas",
+          "colorClass": "bg-chart-orange"
+        },
+        {
+          "label": "Bloqueadas",
+          "colorClass": "bg-chart-blocked"
+        }
+      ],
+      "metricCards": [
+        {
+          "id": "total_operaciones",
+          "title": "Total de operaciones",
+          "icon": "Layers",
+          "iconBg": "bg-chart-blue/15",
+          "iconColor": "text-chart-blue",
+          "iconBorder": "border-chart-blue/30",
+          "value": "19,74 M Bs.",
+          "total": "/ 26,07 K",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "items": [
+                {
+                  "label": "Operaciones entregadas",
+                  "value": "95.30%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "95.3%"
+                },
+                {
+                  "label": "Operaciones en proceso",
+                  "value": "3.24%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "3.24%"
+                },
+                {
+                  "label": "Errores",
+                  "value": "0.00%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "0%"
+                }
+              ]
+            },
+            {
+              "title": "Tiempos de proceso",
+              "isTable": true,
+              "headers": [
+                "Intervalo",
+                "Prom",
+                "Mín",
+                "Máx"
+              ],
+              "rows": [
+                {
+                  "interval": "5 min",
+                  "prom": "4.2 ms",
+                  "min": "4.2 ms",
+                  "max": "4.2 ms"
+                },
+                {
+                  "interval": "15 min",
+                  "prom": "4.8 ms",
+                  "min": "4.8 ms",
+                  "max": "4.8 ms"
+                },
+                {
+                  "interval": "1 hora",
+                  "prom": "5.1 ms",
+                  "min": "5.1 ms",
+                  "max": "5.1 ms"
+                },
+                {
+                  "interval": "4 horas",
+                  "prom": "5.4 ms",
+                  "min": "5.4 ms",
+                  "max": "5.4 ms"
+                }
+              ],
+              "highlightRows": true
+            }
+          ]
+        },
+        {
+          "id": "operaciones_retenidas",
+          "title": "Operaciones retenidas",
+          "icon": "AlertTriangle",
+          "iconBg": "bg-chart-orange/15",
+          "iconColor": "text-chart-orange",
+          "iconBorder": "border-chart-orange/30",
+          "value": "379,02 K Bs.",
+          "total": "/ 170",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "stacked": true,
+              "items": [
+                {
+                  "label": "Tiempo promedio de revisión",
+                  "value": "15.4 min"
+                },
+                {
+                  "label": "Operaciones retenidas",
+                  "value": "35"
+                }
+              ]
+            },
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Monto excedido",
+                  "value": "47.65%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "47.65%"
+                },
+                {
+                  "label": "Frecuencia inusual",
+                  "value": "35.52%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "35.52%"
+                },
+                {
+                  "label": "Dispositivo nuevo",
+                  "value": "16.83%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "16.83%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "operaciones_bloqueadas",
+          "title": "Operaciones bloqueadas",
+          "icon": "ShieldAlert",
+          "iconBg": "bg-chart-blocked/15",
+          "iconColor": "text-chart-blocked",
+          "iconBorder": "border-chart-blocked/30",
+          "value": "192,00 K Bs.",
+          "total": "/ 52",
+          "sections": [
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Lista negra",
+                  "value": "38.40%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "38.4%"
+                },
+                {
+                  "label": "Reglas de IP",
+                  "value": "36.53%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "36.53%"
+                },
+                {
+                  "label": "Alto Riesgo",
+                  "value": "25.00%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "25%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "notifications": [
+        {
+          "id": 1,
+          "title": "Operaciones retenidas pendientes esperando por revisión",
+          "description": "Hay 3 operaciones que se encuentran esperando por revisión desde hace más de 2 horas",
+          "iconBg": "bg-chart-orange/10",
+          "iconColor": "text-chart-orange",
+          "iconType": "Info"
+        },
+        {
+          "id": 2,
+          "title": "Actualización de reglas de la Blacklist exitosa",
+          "description": "Se agregó una nueva regla a la Blacklist para bloquear operaciones al documento V-123456789",
+          "iconBg": "bg-chart-blue/10",
+          "iconColor": "text-chart-blue",
+          "iconType": "Info"
+        }
+      ],
+      "chartData": {
+        "gridLines": [
+          20,
+          50,
+          80,
+          110,
+          140,
+          170
+        ],
+        "xAxisLabels": [
+          "14:00",
+          "15:00",
+          "17:00",
+          "19:00",
+          "21:00",
+          "23:00",
+          "01:00",
+          "03:00",
+          "05:00",
+          "07:00",
+          "09:00",
+          "11:00",
+          "14:00"
+        ],
+        "series": [
+          {
+            "id": "total",
+            "label": "Total",
+            "colorClass": "text-chart-blue",
+            "stroke": "#12679A",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 95 C 100 100, 100 50, 166 50 C 230 50, 230 135, 300 135 C 350 135, 380 135, 416 135 C 470 135, 480 165, 540 165 C 600 165, 610 165, 666 165 C 720 165, 750 100, 800 100 C 850 100, 870 120, 916 120 C 960 120, 980 30, 1000 30"
+          },
+          {
+            "id": "validas",
+            "label": "Válidas",
+            "colorClass": "text-chart-green",
+            "stroke": "#0F9949",
+            "strokeWidth": 3,
+            "isDashed": false,
+            "hasGlow": true,
+            "path": "M 0 110 C 100 115, 100 65, 166 65 C 230 65, 230 145, 300 145 C 350 145, 380 145, 416 145 C 470 145, 480 175, 540 175 C 600 175, 610 175, 666 175 C 720 175, 750 110, 800 110 C 850 110, 870 130, 916 130 C 960 130, 980 40, 1000 40"
+          },
+          {
+            "id": "retenidas",
+            "label": "Retenidas",
+            "colorClass": "text-chart-orange",
+            "stroke": "#CE6733",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 195 C 120 195, 140 185, 166 185 C 190 185, 220 198, 250 198 C 270 198, 300 190, 315 190 C 330 190, 360 198, 416 198 C 500 198, 600 198, 666 198 C 720 198, 760 185, 800 185 C 840 185, 880 198, 916 198 C 960 198, 980 198, 1000 198"
+          },
+          {
+            "id": "bloqueadas",
+            "label": "Bloqueadas",
+            "colorClass": "text-chart-blocked",
+            "stroke": "#CC3233",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 198 C 120 198, 140 190, 166 190 C 190 190, 220 199, 250 199 C 270 199, 300 195, 315 195 C 330 195, 360 199, 416 199 C 500 199, 600 199, 666 199 C 720 199, 760 190, 800 190 C 840 190, 880 199, 916 199 C 960 199, 980 199, 1000 199"
+          }
+        ]
+      }
+    },
+    "7d_montos": {
+      "periods": [
+        {
+          "label": "Últimas 24 horas",
+          "value": "24h"
+        }
+      ],
+      "metricTypes": [
+        {
+          "label": "Montos",
+          "value": "montos"
+        }
+      ],
+      "chartLegend": [
+        {
+          "label": "Total",
+          "colorClass": "bg-chart-blue"
+        },
+        {
+          "label": "En proceso",
+          "colorClass": "bg-chart-yellow"
+        },
+        {
+          "label": "Válidas",
+          "colorClass": "bg-chart-green"
+        },
+        {
+          "label": "Retenidas",
+          "colorClass": "bg-chart-orange"
+        },
+        {
+          "label": "Bloqueadas",
+          "colorClass": "bg-chart-blocked"
+        }
+      ],
+      "metricCards": [
+        {
+          "id": "total_operaciones",
+          "title": "Total de operaciones",
+          "icon": "Layers",
+          "iconBg": "bg-chart-blue/15",
+          "iconColor": "text-chart-blue",
+          "iconBorder": "border-chart-blue/30",
+          "value": "138,18 M Bs.",
+          "total": "/ 182,5 K",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "items": [
+                {
+                  "label": "Operaciones entregadas",
+                  "value": "95.30%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "95.3%"
+                },
+                {
+                  "label": "Operaciones en proceso",
+                  "value": "3.24%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "3.24%"
+                },
+                {
+                  "label": "Errores",
+                  "value": "0.00%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "0%"
+                }
+              ]
+            },
+            {
+              "title": "Tiempos de proceso",
+              "isTable": true,
+              "headers": [
+                "Intervalo",
+                "Prom",
+                "Mín",
+                "Máx"
+              ],
+              "rows": [
+                {
+                  "interval": "5 min",
+                  "prom": "4.2 ms",
+                  "min": "4.2 ms",
+                  "max": "4.2 ms"
+                },
+                {
+                  "interval": "15 min",
+                  "prom": "4.8 ms",
+                  "min": "4.8 ms",
+                  "max": "4.8 ms"
+                },
+                {
+                  "interval": "1 hora",
+                  "prom": "5.1 ms",
+                  "min": "5.1 ms",
+                  "max": "5.1 ms"
+                },
+                {
+                  "interval": "4 horas",
+                  "prom": "5.4 ms",
+                  "min": "5.4 ms",
+                  "max": "5.4 ms"
+                }
+              ],
+              "highlightRows": true
+            }
+          ]
+        },
+        {
+          "id": "operaciones_retenidas",
+          "title": "Operaciones retenidas",
+          "icon": "AlertTriangle",
+          "iconBg": "bg-chart-orange/15",
+          "iconColor": "text-chart-orange",
+          "iconBorder": "border-chart-orange/30",
+          "value": "2,65 M Bs.",
+          "total": "/ 1,190",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "stacked": true,
+              "items": [
+                {
+                  "label": "Tiempo promedio de revisión",
+                  "value": "15.4 min"
+                },
+                {
+                  "label": "Operaciones retenidas",
+                  "value": "35"
+                }
+              ]
+            },
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Monto excedido",
+                  "value": "47.65%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "47.65%"
+                },
+                {
+                  "label": "Frecuencia inusual",
+                  "value": "35.52%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "35.52%"
+                },
+                {
+                  "label": "Dispositivo nuevo",
+                  "value": "16.83%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "16.83%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "operaciones_bloqueadas",
+          "title": "Operaciones bloqueadas",
+          "icon": "ShieldAlert",
+          "iconBg": "bg-chart-blocked/15",
+          "iconColor": "text-chart-blocked",
+          "iconBorder": "border-chart-blocked/30",
+          "value": "1,34 M Bs.",
+          "total": "/ 364",
+          "sections": [
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Lista negra",
+                  "value": "38.40%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "38.4%"
+                },
+                {
+                  "label": "Reglas de IP",
+                  "value": "36.53%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "36.53%"
+                },
+                {
+                  "label": "Alto Riesgo",
+                  "value": "25.00%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "25%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "notifications": [
+        {
+          "id": 1,
+          "title": "Operaciones retenidas pendientes esperando por revisión",
+          "description": "Hay 3 operaciones que se encuentran esperando por revisión desde hace más de 2 horas",
+          "iconBg": "bg-chart-orange/10",
+          "iconColor": "text-chart-orange",
+          "iconType": "Info"
+        },
+        {
+          "id": 2,
+          "title": "Actualización de reglas de la Blacklist exitosa",
+          "description": "Se agregó una nueva regla a la Blacklist para bloquear operaciones al documento V-123456789",
+          "iconBg": "bg-chart-blue/10",
+          "iconColor": "text-chart-blue",
+          "iconType": "Info"
+        }
+      ],
+      "chartData": {
+        "gridLines": [
+          20,
+          50,
+          80,
+          110,
+          140,
+          170
+        ],
+        "xAxisLabels": [
+          "Lun",
+          "Mar",
+          "Mié",
+          "Jue",
+          "Vie",
+          "Sáb",
+          "Dom"
+        ],
+        "series": [
+          {
+            "id": "total",
+            "label": "Total",
+            "colorClass": "text-chart-blue",
+            "stroke": "#12679A",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 90 C 100 130, 100 50, 166 70 C 230 70, 230 150, 300 150 C 350 150, 380 130, 416 130 C 470 130, 480 170, 540 170 C 600 170, 610 90, 666 90 C 720 90, 750 50, 800 50 C 850 50, 870 70, 916 70 C 960 70, 980 50, 1000 50"
+          },
+          {
+            "id": "validas",
+            "label": "Válidas",
+            "colorClass": "text-chart-green",
+            "stroke": "#0F9949",
+            "strokeWidth": 3,
+            "isDashed": false,
+            "hasGlow": true,
+            "path": "M 0 100 C 100 130, 100 70, 166 85 C 230 85, 230 145, 300 145 C 350 145, 380 130, 416 130 C 470 130, 480 160, 540 160 C 600 160, 610 100, 666 100 C 720 100, 750 70, 800 70 C 850 70, 870 85, 916 85 C 960 85, 980 70, 1000 70"
+          },
+          {
+            "id": "retenidas",
+            "label": "Retenidas",
+            "colorClass": "text-chart-orange",
+            "stroke": "#CE6733",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 180 C 100 190, 100 170, 166 175 C 230 175, 230 195, 300 195 C 350 195, 380 190, 416 190 C 470 190, 480 200, 540 200 C 600 200, 610 180, 666 180 C 720 180, 750 170, 800 170 C 850 170, 870 175, 916 175 C 960 175, 980 170, 1000 170"
+          },
+          {
+            "id": "bloqueadas",
+            "label": "Bloqueadas",
+            "colorClass": "text-chart-blocked",
+            "stroke": "#CC3233",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 190 C 100 195, 100 185, 166 187.5 C 230 187.5, 230 197.5, 300 197.5 C 350 197.5, 380 195, 416 195 C 470 195, 480 200, 540 200 C 600 200, 610 190, 666 190 C 720 190, 750 185, 800 185 C 850 185, 870 187.5, 916 187.5 C 960 187.5, 980 185, 1000 185"
+          }
+        ]
+      }
+    },
+    "30d_montos": {
+      "periods": [
+        {
+          "label": "Últimas 24 horas",
+          "value": "24h"
+        }
+      ],
+      "metricTypes": [
+        {
+          "label": "Montos",
+          "value": "montos"
+        }
+      ],
+      "chartLegend": [
+        {
+          "label": "Total",
+          "colorClass": "bg-chart-blue"
+        },
+        {
+          "label": "En proceso",
+          "colorClass": "bg-chart-yellow"
+        },
+        {
+          "label": "Válidas",
+          "colorClass": "bg-chart-green"
+        },
+        {
+          "label": "Retenidas",
+          "colorClass": "bg-chart-orange"
+        },
+        {
+          "label": "Bloqueadas",
+          "colorClass": "bg-chart-blocked"
+        }
+      ],
+      "metricCards": [
+        {
+          "id": "total_operaciones",
+          "title": "Total de operaciones",
+          "icon": "Layers",
+          "iconBg": "bg-chart-blue/15",
+          "iconColor": "text-chart-blue",
+          "iconBorder": "border-chart-blue/30",
+          "value": "590,84 M Bs.",
+          "total": "/ 780,2 K",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "items": [
+                {
+                  "label": "Operaciones entregadas",
+                  "value": "95.30%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "95.3%"
+                },
+                {
+                  "label": "Operaciones en proceso",
+                  "value": "3.24%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "3.24%"
+                },
+                {
+                  "label": "Errores",
+                  "value": "0.00%",
+                  "barColor": "bg-chart-blue",
+                  "percentage": "0%"
+                }
+              ]
+            },
+            {
+              "title": "Tiempos de proceso",
+              "isTable": true,
+              "headers": [
+                "Intervalo",
+                "Prom",
+                "Mín",
+                "Máx"
+              ],
+              "rows": [
+                {
+                  "interval": "5 min",
+                  "prom": "4.2 ms",
+                  "min": "4.2 ms",
+                  "max": "4.2 ms"
+                },
+                {
+                  "interval": "15 min",
+                  "prom": "4.8 ms",
+                  "min": "4.8 ms",
+                  "max": "4.8 ms"
+                },
+                {
+                  "interval": "1 hora",
+                  "prom": "5.1 ms",
+                  "min": "5.1 ms",
+                  "max": "5.1 ms"
+                },
+                {
+                  "interval": "4 horas",
+                  "prom": "5.4 ms",
+                  "min": "5.4 ms",
+                  "max": "5.4 ms"
+                }
+              ],
+              "highlightRows": true
+            }
+          ]
+        },
+        {
+          "id": "operaciones_retenidas",
+          "title": "Operaciones retenidas",
+          "icon": "AlertTriangle",
+          "iconBg": "bg-chart-orange/15",
+          "iconColor": "text-chart-orange",
+          "iconBorder": "border-chart-orange/30",
+          "value": "11,59 M Bs.",
+          "total": "/ 5,200",
+          "sections": [
+            {
+              "title": "Estadísticas",
+              "stacked": true,
+              "items": [
+                {
+                  "label": "Tiempo promedio de revisión",
+                  "value": "15.4 min"
+                },
+                {
+                  "label": "Operaciones retenidas",
+                  "value": "35"
+                }
+              ]
+            },
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Monto excedido",
+                  "value": "47.65%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "47.65%"
+                },
+                {
+                  "label": "Frecuencia inusual",
+                  "value": "35.52%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "35.52%"
+                },
+                {
+                  "label": "Dispositivo nuevo",
+                  "value": "16.83%",
+                  "barColor": "bg-chart-orange",
+                  "percentage": "16.83%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "operaciones_bloqueadas",
+          "title": "Operaciones bloqueadas",
+          "icon": "ShieldAlert",
+          "iconBg": "bg-chart-blocked/15",
+          "iconColor": "text-chart-blocked",
+          "iconBorder": "border-chart-blocked/30",
+          "value": "5,53 M Bs.",
+          "total": "/ 1,500",
+          "sections": [
+            {
+              "title": "Motivo de retención",
+              "items": [
+                {
+                  "label": "Lista negra",
+                  "value": "38.40%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "38.4%"
+                },
+                {
+                  "label": "Reglas de IP",
+                  "value": "36.53%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "36.53%"
+                },
+                {
+                  "label": "Alto Riesgo",
+                  "value": "25.00%",
+                  "barColor": "bg-chart-blocked",
+                  "percentage": "25%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "notifications": [
+        {
+          "id": 1,
+          "title": "Operaciones retenidas pendientes esperando por revisión",
+          "description": "Hay 3 operaciones que se encuentran esperando por revisión desde hace más de 2 horas",
+          "iconBg": "bg-chart-orange/10",
+          "iconColor": "text-chart-orange",
+          "iconType": "Info"
+        },
+        {
+          "id": 2,
+          "title": "Actualización de reglas de la Blacklist exitosa",
+          "description": "Se agregó una nueva regla a la Blacklist para bloquear operaciones al documento V-123456789",
+          "iconBg": "bg-chart-blue/10",
+          "iconColor": "text-chart-blue",
+          "iconType": "Info"
+        }
+      ],
+      "chartData": {
+        "gridLines": [
+          20,
+          50,
+          80,
+          110,
+          140,
+          170
+        ],
+        "xAxisLabels": [
+          "Sem 1",
+          "Sem 2",
+          "Sem 3",
+          "Sem 4"
+        ],
+        "series": [
+          {
+            "id": "total",
+            "label": "Total",
+            "colorClass": "text-chart-blue",
+            "stroke": "#12679A",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 80 C 100 60, 100 100, 166 90 C 230 90, 230 50, 300 50 C 350 50, 380 60, 416 60 C 470 60, 480 40, 540 40 C 600 40, 610 80, 666 80 C 720 80, 750 100, 800 100 C 850 100, 870 70, 916 70 C 960 70, 980 60, 1000 60"
+          },
+          {
+            "id": "validas",
+            "label": "Válidas",
+            "colorClass": "text-chart-green",
+            "stroke": "#0F9949",
+            "strokeWidth": 3,
+            "isDashed": false,
+            "hasGlow": true,
+            "path": "M 0 90 C 100 75, 100 105, 166 97.5 C 230 97.5, 230 67.5, 300 67.5 C 350 67.5, 380 75, 416 75 C 470 75, 480 60, 540 60 C 600 60, 610 90, 666 90 C 720 90, 750 105, 800 105 C 850 105, 870 82.5, 916 82.5 C 960 82.5, 980 75, 1000 75"
+          },
+          {
+            "id": "retenidas",
+            "label": "Retenidas",
+            "colorClass": "text-chart-orange",
+            "stroke": "#CE6733",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 170 C 100 165, 100 175, 166 172.5 C 230 172.5, 230 162.5, 300 162.5 C 350 162.5, 380 165, 416 165 C 470 165, 480 160, 540 160 C 600 160, 610 170, 666 170 C 720 170, 750 175, 800 175 C 850 175, 870 167.5, 916 167.5 C 960 167.5, 980 165, 1000 165"
+          },
+          {
+            "id": "bloqueadas",
+            "label": "Bloqueadas",
+            "colorClass": "text-chart-blocked",
+            "stroke": "#CC3233",
+            "strokeWidth": 2,
+            "isDashed": false,
+            "path": "M 0 185 C 100 183, 100 187, 166 186 C 230 186, 230 182, 300 182 C 350 182, 380 183, 416 183 C 470 183, 480 181, 540 181 C 600 181, 610 185, 666 185 C 720 185, 750 187, 800 187 C 850 187, 870 184, 916 184 C 960 184, 980 183, 1000 183"
+          }
+        ]
+      }
+    }
+  }
+}

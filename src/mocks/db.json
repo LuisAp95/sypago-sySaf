@@ -1,0 +1,4215 @@
+{
+  "operationStatuses": [
+    {
+      "label": "Todas",
+      "value": "todas"
+    },
+    {
+      "label": "En proceso",
+      "value": "en_proceso"
+    },
+    {
+      "label": "Válidas",
+      "value": "validas"
+    },
+    {
+      "label": "Retenidas",
+      "value": "retenidas"
+    },
+    {
+      "label": "Bloqueadas",
+      "value": "bloqueadas"
+    }
+  ],
+  "reports": [
+    {
+      "id": "1599GA8AC601",
+      "type": "credito",
+      "status": "En proceso",
+      "creationDate": "2026-07-11 01:32:21",
+      "issuerDocument": "V36254015",
+      "issuerAccount": "0114202607211015615418219",
+      "receiverDocument": "V92466352",
+      "receiverAccount": "0114202607211015205240376",
+      "amount": "8.070,12",
+      "processTime": "6 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC602",
+      "type": "credito",
+      "status": "En proceso",
+      "creationDate": "2026-07-07 20:41:48",
+      "issuerDocument": "V12475211",
+      "issuerAccount": "0114202607211012308498444",
+      "receiverDocument": "V16245375",
+      "receiverAccount": "0114202607211017175627048",
+      "amount": "11.398,74",
+      "processTime": "15 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC603",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-17 18:14:02",
+      "issuerDocument": "V43036268",
+      "issuerAccount": "0114202607211011851257293",
+      "receiverDocument": "V79370653",
+      "receiverAccount": "0114202607211016713205515",
+      "amount": "4.960,12",
+      "processTime": "14 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC604",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-05 00:18:28",
+      "issuerDocument": "V84075562",
+      "issuerAccount": "0114202607211012299796935",
+      "receiverDocument": "V87940607",
+      "receiverAccount": "0114202607211019360537853",
+      "amount": "45,54",
+      "processTime": "13 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC605",
+      "type": "debito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-14 19:34:00",
+      "issuerDocument": "V18608502",
+      "issuerAccount": "0114202607211017578280294",
+      "receiverDocument": "V97576327",
+      "receiverAccount": "0114202607211012375400728",
+      "amount": "13.754,21",
+      "processTime": "2 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC606",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-16 23:35:02",
+      "issuerDocument": "V26228981",
+      "issuerAccount": "0114202607211016008429532",
+      "receiverDocument": "V66864612",
+      "receiverAccount": "0114202607211017089841318",
+      "amount": "5.308,33",
+      "processTime": "15 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC607",
+      "type": "debito",
+      "status": "Válidas",
+      "creationDate": "2026-07-24 14:52:18",
+      "issuerDocument": "V33594587",
+      "issuerAccount": "0114202607211014035214923",
+      "receiverDocument": "V36647621",
+      "receiverAccount": "0114202607211019888601293",
+      "amount": "8.183,07",
+      "processTime": "3 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC608",
+      "type": "debito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-23 17:23:51",
+      "issuerDocument": "V37621516",
+      "issuerAccount": "0114202607211016180080561",
+      "receiverDocument": "V17100491",
+      "receiverAccount": "0114202607211012373288469",
+      "amount": "5.886,82",
+      "processTime": "2 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC609",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-18 13:17:11",
+      "issuerDocument": "V15601948",
+      "issuerAccount": "0114202607211013839749554",
+      "receiverDocument": "V66111895",
+      "receiverAccount": "0114202607211016537343610",
+      "amount": "14.129,53",
+      "processTime": "5 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC610",
+      "type": "credito",
+      "status": "En proceso",
+      "creationDate": "2026-07-08 00:44:20",
+      "issuerDocument": "V55474572",
+      "issuerAccount": "0114202607211018377108014",
+      "receiverDocument": "V84959368",
+      "receiverAccount": "0114202607211017428468259",
+      "amount": "2.814,19",
+      "processTime": "2 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC611",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-20 10:42:14",
+      "issuerDocument": "V24337004",
+      "issuerAccount": "0114202607211019576885706",
+      "receiverDocument": "V19271295",
+      "receiverAccount": "0114202607211013839703757",
+      "amount": "10.886,72",
+      "processTime": "4 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC612",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-06 21:03:16",
+      "issuerDocument": "V51415884",
+      "issuerAccount": "0114202607211019127908529",
+      "receiverDocument": "V35658900",
+      "receiverAccount": "0114202607211015874690808",
+      "amount": "11.546,19",
+      "processTime": "8 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC613",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-18 20:12:37",
+      "issuerDocument": "V20860089",
+      "issuerAccount": "0114202607211013810594352",
+      "receiverDocument": "V40906257",
+      "receiverAccount": "0114202607211017168992453",
+      "amount": "11.307,19",
+      "processTime": "3 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC614",
+      "type": "debito",
+      "status": "Válidas",
+      "creationDate": "2026-07-22 04:19:55",
+      "issuerDocument": "V72910837",
+      "issuerAccount": "0114202607211013120275902",
+      "receiverDocument": "V13372904",
+      "receiverAccount": "0114202607211018833545835",
+      "amount": "3.668,96",
+      "processTime": "1 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC615",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-24 20:09:36",
+      "issuerDocument": "V37046397",
+      "issuerAccount": "0114202607211011510308368",
+      "receiverDocument": "V18718770",
+      "receiverAccount": "0114202607211016555284594",
+      "amount": "16.759,75",
+      "processTime": "7 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC616",
+      "type": "debito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-17 07:29:26",
+      "issuerDocument": "V45052142",
+      "issuerAccount": "0114202607211017107624614",
+      "receiverDocument": "V35468835",
+      "receiverAccount": "0114202607211015695771621",
+      "amount": "859,33",
+      "processTime": "14 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC617",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-24 15:36:32",
+      "issuerDocument": "V51062253",
+      "issuerAccount": "0114202607211018593514139",
+      "receiverDocument": "V31022173",
+      "receiverAccount": "0114202607211019482114915",
+      "amount": "5.875,24",
+      "processTime": "6 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC618",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-04 18:42:02",
+      "issuerDocument": "V10279719",
+      "issuerAccount": "0114202607211016768537514",
+      "receiverDocument": "V78635619",
+      "receiverAccount": "0114202607211017380512642",
+      "amount": "19.598,67",
+      "processTime": "4 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC619",
+      "type": "debito",
+      "status": "Válidas",
+      "creationDate": "2026-07-06 06:01:02",
+      "issuerDocument": "V75302795",
+      "issuerAccount": "0114202607211012424328729",
+      "receiverDocument": "V50221825",
+      "receiverAccount": "0114202607211015703165393",
+      "amount": "1.959,29",
+      "processTime": "10 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC620",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-12 00:36:48",
+      "issuerDocument": "V49707831",
+      "issuerAccount": "0114202607211015669462210",
+      "receiverDocument": "V96280151",
+      "receiverAccount": "0114202607211017711277281",
+      "amount": "3.594,26",
+      "processTime": "11 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC621",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-03 12:03:09",
+      "issuerDocument": "V98988698",
+      "issuerAccount": "0114202607211013188790821",
+      "receiverDocument": "V23999627",
+      "receiverAccount": "0114202607211011161754491",
+      "amount": "5.396,17",
+      "processTime": "1 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC622",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-15 23:22:29",
+      "issuerDocument": "V66634947",
+      "issuerAccount": "0114202607211019704579530",
+      "receiverDocument": "V34024407",
+      "receiverAccount": "0114202607211015547917339",
+      "amount": "749,03",
+      "processTime": "7 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC623",
+      "type": "debito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-04 03:06:00",
+      "issuerDocument": "V77206101",
+      "issuerAccount": "0114202607211017452779101",
+      "receiverDocument": "V46157222",
+      "receiverAccount": "0114202607211018072169883",
+      "amount": "14.750,76",
+      "processTime": "12 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC624",
+      "type": "debito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-05 14:51:29",
+      "issuerDocument": "V43987329",
+      "issuerAccount": "0114202607211013838817082",
+      "receiverDocument": "V12114999",
+      "receiverAccount": "0114202607211012591302556",
+      "amount": "18.643,13",
+      "processTime": "8 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC625",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-08 14:39:31",
+      "issuerDocument": "V89274261",
+      "issuerAccount": "0114202607211014929227037",
+      "receiverDocument": "V59444495",
+      "receiverAccount": "0114202607211014720371470",
+      "amount": "12.847,16",
+      "processTime": "4 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC626",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-15 15:24:18",
+      "issuerDocument": "V66354430",
+      "issuerAccount": "0114202607211011580411660",
+      "receiverDocument": "V78337615",
+      "receiverAccount": "0114202607211014404085548",
+      "amount": "15.674,45",
+      "processTime": "7 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC627",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-01 01:58:31",
+      "issuerDocument": "V86249190",
+      "issuerAccount": "0114202607211017743554044",
+      "receiverDocument": "V50847300",
+      "receiverAccount": "0114202607211013831068523",
+      "amount": "4.991,99",
+      "processTime": "10 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC628",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-28 07:48:15",
+      "issuerDocument": "V34801483",
+      "issuerAccount": "0114202607211015031140703",
+      "receiverDocument": "V82631054",
+      "receiverAccount": "0114202607211015442067245",
+      "amount": "1.372,95",
+      "processTime": "6 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC629",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-15 18:45:45",
+      "issuerDocument": "V20172268",
+      "issuerAccount": "0114202607211017563534325",
+      "receiverDocument": "V18896809",
+      "receiverAccount": "0114202607211013538217221",
+      "amount": "17.178,93",
+      "processTime": "13 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC630",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-28 20:47:23",
+      "issuerDocument": "V88922319",
+      "issuerAccount": "0114202607211011757576592",
+      "receiverDocument": "V92779451",
+      "receiverAccount": "0114202607211014909032717",
+      "amount": "10.138,71",
+      "processTime": "3 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC631",
+      "type": "debito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-07 09:52:24",
+      "issuerDocument": "V68070781",
+      "issuerAccount": "0114202607211017735392099",
+      "receiverDocument": "V94739951",
+      "receiverAccount": "0114202607211015225339880",
+      "amount": "3.686,51",
+      "processTime": "14 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC632",
+      "type": "credito",
+      "status": "En proceso",
+      "creationDate": "2026-07-05 13:14:47",
+      "issuerDocument": "V20853214",
+      "issuerAccount": "0114202607211018873279128",
+      "receiverDocument": "V16604927",
+      "receiverAccount": "0114202607211015439115680",
+      "amount": "1.809,34",
+      "processTime": "7 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC633",
+      "type": "credito",
+      "status": "En proceso",
+      "creationDate": "2026-07-15 08:21:43",
+      "issuerDocument": "V66339449",
+      "issuerAccount": "0114202607211019469865585",
+      "receiverDocument": "V54927281",
+      "receiverAccount": "0114202607211019378360918",
+      "amount": "18.558,18",
+      "processTime": "12 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC634",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-16 12:35:20",
+      "issuerDocument": "V96105198",
+      "issuerAccount": "0114202607211019255827864",
+      "receiverDocument": "V67690911",
+      "receiverAccount": "0114202607211014916090748",
+      "amount": "5.655,65",
+      "processTime": "3 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC635",
+      "type": "credito",
+      "status": "En proceso",
+      "creationDate": "2026-07-13 12:23:55",
+      "issuerDocument": "V16548716",
+      "issuerAccount": "0114202607211013192264672",
+      "receiverDocument": "V22384156",
+      "receiverAccount": "0114202607211011423079921",
+      "amount": "13.362,73",
+      "processTime": "2 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC636",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-20 20:23:32",
+      "issuerDocument": "V46652960",
+      "issuerAccount": "0114202607211019998240584",
+      "receiverDocument": "V77716339",
+      "receiverAccount": "0114202607211015039711800",
+      "amount": "3.592,86",
+      "processTime": "5 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC637",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-05 22:27:18",
+      "issuerDocument": "V87608505",
+      "issuerAccount": "0114202607211011942217740",
+      "receiverDocument": "V77798047",
+      "receiverAccount": "0114202607211013481133044",
+      "amount": "847,90",
+      "processTime": "5 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC638",
+      "type": "debito",
+      "status": "Válidas",
+      "creationDate": "2026-07-03 05:37:13",
+      "issuerDocument": "V53506018",
+      "issuerAccount": "0114202607211014536241696",
+      "receiverDocument": "V85274487",
+      "receiverAccount": "0114202607211018019377960",
+      "amount": "13.947,18",
+      "processTime": "7 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC639",
+      "type": "credito",
+      "status": "En proceso",
+      "creationDate": "2026-07-22 07:20:40",
+      "issuerDocument": "V48242255",
+      "issuerAccount": "0114202607211016118329987",
+      "receiverDocument": "V56055293",
+      "receiverAccount": "0114202607211015577344785",
+      "amount": "11.023,50",
+      "processTime": "1 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC640",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-02 18:47:56",
+      "issuerDocument": "V31970124",
+      "issuerAccount": "0114202607211011593715399",
+      "receiverDocument": "V74204193",
+      "receiverAccount": "0114202607211011482026940",
+      "amount": "1.206,54",
+      "processTime": "13 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC641",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-27 11:09:09",
+      "issuerDocument": "V23620366",
+      "issuerAccount": "0114202607211013360451546",
+      "receiverDocument": "V83475679",
+      "receiverAccount": "0114202607211013056438560",
+      "amount": "16.344,32",
+      "processTime": "8 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC642",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-23 03:55:44",
+      "issuerDocument": "V92777301",
+      "issuerAccount": "0114202607211018171109624",
+      "receiverDocument": "V96530754",
+      "receiverAccount": "0114202607211016393708442",
+      "amount": "18.215,95",
+      "processTime": "12 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC643",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-10 09:09:18",
+      "issuerDocument": "V67743902",
+      "issuerAccount": "0114202607211017692819962",
+      "receiverDocument": "V27372040",
+      "receiverAccount": "0114202607211012255818289",
+      "amount": "11.286,26",
+      "processTime": "4 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC644",
+      "type": "debito",
+      "status": "Válidas",
+      "creationDate": "2026-07-19 08:22:33",
+      "issuerDocument": "V92302116",
+      "issuerAccount": "0114202607211011471700155",
+      "receiverDocument": "V19372442",
+      "receiverAccount": "0114202607211017842515647",
+      "amount": "7.074,78",
+      "processTime": "6 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC645",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-14 11:48:41",
+      "issuerDocument": "V52670930",
+      "issuerAccount": "0114202607211012634934036",
+      "receiverDocument": "V47767490",
+      "receiverAccount": "0114202607211011334917031",
+      "amount": "1.077,55",
+      "processTime": "2 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC646",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-01 01:19:08",
+      "issuerDocument": "V77172457",
+      "issuerAccount": "0114202607211017652372021",
+      "receiverDocument": "V52788223",
+      "receiverAccount": "0114202607211015043884688",
+      "amount": "14.584,91",
+      "processTime": "8 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC647",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-20 20:36:55",
+      "issuerDocument": "V49481473",
+      "issuerAccount": "0114202607211013736016098",
+      "receiverDocument": "V71702035",
+      "receiverAccount": "0114202607211012954960050",
+      "amount": "8.484,79",
+      "processTime": "5 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC648",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-11 15:12:32",
+      "issuerDocument": "V55844276",
+      "issuerAccount": "0114202607211019965108714",
+      "receiverDocument": "V80286265",
+      "receiverAccount": "0114202607211015238075049",
+      "amount": "9.742,07",
+      "processTime": "11 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC649",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-16 00:30:18",
+      "issuerDocument": "V64401349",
+      "issuerAccount": "0114202607211019009619224",
+      "receiverDocument": "V90075157",
+      "receiverAccount": "0114202607211018258518726",
+      "amount": "1.695,65",
+      "processTime": "4 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC650",
+      "type": "debito",
+      "status": "Válidas",
+      "creationDate": "2026-07-26 00:38:01",
+      "issuerDocument": "V74334425",
+      "issuerAccount": "0114202607211019177605036",
+      "receiverDocument": "V17303347",
+      "receiverAccount": "0114202607211013976948015",
+      "amount": "10.302,54",
+      "processTime": "3 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC651",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-23 14:46:21",
+      "issuerDocument": "V86971140",
+      "issuerAccount": "0114202607211015224743102",
+      "receiverDocument": "V22904789",
+      "receiverAccount": "0114202607211018399971726",
+      "amount": "80,14",
+      "processTime": "12 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC652",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-28 13:40:45",
+      "issuerDocument": "V23910915",
+      "issuerAccount": "0114202607211011956526129",
+      "receiverDocument": "V54139496",
+      "receiverAccount": "0114202607211015108556347",
+      "amount": "3.146,33",
+      "processTime": "2 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC653",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-12 19:29:45",
+      "issuerDocument": "V14517931",
+      "issuerAccount": "0114202607211015523780786",
+      "receiverDocument": "V18158299",
+      "receiverAccount": "0114202607211016135207199",
+      "amount": "8.068,28",
+      "processTime": "7 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC654",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-23 09:18:09",
+      "issuerDocument": "V38945371",
+      "issuerAccount": "0114202607211015019129314",
+      "receiverDocument": "V54498999",
+      "receiverAccount": "0114202607211011879109116",
+      "amount": "5.259,80",
+      "processTime": "6 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC655",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-08 15:35:09",
+      "issuerDocument": "V84518294",
+      "issuerAccount": "0114202607211015111739046",
+      "receiverDocument": "V53899670",
+      "receiverAccount": "0114202607211019751581247",
+      "amount": "18.498,29",
+      "processTime": "1 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC656",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-11 19:35:37",
+      "issuerDocument": "V45129915",
+      "issuerAccount": "0114202607211016808246745",
+      "receiverDocument": "V82594620",
+      "receiverAccount": "0114202607211015603903319",
+      "amount": "3.495,96",
+      "processTime": "15 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC657",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-06 22:07:57",
+      "issuerDocument": "V59612395",
+      "issuerAccount": "0114202607211014062351175",
+      "receiverDocument": "V43017354",
+      "receiverAccount": "0114202607211018326600752",
+      "amount": "18.341,91",
+      "processTime": "6 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC658",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-22 05:57:39",
+      "issuerDocument": "V92005919",
+      "issuerAccount": "0114202607211013031954073",
+      "receiverDocument": "V56094430",
+      "receiverAccount": "0114202607211017411729508",
+      "amount": "1.212,67",
+      "processTime": "1 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC659",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-08 10:05:20",
+      "issuerDocument": "V12930541",
+      "issuerAccount": "0114202607211019718967416",
+      "receiverDocument": "V65694350",
+      "receiverAccount": "0114202607211015863877254",
+      "amount": "11.614,75",
+      "processTime": "12 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC660",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-28 11:59:56",
+      "issuerDocument": "V45038645",
+      "issuerAccount": "0114202607211013339190764",
+      "receiverDocument": "V51029937",
+      "receiverAccount": "0114202607211016213549818",
+      "amount": "1.488,15",
+      "processTime": "1 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC661",
+      "type": "debito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-14 19:49:04",
+      "issuerDocument": "V22852543",
+      "issuerAccount": "0114202607211015098987502",
+      "receiverDocument": "V33307560",
+      "receiverAccount": "0114202607211011805304423",
+      "amount": "11.859,34",
+      "processTime": "7 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC662",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-18 05:11:11",
+      "issuerDocument": "V65952560",
+      "issuerAccount": "0114202607211014205055189",
+      "receiverDocument": "V19832365",
+      "receiverAccount": "0114202607211018095446564",
+      "amount": "19.164,04",
+      "processTime": "11 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC663",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-13 09:29:33",
+      "issuerDocument": "V82469030",
+      "issuerAccount": "0114202607211018663597517",
+      "receiverDocument": "V71367576",
+      "receiverAccount": "0114202607211012170709494",
+      "amount": "12.559,72",
+      "processTime": "13 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC664",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-22 23:20:46",
+      "issuerDocument": "V77363230",
+      "issuerAccount": "0114202607211015868134207",
+      "receiverDocument": "V79992114",
+      "receiverAccount": "0114202607211012204884160",
+      "amount": "4.760,82",
+      "processTime": "8 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC665",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-05 21:43:41",
+      "issuerDocument": "V15430518",
+      "issuerAccount": "0114202607211012996098369",
+      "receiverDocument": "V63345635",
+      "receiverAccount": "0114202607211015256960575",
+      "amount": "19.249,70",
+      "processTime": "10 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC666",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-03 18:34:20",
+      "issuerDocument": "V66715013",
+      "issuerAccount": "0114202607211016238533791",
+      "receiverDocument": "V90059399",
+      "receiverAccount": "0114202607211011055015824",
+      "amount": "411,28",
+      "processTime": "3 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC667",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-07 05:24:12",
+      "issuerDocument": "V97499448",
+      "issuerAccount": "0114202607211017898590125",
+      "receiverDocument": "V33597769",
+      "receiverAccount": "0114202607211013369996416",
+      "amount": "2.968,76",
+      "processTime": "10 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC668",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-26 07:08:47",
+      "issuerDocument": "V61228459",
+      "issuerAccount": "0114202607211013853181636",
+      "receiverDocument": "V55192478",
+      "receiverAccount": "0114202607211017695898167",
+      "amount": "19.094,03",
+      "processTime": "9 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC669",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-24 00:00:50",
+      "issuerDocument": "V78252629",
+      "issuerAccount": "0114202607211019871820344",
+      "receiverDocument": "V20003020",
+      "receiverAccount": "0114202607211011437866247",
+      "amount": "3.977,04",
+      "processTime": "2 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC670",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-01 05:12:14",
+      "issuerDocument": "V92570118",
+      "issuerAccount": "0114202607211011016367737",
+      "receiverDocument": "V89340515",
+      "receiverAccount": "0114202607211013335263819",
+      "amount": "11.778,52",
+      "processTime": "1 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC671",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-23 16:08:05",
+      "issuerDocument": "V96219746",
+      "issuerAccount": "0114202607211016589695103",
+      "receiverDocument": "V69866366",
+      "receiverAccount": "0114202607211014111223438",
+      "amount": "12.428,72",
+      "processTime": "9 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC672",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-01 16:47:45",
+      "issuerDocument": "V41443561",
+      "issuerAccount": "0114202607211017884395141",
+      "receiverDocument": "V69300456",
+      "receiverAccount": "0114202607211013922304508",
+      "amount": "834,97",
+      "processTime": "15 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC673",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-24 05:09:33",
+      "issuerDocument": "V13739843",
+      "issuerAccount": "0114202607211012857502368",
+      "receiverDocument": "V29981566",
+      "receiverAccount": "0114202607211019668608761",
+      "amount": "11.562,72",
+      "processTime": "7 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC674",
+      "type": "credito",
+      "status": "En proceso",
+      "creationDate": "2026-07-19 10:32:48",
+      "issuerDocument": "V82717202",
+      "issuerAccount": "0114202607211014412457993",
+      "receiverDocument": "V25084867",
+      "receiverAccount": "0114202607211016749122878",
+      "amount": "2.861,14",
+      "processTime": "12 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC675",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-23 19:46:24",
+      "issuerDocument": "V11196605",
+      "issuerAccount": "0114202607211018272600159",
+      "receiverDocument": "V73866727",
+      "receiverAccount": "0114202607211013594525579",
+      "amount": "17.663,97",
+      "processTime": "2 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC676",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-20 04:37:54",
+      "issuerDocument": "V12173203",
+      "issuerAccount": "0114202607211013334102957",
+      "receiverDocument": "V28338943",
+      "receiverAccount": "0114202607211017967128777",
+      "amount": "15.371,57",
+      "processTime": "10 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC677",
+      "type": "debito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-11 19:19:19",
+      "issuerDocument": "V34537741",
+      "issuerAccount": "0114202607211018119724126",
+      "receiverDocument": "V53378046",
+      "receiverAccount": "0114202607211018438742334",
+      "amount": "12.155,45",
+      "processTime": "3 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC678",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-20 18:32:45",
+      "issuerDocument": "V94492520",
+      "issuerAccount": "0114202607211011714675827",
+      "receiverDocument": "V88659687",
+      "receiverAccount": "0114202607211019976265889",
+      "amount": "6.173,96",
+      "processTime": "1 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC679",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-25 15:29:58",
+      "issuerDocument": "V18601421",
+      "issuerAccount": "0114202607211017321270688",
+      "receiverDocument": "V43190909",
+      "receiverAccount": "0114202607211011152806428",
+      "amount": "4.301,96",
+      "processTime": "7 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC680",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-21 01:14:32",
+      "issuerDocument": "V82452285",
+      "issuerAccount": "0114202607211019178775927",
+      "receiverDocument": "V83177774",
+      "receiverAccount": "0114202607211013547787901",
+      "amount": "8.948,75",
+      "processTime": "14 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC681",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-01 08:36:01",
+      "issuerDocument": "V55719552",
+      "issuerAccount": "0114202607211016756144083",
+      "receiverDocument": "V61548492",
+      "receiverAccount": "0114202607211015857496330",
+      "amount": "1.438,74",
+      "processTime": "6 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC682",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-11 11:58:01",
+      "issuerDocument": "V25468844",
+      "issuerAccount": "0114202607211011204613038",
+      "receiverDocument": "V13611831",
+      "receiverAccount": "0114202607211014765424911",
+      "amount": "15.549,75",
+      "processTime": "2 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC683",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-16 20:18:01",
+      "issuerDocument": "V29115239",
+      "issuerAccount": "0114202607211011982201513",
+      "receiverDocument": "V72515400",
+      "receiverAccount": "0114202607211016126581443",
+      "amount": "5.252,15",
+      "processTime": "2 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC684",
+      "type": "credito",
+      "status": "En proceso",
+      "creationDate": "2026-07-01 22:39:23",
+      "issuerDocument": "V43229003",
+      "issuerAccount": "0114202607211012476164540",
+      "receiverDocument": "V82051426",
+      "receiverAccount": "0114202607211017328890305",
+      "amount": "13.005,38",
+      "processTime": "13 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC685",
+      "type": "debito",
+      "status": "En proceso",
+      "creationDate": "2026-07-13 00:29:43",
+      "issuerDocument": "V60420017",
+      "issuerAccount": "0114202607211011965011794",
+      "receiverDocument": "V60657175",
+      "receiverAccount": "0114202607211013255511182",
+      "amount": "8.643,74",
+      "processTime": "4 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC686",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-07 21:47:00",
+      "issuerDocument": "V40144484",
+      "issuerAccount": "0114202607211017210088377",
+      "receiverDocument": "V53723113",
+      "receiverAccount": "0114202607211018145455273",
+      "amount": "1.271,87",
+      "processTime": "10 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC687",
+      "type": "credito",
+      "status": "Válidas",
+      "creationDate": "2026-07-21 16:21:21",
+      "issuerDocument": "V46927757",
+      "issuerAccount": "0114202607211015866727440",
+      "receiverDocument": "V28695649",
+      "receiverAccount": "0114202607211012205119314",
+      "amount": "11.670,14",
+      "processTime": "14 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC688",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-23 14:09:43",
+      "issuerDocument": "V46162432",
+      "issuerAccount": "0114202607211014261716911",
+      "receiverDocument": "V49677567",
+      "receiverAccount": "0114202607211017341294211",
+      "amount": "12.989,07",
+      "processTime": "7 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC689",
+      "type": "credito",
+      "status": "En proceso",
+      "creationDate": "2026-07-05 12:31:03",
+      "issuerDocument": "V28369812",
+      "issuerAccount": "0114202607211019516563835",
+      "receiverDocument": "V68625346",
+      "receiverAccount": "0114202607211015624276229",
+      "amount": "6.094,03",
+      "processTime": "13 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC690",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-03 01:08:25",
+      "issuerDocument": "V73581388",
+      "issuerAccount": "0114202607211016174044798",
+      "receiverDocument": "V91645034",
+      "receiverAccount": "0114202607211017074758003",
+      "amount": "18.046,68",
+      "processTime": "10 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC691",
+      "type": "debito",
+      "status": "Válidas",
+      "creationDate": "2026-07-04 05:51:38",
+      "issuerDocument": "V32131349",
+      "issuerAccount": "0114202607211019978574937",
+      "receiverDocument": "V14558986",
+      "receiverAccount": "0114202607211018317464927",
+      "amount": "7.383,91",
+      "processTime": "12 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC692",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-20 17:01:59",
+      "issuerDocument": "V84991164",
+      "issuerAccount": "0114202607211019615971901",
+      "receiverDocument": "V19047275",
+      "receiverAccount": "0114202607211012379668016",
+      "amount": "16.837,23",
+      "processTime": "2 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC693",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-17 02:50:03",
+      "issuerDocument": "V80470461",
+      "issuerAccount": "0114202607211012518305109",
+      "receiverDocument": "V54865016",
+      "receiverAccount": "0114202607211018944737121",
+      "amount": "12.290,04",
+      "processTime": "15 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC694",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-19 15:09:47",
+      "issuerDocument": "V87914569",
+      "issuerAccount": "0114202607211012034803787",
+      "receiverDocument": "V39224872",
+      "receiverAccount": "0114202607211011324845851",
+      "amount": "3.195,99",
+      "processTime": "5 ms",
+      "channel": "App - Jurídico"
+    },
+    {
+      "id": "1599GA8AC695",
+      "type": "debito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-04 11:57:40",
+      "issuerDocument": "V58013395",
+      "issuerAccount": "0114202607211012427631553",
+      "receiverDocument": "V15841107",
+      "receiverAccount": "0114202607211012695129309",
+      "amount": "11.064,97",
+      "processTime": "9 ms",
+      "channel": "Web - Jurídico"
+    },
+    {
+      "id": "1599GA8AC696",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-25 22:53:29",
+      "issuerDocument": "V99620321",
+      "issuerAccount": "0114202607211011156051474",
+      "receiverDocument": "V71178112",
+      "receiverAccount": "0114202607211017874460306",
+      "amount": "1.124,25",
+      "processTime": "5 ms",
+      "channel": "Otro - Jurídico"
+    },
+    {
+      "id": "1599GA8AC697",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-10 23:01:02",
+      "issuerDocument": "V70673656",
+      "issuerAccount": "0114202607211013539989610",
+      "receiverDocument": "V25320550",
+      "receiverAccount": "0114202607211018364738379",
+      "amount": "14.509,42",
+      "processTime": "8 ms",
+      "channel": "App - Natural"
+    },
+    {
+      "id": "1599GA8AC698",
+      "type": "credito",
+      "status": "Retenidas",
+      "creationDate": "2026-07-26 21:33:09",
+      "issuerDocument": "V58605127",
+      "issuerAccount": "0114202607211012510162573",
+      "receiverDocument": "V71482174",
+      "receiverAccount": "0114202607211012787797144",
+      "amount": "18.275,47",
+      "processTime": "11 ms",
+      "channel": "Web - Natural"
+    },
+    {
+      "id": "1599GA8AC699",
+      "type": "credito",
+      "status": "En proceso",
+      "creationDate": "2026-07-16 21:57:09",
+      "issuerDocument": "V73575889",
+      "issuerAccount": "0114202607211013878029373",
+      "receiverDocument": "V59178843",
+      "receiverAccount": "0114202607211015752786787",
+      "amount": "16.854,46",
+      "processTime": "4 ms",
+      "channel": "Otro - Natural"
+    },
+    {
+      "id": "1599GA8AC700",
+      "type": "credito",
+      "status": "Bloqueadas",
+      "creationDate": "2026-07-02 08:36:00",
+      "issuerDocument": "V92795602",
+      "issuerAccount": "0114202607211018597237104",
+      "receiverDocument": "V58101231",
+      "receiverAccount": "0114202607211017527138376",
+      "amount": "2.936,88",
+      "processTime": "12 ms",
+      "channel": "App - Jurídico"
+    }
+  ],
+  "quarantine": [
+    {
+      "id": "1599GA8AC639",
+      "user": "Persona 2",
+      "risk": "Alto",
+      "document": "V87654321",
+      "reason": "Incumplimiento de reglas",
+      "waitTime": "2,15 min",
+      "amount": "5.500,00"
+    },
+    {
+      "id": "1599GA8AC640",
+      "user": "Persona 3",
+      "risk": "Crítico",
+      "document": "V11223344",
+      "reason": "Lista negra",
+      "waitTime": "10,42 min",
+      "amount": "25.000,00"
+    },
+    {
+      "id": "1599GA8AC641",
+      "user": "Persona 1",
+      "risk": "Crítico",
+      "document": "V12345678",
+      "reason": "IP sospechosa",
+      "waitTime": "5,03 min",
+      "amount": "14.132,70"
+    },
+    {
+      "id": "1599GA8AC642",
+      "user": "Persona 1",
+      "risk": "Alto",
+      "document": "V12345678",
+      "reason": "Dispositivo nuevo",
+      "waitTime": "5,03 min",
+      "amount": "14.132,70"
+    },
+    {
+      "id": "1599GA8AC643",
+      "user": "Persona 1",
+      "risk": "Alto",
+      "document": "V12345678",
+      "reason": "Dispositivo nuevo",
+      "waitTime": "5,03 min",
+      "amount": "14.132,70"
+    },
+    {
+      "id": "1599GA8AC644",
+      "user": "Persona 1",
+      "risk": "Alto",
+      "document": "V12345678",
+      "reason": "Dispositivo nuevo",
+      "waitTime": "5,03 min",
+      "amount": "14.132,70"
+    },
+    {
+      "id": "1599GA8AC645",
+      "user": "Persona 1",
+      "risk": "Crítico",
+      "document": "V12345678",
+      "reason": "IP sospechosa",
+      "waitTime": "5,03 min",
+      "amount": "14.132,70"
+    },
+    {
+      "id": "1599GA8AC646",
+      "user": "Persona 1",
+      "risk": "Crítico",
+      "document": "V12345678",
+      "reason": "IP sospechosa",
+      "waitTime": "5,03 min",
+      "amount": "14.132,70"
+    }
+  ],
+  "riskStats": {
+    "critical": {
+      "count": 170,
+      "amount": "379,02 K Bs."
+    },
+    "high": {
+      "count": 11,
+      "amount": "156,00 K Bs."
+    },
+    "medium": {
+      "count": 35,
+      "amount": "92,66 K Bs."
+    },
+    "low": {
+      "count": 124,
+      "amount": "223,02 K Bs."
+    }
+  },
+  "blacklist": [
+    {
+      "id": "1",
+      "status": "Activo",
+      "field": "Documento",
+      "value": "V12345678",
+      "action": "Bloquear",
+      "lastModified": "27/07/2026 10:37",
+      "eventsRegistered": 16
+    },
+    {
+      "id": "2",
+      "status": "Activo",
+      "field": "Cuenta",
+      "value": "0114****123",
+      "action": "Cuarentena",
+      "lastModified": "27/07/2026 10:37",
+      "eventsRegistered": 7
+    },
+    {
+      "id": "3",
+      "status": "Inactivo",
+      "field": "Teléfono",
+      "value": "0412-1234567",
+      "action": "Bloquear",
+      "lastModified": "27/07/2026 10:37",
+      "eventsRegistered": 34
+    },
+    {
+      "id": "4",
+      "status": "Inactivo",
+      "field": "Cuenta",
+      "value": "0114****123",
+      "action": "Cuarentena",
+      "lastModified": "27/07/2026 10:37",
+      "eventsRegistered": 88
+    },
+    {
+      "id": "5",
+      "status": "Activo",
+      "field": "Teléfono",
+      "value": "0412-1234567",
+      "action": "Bloquear",
+      "lastModified": "27/07/2026 10:37",
+      "eventsRegistered": 3
+    },
+    {
+      "id": "6",
+      "status": "Activo",
+      "field": "Cuenta",
+      "value": "0114****123",
+      "action": "Cuarentena",
+      "lastModified": "27/07/2026 10:37",
+      "eventsRegistered": 9
+    },
+    {
+      "id": "7",
+      "status": "Inactivo",
+      "field": "Teléfono",
+      "value": "0412-1234567",
+      "action": "Bloquear",
+      "lastModified": "27/07/2026 10:37",
+      "eventsRegistered": 47
+    },
+    {
+      "id": "8",
+      "status": "Activo",
+      "field": "Cuenta",
+      "value": "0114****123",
+      "action": "Cuarentena",
+      "lastModified": "27/07/2026 10:37",
+      "eventsRegistered": 1
+    }
+  ],
+  "rulesChannel": [
+    {
+      "id": "1",
+      "channel": "App - Natural",
+      "status": "Activo",
+      "group": "Natural",
+      "weekday": "Entre semana",
+      "weekend": "Fin de semana",
+      "holidays": "N / A",
+      "lastModified": "27/07/2026 10:37"
+    },
+    {
+      "id": "3",
+      "channel": "Web - Natural",
+      "status": "Activo",
+      "group": "Natural",
+      "weekday": "Libre",
+      "weekend": "Fin de semana",
+      "holidays": "Caso especial",
+      "lastModified": "27/07/2026 10:37"
+    },
+    {
+      "id": "4",
+      "channel": "Otro - Natural",
+      "status": "Inactivo",
+      "group": "Natural",
+      "weekday": "Libre",
+      "weekend": "Fin de semana",
+      "holidays": "N / A",
+      "lastModified": "27/07/2026 10:37"
+    },
+    {
+      "id": "5",
+      "channel": "App - Jurídico",
+      "status": "Activo",
+      "group": "Jurídico",
+      "weekday": "Entre semana",
+      "weekend": "Fin de semana",
+      "holidays": "N / A",
+      "lastModified": "27/07/2026 10:37"
+    },
+    {
+      "id": "7",
+      "channel": "Web - Jurídico",
+      "status": "Activo",
+      "group": "Jurídico",
+      "weekday": "Semana Jur",
+      "weekend": "Fin de semana",
+      "holidays": "Caso especial",
+      "lastModified": "27/07/2026 10:37"
+    },
+    {
+      "id": "8",
+      "channel": "Otro - Jurídico",
+      "status": "Activo",
+      "group": "Jurídico",
+      "weekday": "Semana Jur",
+      "weekend": "Fin de semana",
+      "holidays": "N / A",
+      "lastModified": "27/07/2026 10:37"
+    }
+  ],
+  "rulesViewer": [
+    {
+      "id": "1",
+      "code": "001",
+      "name": "Entre semana",
+      "channel": "App - N",
+      "title": "001 Entre semana App - N",
+      "ops": {
+        "max": 8,
+        "current": 8
+      },
+      "amount": {
+        "max": "5 Millo Bs",
+        "current": "5 Millo Bs"
+      },
+      "subRules": [
+        {
+          "id": "sub-1",
+          "enabled": true,
+          "status": "Activo",
+          "startTime": "23:00",
+          "endTime": "08:00",
+          "opsPerMinute": 4,
+          "maxAmount": "600 Mil Bs"
+        },
+        {
+          "id": "sub-2",
+          "enabled": true,
+          "status": "Activa",
+          "startTime": "08:00",
+          "endTime": "18:00",
+          "opsPerMinute": 8,
+          "maxAmount": "5 Millo Bs"
+        },
+        {
+          "id": "sub-3",
+          "enabled": true,
+          "status": "Activo",
+          "startTime": "18:00",
+          "endTime": "23:00",
+          "opsPerMinute": 8,
+          "maxAmount": "2 Millo Bs"
+        }
+      ],
+      "chartData": {
+        "ops": [
+          {
+            "x": 0,
+            "y": 4
+          },
+          {
+            "x": 8,
+            "y": 4
+          },
+          {
+            "x": 8,
+            "y": 8
+          },
+          {
+            "x": 24,
+            "y": 8
+          }
+        ],
+        "amount": [
+          {
+            "x": 0,
+            "y": 3
+          },
+          {
+            "x": 8,
+            "y": 3
+          },
+          {
+            "x": 8,
+            "y": 5
+          },
+          {
+            "x": 19,
+            "y": 5
+          },
+          {
+            "x": 19,
+            "y": 4
+          },
+          {
+            "x": 24,
+            "y": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "code": "002",
+      "name": "Fin de semana",
+      "channel": "Web - N",
+      "title": "002 Fin de semana Web - N",
+      "ops": {
+        "max": 5,
+        "current": 3
+      },
+      "amount": {
+        "max": "3 Millo Bs",
+        "current": "3 Millo Bs"
+      },
+      "chartData": {
+        "ops": [
+          {
+            "x": 0,
+            "y": 2
+          },
+          {
+            "x": 6,
+            "y": 2
+          },
+          {
+            "x": 6,
+            "y": 4
+          },
+          {
+            "x": 13,
+            "y": 4
+          },
+          {
+            "x": 13,
+            "y": 5
+          },
+          {
+            "x": 20,
+            "y": 5
+          },
+          {
+            "x": 20,
+            "y": 3
+          },
+          {
+            "x": 24,
+            "y": 3
+          }
+        ],
+        "amount": [
+          {
+            "x": 0,
+            "y": 1
+          },
+          {
+            "x": 6,
+            "y": 1
+          },
+          {
+            "x": 6,
+            "y": 3
+          },
+          {
+            "x": 24,
+            "y": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "code": "003",
+      "name": "Horario oficina",
+      "channel": "App - J",
+      "title": "003 Horario oficina App - J",
+      "ops": {
+        "max": 20,
+        "current": 20
+      },
+      "amount": {
+        "max": "15 Millo Bs",
+        "current": "15 Millo Bs"
+      },
+      "chartData": {
+        "ops": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 8,
+            "y": 0
+          },
+          {
+            "x": 8,
+            "y": 20
+          },
+          {
+            "x": 18,
+            "y": 20
+          },
+          {
+            "x": 18,
+            "y": 0
+          },
+          {
+            "x": 24,
+            "y": 0
+          }
+        ],
+        "amount": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 8,
+            "y": 0
+          },
+          {
+            "x": 8,
+            "y": 15
+          },
+          {
+            "x": 18,
+            "y": 15
+          },
+          {
+            "x": 18,
+            "y": 0
+          },
+          {
+            "x": 24,
+            "y": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "title": "Caso especial",
+      "ops": {
+        "max": 1,
+        "current": 1
+      },
+      "amount": {
+        "max": "3 Millo Bs",
+        "current": "3 Millo Bs"
+      },
+      "chartData": {
+        "ops": [
+          {
+            "x": 0,
+            "y": 1
+          },
+          {
+            "x": 24,
+            "y": 1
+          }
+        ],
+        "amount": [
+          {
+            "x": 0,
+            "y": 3
+          },
+          {
+            "x": 24,
+            "y": 3
+          }
+        ]
+      }
+    }
+  ],
+  "userExceptions": [
+    {
+      "id": "1",
+      "alias": "Persona Uno",
+      "document": "V 1234567",
+      "status": "Activo",
+      "group": "Natural",
+      "days": {
+        "l": true,
+        "m": true,
+        "x": true,
+        "j": true,
+        "v": true,
+        "s": false,
+        "d": false
+      },
+      "lastModified": "27/07/2026 10:37"
+    },
+    {
+      "id": "2",
+      "alias": "Persona Dos",
+      "document": "E 4862139",
+      "status": "Activo",
+      "group": "Natural",
+      "days": {
+        "l": true,
+        "m": true,
+        "x": true,
+        "j": true,
+        "v": true,
+        "s": false,
+        "d": false
+      },
+      "lastModified": "27/07/2026 10:37"
+    },
+    {
+      "id": "3",
+      "alias": "Comercio Uno",
+      "document": "J 40495137",
+      "status": "Activo",
+      "group": "Jurídico",
+      "days": {
+        "l": true,
+        "m": true,
+        "x": true,
+        "j": true,
+        "v": true,
+        "s": false,
+        "d": false
+      },
+      "lastModified": "27/07/2026 10:37"
+    }
+  ],
+  "dashboardStats": {
+    "periods": [
+      {
+        "label": "Últimas 24 horas",
+        "value": "24h"
+      }
+    ],
+    "metricTypes": [
+      {
+        "label": "Cantidades",
+        "value": "cantidades"
+      }
+    ],
+    "chartLegend": [
+      {
+        "label": "Total",
+        "colorClass": "bg-chart-blue"
+      },
+      {
+        "label": "En proceso",
+        "colorClass": "bg-chart-yellow"
+      },
+      {
+        "label": "Válidas",
+        "colorClass": "bg-chart-green"
+      },
+      {
+        "label": "Retenidas",
+        "colorClass": "bg-chart-orange"
+      },
+      {
+        "label": "Bloqueadas",
+        "colorClass": "bg-chart-blocked"
+      }
+    ],
+    "metricCards": [
+      {
+        "id": "total_operaciones",
+        "title": "Total de operaciones",
+        "icon": "Layers",
+        "iconBg": "bg-chart-blue/15",
+        "iconColor": "text-chart-blue",
+        "iconBorder": "border-chart-blue/30",
+        "value": "26,07 K",
+        "total": "/ 19,74 M",
+        "sections": [
+          {
+            "title": "Estadísticas",
+            "items": [
+              {
+                "label": "Operaciones entregadas",
+                "value": "95.30%",
+                "barColor": "bg-chart-blue",
+                "percentage": "95.3%"
+              },
+              {
+                "label": "Operaciones en proceso",
+                "value": "3.24%",
+                "barColor": "bg-chart-blue",
+                "percentage": "3.24%"
+              },
+              {
+                "label": "Errores",
+                "value": "0.00%",
+                "barColor": "bg-chart-blue",
+                "percentage": "0%"
+              }
+            ]
+          },
+          {
+            "title": "Tiempos de proceso",
+            "isTable": true,
+            "headers": [
+              "Intervalo",
+              "Prom",
+              "Mín",
+              "Máx"
+            ],
+            "rows": [
+              {
+                "interval": "5 min",
+                "prom": "4.2 ms",
+                "min": "4.2 ms",
+                "max": "4.2 ms"
+              },
+              {
+                "interval": "15 min",
+                "prom": "4.8 ms",
+                "min": "4.8 ms",
+                "max": "4.8 ms"
+              },
+              {
+                "interval": "1 hora",
+                "prom": "5.1 ms",
+                "min": "5.1 ms",
+                "max": "5.1 ms"
+              },
+              {
+                "interval": "4 horas",
+                "prom": "5.4 ms",
+                "min": "5.4 ms",
+                "max": "5.4 ms"
+              }
+            ],
+            "highlightRows": true
+          }
+        ]
+      },
+      {
+        "id": "operaciones_retenidas",
+        "title": "Operaciones retenidas",
+        "icon": "AlertTriangle",
+        "iconBg": "bg-chart-orange/15",
+        "iconColor": "text-chart-orange",
+        "iconBorder": "border-chart-orange/30",
+        "value": "170",
+        "total": "/ 379,02 K",
+        "sections": [
+          {
+            "title": "Estadísticas",
+            "stacked": true,
+            "items": [
+              {
+                "label": "Tiempo promedio de revisión",
+                "value": "15.4 min"
+              },
+              {
+                "label": "Operaciones retenidas",
+                "value": "35"
+              }
+            ]
+          },
+          {
+            "title": "Motivo de retención",
+            "items": [
+              {
+                "label": "Monto excedido",
+                "value": "47.65%",
+                "barColor": "bg-chart-orange",
+                "percentage": "47.65%"
+              },
+              {
+                "label": "Frecuencia inusual",
+                "value": "35.52%",
+                "barColor": "bg-chart-orange",
+                "percentage": "35.52%"
+              },
+              {
+                "label": "Dispositivo nuevo",
+                "value": "16.83%",
+                "barColor": "bg-chart-orange",
+                "percentage": "16.83%"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "operaciones_bloqueadas",
+        "title": "Operaciones bloqueadas",
+        "icon": "ShieldAlert",
+        "iconBg": "bg-chart-blocked/15",
+        "iconColor": "text-chart-blocked",
+        "iconBorder": "border-chart-blocked/30",
+        "value": "52",
+        "total": "/ 192,00 K",
+        "sections": [
+          {
+            "title": "Motivo de retención",
+            "items": [
+              {
+                "label": "Lista negra",
+                "value": "38.40%",
+                "barColor": "bg-chart-blocked",
+                "percentage": "38.4%"
+              },
+              {
+                "label": "Reglas de IP",
+                "value": "36.53%",
+                "barColor": "bg-chart-blocked",
+                "percentage": "36.53%"
+              },
+              {
+                "label": "Alto Riesgo",
+                "value": "25.00%",
+                "barColor": "bg-chart-blocked",
+                "percentage": "25%"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notifications": [
+      {
+        "id": 1,
+        "title": "Operaciones retenidas pendientes esperando por revisión",
+        "description": "Hay 3 operaciones que se encuentran esperando por revisión desde hace más de 2 horas",
+        "iconBg": "bg-chart-orange/10",
+        "iconColor": "text-chart-orange",
+        "iconType": "Info"
+      },
+      {
+        "id": 2,
+        "title": "Actualización de reglas de la Blacklist exitosa",
+        "description": "Se agregó una nueva regla a la Blacklist para bloquear operaciones al documento V-123456789",
+        "iconBg": "bg-chart-blue/10",
+        "iconColor": "text-chart-blue",
+        "iconType": "Info"
+      }
+    ],
+    "chartData": {
+      "gridLines": [
+        20,
+        50,
+        80,
+        110,
+        140,
+        170
+      ],
+      "xAxisLabels": [
+        "14:00",
+        "15:00",
+        "17:00",
+        "19:00",
+        "21:00",
+        "23:00",
+        "01:00",
+        "03:00",
+        "05:00",
+        "07:00",
+        "09:00",
+        "11:00",
+        "14:00"
+      ],
+      "series": [
+        {
+          "id": "total",
+          "label": "Total",
+          "colorClass": "text-chart-blue",
+          "stroke": "#12679A",
+          "strokeWidth": 2,
+          "isDashed": false,
+          "path": "M 0 95 C 100 100, 100 50, 166 50 C 230 50, 230 135, 300 135 C 350 135, 380 135, 416 135 C 470 135, 480 165, 540 165 C 600 165, 610 165, 666 165 C 720 165, 750 100, 800 100 C 850 100, 870 120, 916 120 C 960 120, 980 30, 1000 30"
+        },
+        {
+          "id": "validas",
+          "label": "Válidas",
+          "colorClass": "text-chart-green",
+          "stroke": "#0F9949",
+          "strokeWidth": 3,
+          "isDashed": false,
+          "hasGlow": true,
+          "path": "M 0 110 C 100 115, 100 65, 166 65 C 230 65, 230 145, 300 145 C 350 145, 380 145, 416 145 C 470 145, 480 175, 540 175 C 600 175, 610 175, 666 175 C 720 175, 750 110, 800 110 C 850 110, 870 130, 916 130 C 960 130, 980 40, 1000 40"
+        },
+        {
+          "id": "retenidas",
+          "label": "Retenidas",
+          "colorClass": "text-chart-orange",
+          "stroke": "#CE6733",
+          "strokeWidth": 2,
+          "isDashed": false,
+          "path": "M 0 195 C 120 195, 140 185, 166 185 C 190 185, 220 198, 250 198 C 270 198, 300 190, 315 190 C 330 190, 360 198, 416 198 C 500 198, 600 198, 666 198 C 720 198, 760 185, 800 185 C 840 185, 880 198, 916 198 C 960 198, 980 198, 1000 198"
+        },
+        {
+          "id": "bloqueadas",
+          "label": "Bloqueadas",
+          "colorClass": "text-chart-blocked",
+          "stroke": "#CC3233",
+          "strokeWidth": 2,
+          "isDashed": false,
+          "path": "M 0 198 C 120 198, 140 190, 166 190 C 190 190, 220 199, 250 199 C 270 199, 300 195, 315 195 C 330 195, 360 199, 416 199 C 500 199, 600 199, 666 199 C 720 199, 760 190, 800 190 C 840 190, 880 199, 916 199 C 960 199, 980 199, 1000 199"
+        }
+      ]
+    }
+  },
+  "roles": [
+    {
+      "id": "role-001",
+      "nombre": "Administrador",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "26-11-2024 23:41:42.492",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Versiones": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Reportes": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Cuarentena": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Estadísticas": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Lista Negra": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Región": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Perfiles": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Definición de Reglas": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Reglas por Canal": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Definición de Excepciones": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Excepciones por Usuario": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Usuarios / Roles": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        },
+        "Auditoría": {
+          "ver": true,
+          "agregar": true,
+          "borrar": true,
+          "imprimir": true,
+          "editar": true,
+          "notificar": true,
+          "solicitar": true
+        }
+      }
+    },
+    {
+      "id": "role-002",
+      "nombre": "Auditoría",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "26-11-2024 23:20:39.861",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": true,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": true,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-003",
+      "nombre": "Coord Análisis Económico Gcia EE GGF",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "26-11-2024 23:20:39.861",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": true,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-004",
+      "nombre": "Coord Compensación GG SOB",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "15-01-2026 16:12:33.144",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": true,
+          "agregar": true,
+          "borrar": false,
+          "imprimir": false,
+          "editar": true,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-005",
+      "nombre": "Coord de G y S a Nominas Externas de SS Esp GGSOB",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "29-04-2025 10:56:04.351",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": true,
+          "agregar": true,
+          "borrar": false,
+          "imprimir": true,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-006",
+      "nombre": "Coord FF y OP M/E Gcia Tesoreria GGF",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "26-11-2024 23:20:39.861",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": true,
+          "agregar": true,
+          "borrar": false,
+          "imprimir": true,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-007",
+      "nombre": "Coord FF y OP M/N Gcia Tesoreria GG Finanzas",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "20-04-2026 16:11:14.986",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-008",
+      "nombre": "Coord M/M e I/F Gcia Tesoreria GG Finanzas",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "26-11-2024 23:20:39.861",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-009",
+      "nombre": "Coord Otros Medios de Pago GG Soporte OB",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "15-01-2026 16:13:53.845",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-010",
+      "nombre": "Coordinador comun med de pago Gcia SOF GG Finanzas",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "26-11-2024 23:20:39.861",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-011",
+      "nombre": "Coordinador Reg Oper Financ Gcia SOF GG Finanzas",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "26-11-2024 23:20:39.861",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-012",
+      "nombre": "Esp I de Compensacion GG Soporte OB",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "06-03-2025 10:32:54.361",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-013",
+      "nombre": "Esp I de G y S a Nomina Externa de SS Esp GGSOB",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "06-03-2025 10:44:49.106",
+      "fechaActualizacion": "06-03-2025 10:44:49.106",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    },
+    {
+      "id": "role-014",
+      "nombre": "Esp I FF y OP M/E Gcia Tesoreria GG Finanzas",
+      "estado": "Activo",
+      "plantilla": null,
+      "fechaCreacion": "26-11-2024 23:20:39.861",
+      "fechaActualizacion": "26-11-2024 23:20:39.861",
+      "permisos": {
+        "Vista Principal": {
+          "ver": true,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Versiones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reportes": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Cuarentena": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Estadísticas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Lista Negra": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Región": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Perfiles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Reglas": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Reglas por Canal": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Definición de Excepciones": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Excepciones por Usuario": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Usuarios / Roles": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        },
+        "Auditoría": {
+          "ver": false,
+          "agregar": false,
+          "borrar": false,
+          "imprimir": false,
+          "editar": false,
+          "notificar": false,
+          "solicitar": false
+        }
+      }
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "usr-001",
+      "nombre": "Sycom",
+      "usuario": "sycom",
+      "email": "sycom@sypago.com",
+      "password": "1234567",
+      "telefono": "+58 412-7834521",
+      "estado": "Activo",
+      "rol": "Administrador",
+      "rolId": "role-001",
+      "fechaCreacion": "26-11-2024 08:00:00.000",
+      "fechaActualizacion": "26-11-2024 08:00:00.000"
+    },
+    {
+      "id": "usr-002",
+      "nombre": "Carlos Rodríguez",
+      "usuario": "c.rodriguez",
+      "email": "c.rodriguez@sypago.com",
+      "password": "Xk9mP2vL",
+      "telefono": "+58 414-6291037",
+      "estado": "Activo",
+      "rol": "Auditoría",
+      "rolId": "role-002",
+      "fechaCreacion": "26-11-2024 09:15:00.000",
+      "fechaActualizacion": "15-01-2026 10:00:00.000"
+    },
+    {
+      "id": "usr-003",
+      "nombre": "María López",
+      "usuario": "m.lopez",
+      "email": "m.lopez@sypago.com",
+      "password": "Qr7tN4wB3s",
+      "telefono": "+58 416-3508274",
+      "estado": "Activo",
+      "rol": "Coord FF y OP M/E Gcia Tesoreria GGF",
+      "rolId": "role-006",
+      "fechaCreacion": "01-12-2024 10:30:00.000",
+      "fechaActualizacion": "01-12-2024 10:30:00.000"
+    },
+    {
+      "id": "usr-004",
+      "nombre": "Oscar",
+      "usuario": "oscar",
+      "email": "j.gonzalez@sypago.com",
+      "password": "12345678",
+      "telefono": "+58 424-9172643",
+      "estado": "Activo",
+      "rol": "Coord Compensación GG SOB",
+      "rolId": "role-004",
+      "fechaCreacion": "05-01-2025 11:00:00.000",
+      "fechaActualizacion": "20-04-2026 09:00:00.000"
+    },
+    {
+      "id": "usr-005",
+      "nombre": "Laura Pérez",
+      "usuario": "l.perez",
+      "email": "l.perez@sypago.com",
+      "password": "Zt3bF6nR",
+      "telefono": "+58 426-8045391",
+      "estado": "Inactivo",
+      "rol": "Auditoría",
+      "rolId": "role-002",
+      "fechaCreacion": "10-02-2025 14:00:00.000",
+      "fechaActualizacion": "10-02-2025 14:00:00.000"
+    },
+    {
+      "id": "usr-006",
+      "nombre": "Ricardo Torres",
+      "usuario": "r.torres",
+      "email": "r.torres@sypago.com",
+      "password": "Mv4pD9sK7x",
+      "telefono": "+58 412-5463910",
+      "estado": "Activo",
+      "rol": "Coord Otros Medios de Pago GG Soporte OB",
+      "rolId": "role-009",
+      "fechaCreacion": "15-03-2025 08:45:00.000",
+      "fechaActualizacion": "15-01-2026 12:00:00.000"
+    },
+    {
+      "id": "usr-007",
+      "nombre": "Sofía Ramírez",
+      "usuario": "s.ramirez",
+      "email": "s.ramirez@sypago.com",
+      "password": "Ln8eC2qW5j",
+      "telefono": "+58 414-2037864",
+      "estado": "Activo",
+      "rol": "Esp I de Compensacion GG Soporte OB",
+      "rolId": "role-012",
+      "fechaCreacion": "06-03-2025 10:00:00.000",
+      "fechaActualizacion": "06-03-2025 10:00:00.000"
+    },
+    {
+      "id": "usr-008",
+      "nombre": "Pedro Vásquez",
+      "usuario": "p.vasquez",
+      "email": "p.vasquez@sypago.com",
+      "password": "Bg6yA3hT9r",
+      "telefono": "+58 416-7129485",
+      "estado": "Activo",
+      "rol": "Coord Análisis Económico Gcia EE GGF",
+      "rolId": "role-003",
+      "fechaCreacion": "20-04-2025 15:30:00.000",
+      "fechaActualizacion": "20-04-2025 15:30:00.000"
+    },
+    {
+      "id": "usr-009",
+      "nombre": "Elena Morales",
+      "usuario": "e.morales",
+      "email": "e.morales@sypago.com",
+      "password": "Wf2uG7iO4d",
+      "telefono": "+58 424-3896102",
+      "estado": "Activo",
+      "rol": "Coord M/M e I/F Gcia Tesoreria GG Finanzas",
+      "rolId": "role-008",
+      "fechaCreacion": "01-05-2025 09:00:00.000",
+      "fechaActualizacion": "01-05-2025 09:00:00.000"
+    },
+    {
+      "id": "usr-010",
+      "nombre": "Fernando Díaz",
+      "usuario": "f.diaz",
+      "email": "f.diaz@sypago.com",
+      "password": "Ys5kE1rN8v",
+      "telefono": "+58 426-1574832",
+      "estado": "Inactivo",
+      "rol": "Coordinador comun med de pago Gcia SOF GG Finanzas",
+      "rolId": "role-010",
+      "fechaCreacion": "10-06-2025 11:00:00.000",
+      "fechaActualizacion": "10-06-2025 11:00:00.000"
+    }
+  ],
+  "operationChannels": [
+    {
+      "label": "Todos los canales",
+      "value": "todos"
+    },
+    {
+      "label": "App - Natural",
+      "value": "App - Natural"
+    },
+    {
+      "label": "Web - Natural",
+      "value": "Web - Natural"
+    },
+    {
+      "label": "Otro - Natural",
+      "value": "Otro - Natural"
+    },
+    {
+      "label": "App - Jurídico",
+      "value": "App - Jurídico"
+    },
+    {
+      "label": "Web - Jurídico",
+      "value": "Web - Jurídico"
+    },
+    {
+      "label": "Otro - Jurídico",
+      "value": "Otro - Jurídico"
+    }
+  ]
+}
