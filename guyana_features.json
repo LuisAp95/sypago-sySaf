@@ -1,0 +1,17 @@
+[
+  {
+    "type": "Polygon",
+    "arcs": [
+      [
+        -198,
+        -232,
+        232,
+        233
+      ]
+    ],
+    "id": "328",
+    "properties": {
+      "name": "Guyana"
+    }
+  }
+]

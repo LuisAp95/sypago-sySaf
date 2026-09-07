@@ -1,0 +1,251 @@
+{
+  "countries": [
+    {
+      "code": "VE",
+      "numericCode": "862",
+      "flag": "🇻🇪",
+      "name": "Venezuela",
+      "coordinates": [-66.5897, 6.4238],
+      "cities": [
+        { "name": "Caracas", "coordinates": [-66.9036, 10.4806] },
+        { "name": "Maracaibo", "coordinates": [-71.6406, 10.6427] },
+        { "name": "Valencia", "coordinates": [-68.0076, 10.1620] },
+        { "name": "Barquisimeto", "coordinates": [-69.3570, 10.0647] },
+        { "name": "Puerto Ordaz", "coordinates": [-62.7117, 8.3077] }
+      ]
+    },
+    {
+      "code": "US",
+      "numericCode": "840",
+      "flag": "🇺🇸",
+      "name": "Estados Unidos",
+      "coordinates": [-95.7129, 37.0902],
+      "cities": [
+        { "name": "Nueva York", "coordinates": [-74.0060, 40.7128] },
+        { "name": "Miami", "coordinates": [-80.1918, 25.7617] },
+        { "name": "Los Angeles", "coordinates": [-118.2437, 34.0522] },
+        { "name": "Houston", "coordinates": [-95.3698, 29.7604] },
+        { "name": "Chicago", "coordinates": [-87.6298, 41.8781] }
+      ]
+    },
+    {
+      "code": "ES",
+      "numericCode": "724",
+      "flag": "🇪🇸",
+      "name": "España",
+      "coordinates": [-3.7492, 40.4637],
+      "cities": [
+        { "name": "Madrid", "coordinates": [-3.7038, 40.4168] },
+        { "name": "Barcelona", "coordinates": [2.1686, 41.3874] },
+        { "name": "Valencia", "coordinates": [-0.3763, 39.4699] },
+        { "name": "Sevilla", "coordinates": [-5.9845, 37.3891] }
+      ]
+    },
+    {
+      "code": "FR",
+      "numericCode": "250",
+      "flag": "🇫🇷",
+      "name": "Francia",
+      "coordinates": [2.2137, 46.2276],
+      "cities": [
+        { "name": "París", "coordinates": [2.3522, 48.8566] },
+        { "name": "Lyon", "coordinates": [4.8357, 45.7640] },
+        { "name": "Marsella", "coordinates": [5.3698, 43.2965] }
+      ]
+    },
+    {
+      "code": "DE",
+      "numericCode": "276",
+      "flag": "🇩🇪",
+      "name": "Alemania",
+      "coordinates": [10.4515, 51.1657],
+      "cities": [
+        { "name": "Berlín", "coordinates": [13.4050, 52.5200] },
+        { "name": "Frankfurt", "coordinates": [8.6821, 50.1109] },
+        { "name": "Múnich", "coordinates": [11.5820, 48.1351] }
+      ]
+    },
+    {
+      "code": "GB",
+      "numericCode": "826",
+      "flag": "🇬🇧",
+      "name": "Reino Unido",
+      "coordinates": [-3.4360, 55.3781],
+      "cities": [
+        { "name": "Londres", "coordinates": [-0.1278, 51.5074] },
+        { "name": "Manchester", "coordinates": [-2.2426, 53.4808] }
+      ]
+    },
+    {
+      "code": "IT",
+      "numericCode": "380",
+      "flag": "🇮🇹",
+      "name": "Italia",
+      "coordinates": [12.5674, 41.8719],
+      "cities": [
+        { "name": "Roma", "coordinates": [12.4964, 41.9028] },
+        { "name": "Milán", "coordinates": [9.1900, 45.4642] }
+      ]
+    },
+    {
+      "code": "CA",
+      "numericCode": "124",
+      "flag": "🇨🇦",
+      "name": "Canadá",
+      "coordinates": [-106.3468, 56.1304],
+      "cities": [
+        { "name": "Toronto", "coordinates": [-79.3832, 43.6532] },
+        { "name": "Montreal", "coordinates": [-73.5673, 45.5017] },
+        { "name": "Vancouver", "coordinates": [-123.1207, 49.2827] }
+      ]
+    },
+    {
+      "code": "MX",
+      "numericCode": "484",
+      "flag": "🇲🇽",
+      "name": "México",
+      "coordinates": [-102.5528, 23.6345],
+      "cities": [
+        { "name": "Ciudad de México", "coordinates": [-99.1332, 19.4326] },
+        { "name": "Guadalajara", "coordinates": [-103.3496, 20.6597] },
+        { "name": "Monterrey", "coordinates": [-100.3161, 25.6866] }
+      ]
+    },
+    {
+      "code": "CO",
+      "numericCode": "170",
+      "flag": "🇨🇴",
+      "name": "Colombia",
+      "coordinates": [-74.2973, 4.5709],
+      "cities": [
+        { "name": "Bogotá", "coordinates": [-74.0721, 4.7110] },
+        { "name": "Medellín", "coordinates": [-75.5636, 6.2442] },
+        { "name": "Cali", "coordinates": [-76.5320, 3.4516] }
+      ]
+    },
+    {
+      "code": "AR",
+      "numericCode": "032",
+      "flag": "🇦🇷",
+      "name": "Argentina",
+      "coordinates": [-63.6167, -38.4161],
+      "cities": [
+        { "name": "Buenos Aires", "coordinates": [-58.3816, -34.6037] },
+        { "name": "Córdoba", "coordinates": [-64.1888, -31.4201] },
+        { "name": "Mendoza", "coordinates": [-68.8458, -32.8895] }
+      ]
+    },
+    {
+      "code": "BR",
+      "numericCode": "076",
+      "flag": "🇧🇷",
+      "name": "Brasil",
+      "coordinates": [-51.9253, -14.2350],
+      "cities": [
+        { "name": "São Paulo", "coordinates": [-46.6333, -23.5505] },
+        { "name": "Río de Janeiro", "coordinates": [-43.1729, -22.9068] },
+        { "name": "Brasilia", "coordinates": [-47.9292, -15.7801] }
+      ]
+    },
+    {
+      "code": "CL",
+      "numericCode": "152",
+      "flag": "🇨🇱",
+      "name": "Chile",
+      "coordinates": [-71.5430, -35.6751],
+      "cities": [
+        { "name": "Santiago", "coordinates": [-70.6693, -33.4489] },
+        { "name": "Valparaíso", "coordinates": [-71.6127, -33.0472] }
+      ]
+    },
+    {
+      "code": "PE",
+      "numericCode": "604",
+      "flag": "🇵🇪",
+      "name": "Perú",
+      "coordinates": [-75.0152, -9.1900],
+      "cities": [
+        { "name": "Lima", "coordinates": [-77.0428, -12.0464] },
+        { "name": "Arequipa", "coordinates": [-71.5375, -16.4090] }
+      ]
+    },
+    {
+      "code": "JP",
+      "numericCode": "392",
+      "flag": "🇯🇵",
+      "name": "Japón",
+      "coordinates": [138.2529, 36.2048],
+      "cities": [
+        { "name": "Tokio", "coordinates": [139.6917, 35.6895] },
+        { "name": "Osaka", "coordinates": [135.5023, 34.6937] }
+      ]
+    },
+    {
+      "code": "CN",
+      "numericCode": "156",
+      "flag": "🇨🇳",
+      "name": "China",
+      "coordinates": [104.1954, 35.8617],
+      "cities": [
+        { "name": "Pekín", "coordinates": [116.4074, 39.9042] },
+        { "name": "Shanghái", "coordinates": [121.4737, 31.2304] },
+        { "name": "Shenzhen", "coordinates": [114.0579, 22.5431] }
+      ]
+    },
+    {
+      "code": "RU",
+      "numericCode": "643",
+      "flag": "🇷🇺",
+      "name": "Rusia",
+      "coordinates": [105.3188, 61.5240],
+      "cities": [
+        { "name": "Moscú", "coordinates": [37.6173, 55.7558] },
+        { "name": "San Petersburgo", "coordinates": [30.3351, 59.9343] }
+      ]
+    },
+    {
+      "code": "NG",
+      "numericCode": "566",
+      "flag": "🇳🇬",
+      "name": "Nigeria",
+      "coordinates": [8.6753, 9.0820],
+      "cities": [
+        { "name": "Lagos", "coordinates": [3.3792, 6.5244] },
+        { "name": "Abuya", "coordinates": [7.3986, 9.0765] }
+      ]
+    },
+    {
+      "code": "ZA",
+      "numericCode": "710",
+      "flag": "🇿🇦",
+      "name": "Sudáfrica",
+      "coordinates": [22.9375, -30.5595],
+      "cities": [
+        { "name": "Johannesburgo", "coordinates": [28.0473, -26.2041] },
+        { "name": "Ciudad del Cabo", "coordinates": [18.4241, -33.9249] }
+      ]
+    },
+    {
+      "code": "AU",
+      "numericCode": "036",
+      "flag": "🇦🇺",
+      "name": "Australia",
+      "coordinates": [133.7751, -25.2744],
+      "cities": [
+        { "name": "Sídney", "coordinates": [151.2093, -33.8688] },
+        { "name": "Melbourne", "coordinates": [144.9631, -37.8136] }
+      ]
+    },
+    {
+      "code": "AE",
+      "numericCode": "784",
+      "flag": "🇦🇪",
+      "name": "Emiratos Árabes Unidos",
+      "coordinates": [53.8478, 23.4241],
+      "cities": [
+        { "name": "Dubái", "coordinates": [55.2708, 25.2048] },
+        { "name": "Abu Dabi", "coordinates": [54.3773, 24.4539] }
+      ]
+    }
+  ]
+}

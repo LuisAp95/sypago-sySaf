@@ -1,0 +1,101 @@
+{
+  "kpiTrends": {
+    "24h": {
+      "tasaRechazo":      { "trend": "-0.05%", "trendDir": "down", "trendLabel": "vs anteriores 24h",    "goodTrend": true  },
+      "volumen":          { "trend": "+2.3%",  "trendDir": "up",   "trendLabel": "vs anteriores 24h",    "goodTrend": true  },
+      "falsosPositivos":  { "trend": "-5.1%",  "trendDir": "down", "trendLabel": "vs anteriores 24h",    "goodTrend": true  },
+      "altoRiesgo":       { "trend": null,      "trendDir": null,   "trendLabel": null,                   "goodTrend": null  }
+    },
+    "7d": {
+      "tasaRechazo":      { "trend": "+0.1%",  "trendDir": "up",   "trendLabel": "vs 7 días anteriores", "goodTrend": false },
+      "volumen":          { "trend": "+1.8%",  "trendDir": "up",   "trendLabel": "vs 7 días anteriores", "goodTrend": true  },
+      "falsosPositivos":  { "trend": "+3.2%",  "trendDir": "up",   "trendLabel": "vs 7 días anteriores", "goodTrend": false },
+      "altoRiesgo":       { "trend": null,      "trendDir": null,   "trendLabel": null,                   "goodTrend": null  }
+    },
+    "30d": {
+      "tasaRechazo":      { "trend": "-0.1%",  "trendDir": "down", "trendLabel": "vs anteriores 30 días","goodTrend": true  },
+      "volumen":          { "trend": "+2.3%",  "trendDir": "up",   "trendLabel": "vs anteriores 30 días","goodTrend": true  },
+      "falsosPositivos":  { "trend": "-5.1%",  "trendDir": "down", "trendLabel": "vs anteriores 30 días","goodTrend": true  },
+      "altoRiesgo":       { "trend": null,      "trendDir": null,   "trendLabel": null,                   "goodTrend": null  }
+    }
+  },
+
+  "ruleDistribution": {
+    "24h": [
+      { "label": "Comportamiento",  "pct": 40, "color": "#eab308", "count": 89  },
+      { "label": "Límites Dinero",  "pct": 37, "color": "#f97316", "count": 82  },
+      { "label": "Lista Negra",     "pct": 9,  "color": "#3b82f6", "count": 20  },
+      { "label": "Geolocalización", "pct": 9,  "color": "#06b6d4", "count": 19  },
+      { "label": "Otros",           "pct": 5,  "color": "#6b7280", "count": 12  }
+    ],
+    "7d": [
+      { "label": "Geolocalización", "pct": 38, "color": "#06b6d4", "count": 591 },
+      { "label": "Límites Dinero",  "pct": 31, "color": "#f97316", "count": 482 },
+      { "label": "Comportamiento",  "pct": 18, "color": "#eab308", "count": 280 },
+      { "label": "Lista Negra",     "pct": 10, "color": "#3b82f6", "count": 155 },
+      { "label": "Otros",           "pct": 3,  "color": "#6b7280", "count": 46  }
+    ],
+    "30d": [
+      { "label": "Geolocalización", "pct": 40, "color": "#06b6d4", "count": 2680 },
+      { "label": "Límites Dinero",  "pct": 29, "color": "#f97316", "count": 1943 },
+      { "label": "Comportamiento",  "pct": 18, "color": "#eab308", "count": 1206 },
+      { "label": "Lista Negra",     "pct": 10, "color": "#3b82f6", "count": 670  },
+      { "label": "Otros",           "pct": 3,  "color": "#6b7280", "count": 201  }
+    ]
+  },
+
+  "volumeTrendChart": {
+    "24h": {
+      "title": "Tendencia de Volumen vs. Rechazos (24h)",
+      "xAxisLabels": ["14:00","15:00","17:00","19:00","21:00","23:00","01:00","03:00","05:00","07:00","09:00","11:00","14:00"],
+      "yAxisLabels": ["26K","20K","15K","10K","5K","0"],
+      "totalPath":    "M 0 95 C 100 100, 100 50, 166 50 C 230 50, 230 135, 300 135 C 350 135, 380 135, 416 135 C 470 135, 480 165, 540 165 C 600 165, 610 165, 666 165 C 720 165, 750 100, 800 100 C 850 100, 870 120, 916 120 C 960 120, 980 30, 1000 30",
+      "rechazosPath": "M 0 195 C 120 195, 140 185, 166 185 C 190 185, 220 198, 250 198 C 270 198, 300 190, 315 190 C 330 190, 360 198, 416 198 C 500 198, 600 198, 666 198 C 720 198, 760 185, 800 185 C 840 185, 880 198, 916 198 C 960 198, 980 198, 1000 198"
+    },
+    "7d": {
+      "title": "Tendencia de Volumen vs. Rechazos (7 Días)",
+      "xAxisLabels": ["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"],
+      "yAxisLabels": ["182K","140K","100K","60K","20K","0"],
+      "totalPath":    "M 0 90 C 100 130, 100 50, 166 70 C 230 70, 230 150, 300 150 C 350 150, 380 130, 416 130 C 470 130, 480 170, 540 170 C 600 170, 610 90, 666 90 C 720 90, 750 50, 800 50 C 850 50, 870 70, 916 70 C 960 70, 980 50, 1000 50",
+      "rechazosPath": "M 0 180 C 100 190, 100 170, 166 175 C 230 175, 230 195, 300 195 C 350 195, 380 190, 416 190 C 470 190, 480 200, 540 200 C 600 200, 610 180, 666 180 C 720 180, 750 170, 800 170 C 850 170, 870 175, 916 175 C 960 175, 980 170, 1000 170"
+    },
+    "30d": {
+      "title": "Tendencia de Volumen vs. Rechazos (30 Días)",
+      "xAxisLabels": ["Sem 1","Sem 2","Sem 3","Sem 4"],
+      "yAxisLabels": ["780K","600K","400K","200K","100K","0"],
+      "totalPath":    "M 0 80 C 100 60, 100 100, 166 90 C 230 90, 230 50, 300 50 C 350 50, 380 60, 416 60 C 470 60, 480 40, 540 40 C 600 40, 610 80, 666 80 C 720 80, 750 100, 800 100 C 850 100, 870 70, 916 70 C 960 70, 980 60, 1000 60",
+      "rechazosPath": "M 0 170 C 100 165, 100 175, 166 172 C 230 172, 230 163, 300 163 C 350 163, 380 165, 416 165 C 470 165, 480 160, 540 160 C 600 160, 610 170, 666 170 C 720 170, 750 175, 800 175 C 850 175, 870 167, 916 167 C 960 167, 980 165, 1000 165"
+    }
+  },
+
+  "highValueAlerts": {
+    "24h": [
+      { "id": "1599GA8AC662", "cliente": "Corp. Financiera A",   "fecha": "Hoy, 05:11", "monto": "19.164,04", "canal": "Web - Natural",  "reglaDetonada": "Límite Dinero",  "puntuacion": 9.2, "estado": "Bloqueada" },
+      { "id": "1599GA8AC675", "cliente": "Inversora Delta C.A.", "fecha": "Hoy, 19:46", "monto": "17.663,97", "canal": "Otro - Natural", "reglaDetonada": "Comportamiento", "puntuacion": 8.5, "estado": "Bloqueada" },
+      { "id": "1599GA8AC673", "cliente": "M. López (Natural)",   "fecha": "Hoy, 05:09", "monto": "11.562,72", "canal": "App - Natural",  "reglaDetonada": "Límite Dinero",  "puntuacion": 7.8, "estado": "Retenida"  },
+      { "id": "1599GA8AC671", "cliente": "Syscom Web S.A.",      "fecha": "Hoy, 16:08", "monto": "12.428,72", "canal": "Web - Jurídico", "reglaDetonada": "Geolocalización","puntuacion": 8.1, "estado": "Bloqueada" }
+    ],
+    "7d": [
+      { "id": "1599GA8AC662", "cliente": "Corp. Financiera A",   "fecha": "28/07, 05:11", "monto": "19.164,04", "canal": "Web - Natural",   "reglaDetonada": "Límite Dinero",  "puntuacion": 9.2, "estado": "Bloqueada" },
+      { "id": "1599GA8AC668", "cliente": "Petro Dev Corp.",      "fecha": "26/07, 07:08", "monto": "19.094,03", "canal": "Web - Natural",   "reglaDetonada": "Comportamiento", "puntuacion": 8.9, "estado": "Bloqueada" },
+      { "id": "1599GA8AC675", "cliente": "Inversora Delta C.A.", "fecha": "23/07, 19:46", "monto": "17.663,97", "canal": "Otro - Natural",  "reglaDetonada": "Comportamiento", "puntuacion": 8.5, "estado": "Bloqueada" },
+      { "id": "1599GA8AC615", "cliente": "R. Torres (Natural)",  "fecha": "24/07, 20:09", "monto": "16.759,75", "canal": "Otro - Natural",  "reglaDetonada": "Límite Dinero",  "puntuacion": 7.4, "estado": "Retenida"  },
+      { "id": "1599GA8AC623", "cliente": "Constructora MG",      "fecha": "04/07, 03:06", "monto": "14.750,76", "canal": "Web - Jurídico",  "reglaDetonada": "Geolocalización","puntuacion": 8.4, "estado": "Bloqueada" },
+      { "id": "1599GA8AC671", "cliente": "Syscom Web S.A.",      "fecha": "23/07, 16:08", "monto": "12.428,72", "canal": "Web - Jurídico",  "reglaDetonada": "Geolocalización","puntuacion": 8.1, "estado": "Bloqueada" },
+      { "id": "1599GA8AC670", "cliente": "Finanzas VE C.A.",     "fecha": "01/07, 05:12", "monto": "11.778,52", "canal": "App - Jurídico",  "reglaDetonada": "Lista Negra",    "puntuacion": 9.6, "estado": "Bloqueada" },
+      { "id": "1599GA8AC673", "cliente": "M. López (Natural)",   "fecha": "24/07, 05:09", "monto": "11.562,72", "canal": "App - Natural",   "reglaDetonada": "Límite Dinero",  "puntuacion": 7.8, "estado": "Retenida"  }
+    ],
+    "30d": [
+      { "id": "1599GA8AC662", "cliente": "Corp. Financiera A",   "fecha": "28/07, 05:11", "monto": "19.164,04", "canal": "Web - Natural",   "reglaDetonada": "Límite Dinero",  "puntuacion": 9.2, "estado": "Bloqueada" },
+      { "id": "1599GA8AC668", "cliente": "Petro Dev Corp.",      "fecha": "26/07, 07:08", "monto": "19.094,03", "canal": "Web - Natural",   "reglaDetonada": "Comportamiento", "puntuacion": 8.9, "estado": "Bloqueada" },
+      { "id": "1599GA8AC624", "cliente": "SYSCOM C.A.",          "fecha": "05/07, 14:51", "monto": "18.643,13", "canal": "Otro - Jurídico", "reglaDetonada": "Límite Dinero",  "puntuacion": 9.1, "estado": "Bloqueada" },
+      { "id": "1599GA8AC675", "cliente": "Inversora Delta C.A.", "fecha": "23/07, 19:46", "monto": "17.663,97", "canal": "Otro - Natural",  "reglaDetonada": "Comportamiento", "puntuacion": 8.5, "estado": "Bloqueada" },
+      { "id": "1599GA8AC615", "cliente": "R. Torres (Natural)",  "fecha": "24/07, 20:09", "monto": "16.759,75", "canal": "Otro - Natural",  "reglaDetonada": "Límite Dinero",  "puntuacion": 7.4, "estado": "Retenida"  },
+      { "id": "1599GA8AC665", "cliente": "Grupo Méndez S.A.",    "fecha": "05/07, 21:43", "monto": "19.249,70", "canal": "Web - Jurídico",  "reglaDetonada": "Geolocalización","puntuacion": 7.9, "estado": "Retenida"  },
+      { "id": "1599GA8AC623", "cliente": "Constructora MG",      "fecha": "04/07, 03:06", "monto": "14.750,76", "canal": "Web - Jurídico",  "reglaDetonada": "Geolocalización","puntuacion": 8.4, "estado": "Bloqueada" },
+      { "id": "1599GA8AC671", "cliente": "Syscom Web S.A.",      "fecha": "23/07, 16:08", "monto": "12.428,72", "canal": "Web - Jurídico",  "reglaDetonada": "Geolocalización","puntuacion": 8.1, "estado": "Bloqueada" },
+      { "id": "1599GA8AC670", "cliente": "Finanzas VE C.A.",     "fecha": "01/07, 05:12", "monto": "11.778,52", "canal": "App - Jurídico",  "reglaDetonada": "Lista Negra",    "puntuacion": 9.6, "estado": "Bloqueada" },
+      { "id": "1599GA8AC673", "cliente": "M. López (Natural)",   "fecha": "24/07, 05:09", "monto": "11.562,72", "canal": "App - Natural",   "reglaDetonada": "Límite Dinero",  "puntuacion": 7.8, "estado": "Retenida"  }
+    ]
+  }
+}
