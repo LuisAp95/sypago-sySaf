@@ -100,15 +100,6 @@ export const ProfilesView: React.FC = () => {
       )
     },
     {
-      header: 'Puntuación de Riesgo',
-      accessorKey: 'riskScore',
-      cell: (item) => (
-        <span className={`px-2.5 py-1 rounded-md text-xs font-medium border ${getSecurityColor(item.securityLevel)}`}>
-          Riesgo: {item.riskScore}
-        </span>
-      )
-    },
-    {
       header: 'Última IP / Seguridad',
       accessorKey: 'lastIp',
       className: 'text-right',

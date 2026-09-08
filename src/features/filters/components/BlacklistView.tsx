@@ -8,6 +8,7 @@ import { Checkbox } from '@/components/ui/Checkbox';
 import { DataGrid, type ColumnDef } from '@/components/ui/DataGrid';
 import { Eye } from 'lucide-react';
 import { BlacklistDetailModal } from './BlacklistDetailModal';
+import { AddBlacklistModal } from './AddBlacklistModal';
 import { ConfirmDialog } from '@/components/ui/ConfirmDialog';
 import { auditService } from '@/features/administration';
 
@@ -38,6 +39,7 @@ export const BlacklistView: React.FC = () => {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
   const [selectedItemForDetail, setSelectedItemForDetail] = useState<BlacklistItem | null>(null);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [confirmDialog, setConfirmDialog] = useState<{
     isOpen: boolean;
     type: 'activate' | 'deactivate';
@@ -188,6 +190,7 @@ export const BlacklistView: React.FC = () => {
         showSearch
         showFilter
         showAdd
+        onAddClick={() => setIsAddModalOpen(true)}
         showCopy
       />
 
@@ -243,6 +246,12 @@ export const BlacklistView: React.FC = () => {
         isOpen={isDetailModalOpen}
         onClose={() => setIsDetailModalOpen(false)}
         item={selectedItemForDetail}
+      />
+
+      <AddBlacklistModal
+        isOpen={isAddModalOpen}
+        onClose={() => setIsAddModalOpen(false)}
+        onAdd={(newItem) => setItems(prev => [newItem, ...prev])}
       />
 
       <ConfirmDialog

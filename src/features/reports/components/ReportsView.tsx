@@ -66,6 +66,7 @@ export const ReportsView: React.FC = () => {
       accessorKey: 'receiverAccount',
       cell: (item) => maskAccountNumber(item.receiverAccount)
     },
+    { header: 'Canal', accessorKey: 'channel' },
     { header: 'Monto', accessorKey: 'amount' },
     { header: 'Tiempo de Proceso', accessorKey: 'processTime' }
   ];

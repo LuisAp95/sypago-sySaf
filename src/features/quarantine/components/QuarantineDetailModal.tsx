@@ -2,10 +2,6 @@ import React from 'react';
 import { Modal } from '@/components/ui/Modal';
 import { Badge } from '@/components/ui/Badge';
 import { 
-  Hash, 
-  User, 
-  FileText, 
-  DollarSign, 
   ShieldAlert, 
   AlertTriangle, 
   Link2, 
@@ -86,54 +82,31 @@ export const QuarantineDetailModal: React.FC<QuarantineDetailModalProps> = ({
     >
       <div className="flex flex-col gap-4">
         {/* Top Info Row */}
-        <div className="grid grid-cols-4 gap-4 p-4 rounded-xl border border-[#333235] bg-[#232225]">
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#2A2B3D]">
-              <Hash className="w-5 h-5 text-[#818CF8]" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[12px] text-[#9E9D9F] font-medium">ID</span>
-              <span className="text-sm font-bold text-white">{item.id}</span>
-            </div>
+        <div className="grid grid-cols-4 p-4 rounded-xl border border-[#333235] bg-[#232225] divide-x divide-[#333235]">
+          <div className="flex flex-col px-4 first:pl-2">
+            <span className="text-[12px] text-[#9E9D9F] font-medium mb-1">ID de Registro:</span>
+            <span className="text-sm font-bold text-white">{item.id}</span>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#2A2B3D]">
-              <User className="w-5 h-5 text-[#818CF8]" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[12px] text-[#9E9D9F] font-medium">Usuario</span>
-              <span className="text-sm font-bold text-white">{item.user}</span>
-            </div>
+          <div className="flex flex-col px-4">
+            <span className="text-[12px] text-[#9E9D9F] font-medium mb-1">Usuario:</span>
+            <span className="text-sm font-bold text-white">{item.user}</span>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#2A2B3D]">
-              <FileText className="w-5 h-5 text-[#818CF8]" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[12px] text-[#9E9D9F] font-medium">Documento</span>
-              <span className="text-sm font-bold text-white">{item.document}</span>
-            </div>
+          <div className="flex flex-col px-4">
+            <span className="text-[12px] text-[#9E9D9F] font-medium mb-1">Documento:</span>
+            <span className="text-sm font-bold text-white">{item.document}</span>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#2A2B3D]">
-              <DollarSign className="w-5 h-5 text-[#818CF8]" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[12px] text-[#9E9D9F] font-medium">Monto</span>
-              <span className="text-sm font-bold text-white">
-                {item.amount?.includes('Bs') ? item.amount : `${item.amount} Bs.`}
-              </span>
-            </div>
+          <div className="flex flex-col px-4 last:pr-2">
+            <span className="text-[12px] text-[#9E9D9F] font-medium mb-1">Monto:</span>
+            <span className="text-sm font-bold text-white">
+              {item.amount?.includes('Bs') ? item.amount : `${item.amount} Bs.`}
+            </span>
           </div>
         </div>
 
         {/* Risk Level Row */}
-        <div className="flex items-center gap-4 p-4 rounded-xl border border-[#333235] bg-[#232225]">
-          <div className={`flex items-center justify-center w-10 h-10 rounded-lg ${isCritical ? 'bg-[#3D2B2B]' : 'bg-[#333235]'}`}>
-            <ShieldAlert className={`w-5 h-5 ${isCritical ? 'text-[#EF4444]' : 'text-[#9E9D9F]'}`} />
-          </div>
-          <div className="flex flex-col items-start gap-1">
-            <span className="text-[12px] text-[#9E9D9F] font-medium">Nivel de Riesgo</span>
+        <div className="flex items-center p-4 rounded-xl border border-[#333235] bg-[#232225]">
+          <div className="flex flex-col items-start gap-2">
+            <span className="text-base text-gray-200 font-bold">Nivel de Riesgo</span>
             <Badge variant={item.risk as any}>{item.risk}</Badge>
           </div>
         </div>

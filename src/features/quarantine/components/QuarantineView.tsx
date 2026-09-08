@@ -19,6 +19,7 @@ interface QuarantineItem {
   reason: string;
   waitTime: string;
   amount: string;
+  channel?: string;
 }
 
 // Configuración de las tarjetas de estadísticas de riesgo
@@ -171,7 +172,7 @@ export const QuarantineView: React.FC = () => {
     },
     {
       header: 'ID',
-      className: 'w-[15%]',
+      className: 'w-[12%]',
       cell: (item) => {
         const status = actionedItems[item.id];
         return (
@@ -187,14 +188,15 @@ export const QuarantineView: React.FC = () => {
         );
       }
     },
-    { header: 'Usuario', accessorKey: 'user', className: 'w-[15%]' },
+    { header: 'Usuario', accessorKey: 'user', className: 'w-[12%]' },
     {
       header: 'Riesgo',
       accessorKey: 'risk',
       className: 'w-[10%]',
       cell: (item) => <Badge variant={item.risk as any}>{item.risk}</Badge>
     },
-    { header: 'Documento', accessorKey: 'document', className: 'w-[15%]' },
+    { header: 'Documento', accessorKey: 'document', className: 'w-[12%]' },
+    { header: 'Canal', accessorKey: 'channel', className: 'w-[12%]' },
     { header: 'Motivo', accessorKey: 'reason', className: 'w-[15%]' },
     {
       header: 'Tiempo en Espera',

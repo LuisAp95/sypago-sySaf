@@ -11,7 +11,8 @@ import { RulesDefinition, RulesChannel } from '@/features/rules';
 import { QuarantineView } from '@/features/quarantine';
 import { BlacklistView, RegionView, ProfilesView } from '@/features/filters';
 import { ExceptionsDefinition, UserExceptions } from '@/features/exceptions';
-import { ReportsView, StatsView } from '@/features/reports';
+import { ReportsView } from '@/features/reports';
+import { StatsView } from '@/features/stats';
 import { UserRolesView, AuditView } from '@/features/administration';
 
 const queryClient = new QueryClient({

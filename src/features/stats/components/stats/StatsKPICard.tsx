@@ -48,28 +48,13 @@ export const StatsKPICard: React.FC<Props> = ({ kpi, index }) => {
       </div>
 
       {/* Valor principal */}
-      <div className="relative">
-        <div className="text-2xl font-bold text-white tracking-tight leading-none">
+      <div className="relative my-2 flex-1 flex flex-col justify-center gap-1.5">
+        <div className="text-3xl font-bold text-white tracking-tight leading-none">
           {kpi.value}
         </div>
         {kpi.subValue && (
-          <div className="text-[10px] text-gray-500 mt-0.5">{kpi.subValue}</div>
+          <div className="text-lg font-semibold text-gray-200 leading-tight">{kpi.subValue}</div>
         )}
-      </div>
-
-      {/* Sparkline */}
-      <div className="relative h-9 flex items-end gap-[2px]">
-        {kpi.sparkline.map((h, i) => (
-          <div
-            key={i}
-            className="flex-1 rounded-[2px] transition-all duration-500"
-            style={{
-              height: `${h}%`,
-              backgroundColor: sparkColor,
-              opacity: 0.12 + (i / kpi.sparkline.length) * 0.65,
-            }}
-          />
-        ))}
       </div>
 
       {/* Trend */}

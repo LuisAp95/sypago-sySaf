@@ -124,6 +124,17 @@
       ]
     },
     {
+      "code": "PR",
+      "numericCode": "630",
+      "flag": "🇵🇷",
+      "name": "Puerto Rico",
+      "coordinates": [-66.5901, 18.2208],
+      "cities": [
+        { "name": "San Juan", "coordinates": [-66.1057, 18.4655] },
+        { "name": "Ponce", "coordinates": [-66.6141, 18.0111] }
+      ]
+    },
+    {
       "code": "AR",
       "numericCode": "032",
       "flag": "🇦🇷",

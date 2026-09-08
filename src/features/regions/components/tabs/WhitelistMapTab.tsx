@@ -20,6 +20,8 @@ const WhitelistCard: React.FC<{
 }> = ({ entry, onRemove, onToggle }) => {
   const isActive = entry.status === 'Activo';
   const isByCity = !!entry.city;
+  const countryObj = geoData.countries.find((c) => c.name === entry.country);
+  const flag = countryObj?.flag;
 
   return (
     <div
@@ -40,7 +42,9 @@ const WhitelistCard: React.FC<{
             )}
           </div>
           <div className="min-w-0">
-            <p className="text-sm font-semibold text-white truncate">{entry.country}</p>
+            <p className="text-sm font-semibold text-white truncate">
+              {flag ? `${flag} ` : ''}{entry.country}
+            </p>
             {entry.city && <p className="text-xs text-gray-400 truncate">{entry.city}</p>}
           </div>
         </div>
@@ -90,6 +94,8 @@ const RiskZoneCard: React.FC<{
   const isActive = entry.status === 'Activo';
   const isByCity = !!entry.city;
   const isCritical = entry.riskLevel === 'Crítico';
+  const countryObj = geoData.countries.find((c) => c.name === entry.country);
+  const flag = countryObj?.flag;
 
   return (
     <div
@@ -110,7 +116,9 @@ const RiskZoneCard: React.FC<{
             )}
           </div>
           <div className="min-w-0">
-            <p className="text-sm font-semibold text-white truncate">{entry.country}</p>
+            <p className="text-sm font-semibold text-white truncate">
+              {flag ? `${flag} ` : ''}{entry.country}
+            </p>
             {entry.city && <p className="text-xs text-gray-400 truncate">{entry.city}</p>}
           </div>
         </div>
@@ -153,7 +161,7 @@ export const WhitelistMapTab: React.FC = () => {
   // Whitelist State
   const { entries, addEntry, removeEntry, toggleStatus } = useWhitelist();
   // Risk Zones State
-  const { riskEntries, addRiskEntry, removeRiskEntry, toggleRiskStatus } = useRiskZones();
+  const { riskEntries, addRiskEntry } = useRiskZones();
 
   // Form State
   const [selectedCountry, setSelectedCountry] = useState('');

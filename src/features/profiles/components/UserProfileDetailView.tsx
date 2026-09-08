@@ -23,11 +23,19 @@ export const UserProfileDetailView: React.FC<UserProfileDetailViewProps> = ({ us
       id: `reg-${Date.now()}`,
       status: 'Vigente',
     };
-    setRegionsList((prev) => [createdRegion, ...prev]);
+    setRegionsList((prev) => {
+      const newList = [createdRegion, ...prev];
+      user.allowedRegions = newList; // Muta el mock en memoria
+      return newList;
+    });
   };
 
   const handleRemoveRegion = (id: string) => {
-    setRegionsList((prev) => prev.filter((r) => r.id !== id));
+    setRegionsList((prev) => {
+      const newList = prev.filter((r) => r.id !== id);
+      user.allowedRegions = newList; // Muta el mock en memoria
+      return newList;
+    });
   };
 
   return (

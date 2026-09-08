@@ -8,18 +8,18 @@ interface StatsRetentionBarsProps {
 
 function ReasonList({ title, items, baseColor }: { title: string; items: RetentionReason[]; baseColor: string }) {
   return (
-    <div>
-      <h4 className="text-xs font-semibold mb-3" style={{ color: baseColor }}>{title}</h4>
-      <div className="space-y-3">
+    <div className="flex flex-col">
+      <h4 className="text-sm font-semibold mb-5" style={{ color: baseColor }}>{title}</h4>
+      <div className="space-y-5 flex-1">
         {items.map((item, i) => (
           <div key={i}>
-            <div className="flex justify-between items-center mb-1">
-              <span className="text-[11px] text-gray-300">{item.label}</span>
-              <span className="text-[11px] font-semibold tabular-nums" style={{ color: baseColor }}>
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-[13px] font-medium text-gray-300">{item.label}</span>
+              <span className="text-[13px] font-bold tabular-nums" style={{ color: baseColor }}>
                 {item.value}
               </span>
             </div>
-            <div className="h-1.5 bg-[#2a2d35] rounded-full overflow-hidden">
+            <div className="h-2.5 bg-[#2a2d35] rounded-full overflow-hidden">
               <div
                 className="h-full rounded-full transition-all duration-700"
                 style={{
@@ -38,13 +38,13 @@ function ReasonList({ title, items, baseColor }: { title: string; items: Retenti
 
 export const StatsRetentionBars: React.FC<StatsRetentionBarsProps> = ({ retentionReasons, blockReasons }) => {
   return (
-    <div className="bg-tertiary border border-[#3A393C] rounded-2xl p-5">
-      <div className="mb-4">
-        <h3 className="text-sm font-semibold text-white">Motivos de Retención y Bloqueo</h3>
-        <p className="text-[11px] text-gray-400 mt-0.5">Principales causas de intervención en el período</p>
+    <div className="bg-tertiary border border-[#3A393C] rounded-2xl p-6 flex flex-col h-full min-h-[300px]">
+      <div className="mb-6">
+        <h3 className="text-base font-semibold text-white">Motivos de Retención y Bloqueo</h3>
+        <p className="text-xs text-gray-400 mt-1">Principales causas de intervención en el período</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 flex-1">
         {retentionReasons.length > 0 && (
           <ReasonList
             title="Retención"
@@ -60,7 +60,7 @@ export const StatsRetentionBars: React.FC<StatsRetentionBarsProps> = ({ retentio
           />
         )}
         {!retentionReasons.length && !blockReasons.length && (
-          <p className="text-gray-500 text-sm col-span-2 text-center py-4">Sin datos disponibles</p>
+          <p className="text-gray-500 text-sm col-span-2 text-center py-4 flex-1">Sin datos disponibles</p>
         )}
       </div>
     </div>

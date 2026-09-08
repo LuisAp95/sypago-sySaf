@@ -50,9 +50,10 @@ const openPdfPrintWindow = (title: string, contentHtml: string) => {
           padding: 20px 24px;
         }
         .header-banner {
-          background-color: #1a191c;
-          color: #ffffff;
+          background-color: #ffffff;
+          color: #0f172a;
           padding: 16px 20px;
+          border: 1px solid #e2e8f0;
           border-left: 6px solid #4f46e5;
           border-radius: 8px;
           display: flex;
@@ -67,21 +68,21 @@ const openPdfPrintWindow = (title: string, contentHtml: string) => {
           font-weight: 800;
           letter-spacing: 0.5px;
           margin: 0 0 4px 0;
-          color: #ffffff;
+          color: #0f172a;
         }
         .header-subtitle {
           font-size: 11px;
-          color: #a1a1aa;
+          color: #64748b;
           margin: 0;
         }
         .header-meta {
           text-align: right;
           font-size: 11px;
-          color: #e0e7ff;
+          color: #475569;
           line-height: 1.5;
         }
         .header-meta strong {
-          color: #818cf8;
+          color: #4f46e5;
         }
         .section-title {
           font-size: 15px;

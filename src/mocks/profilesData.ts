@@ -91,8 +91,19 @@ export interface UserProfile {
   networkIntegrityData: NetworkIntegrityInfo;
 }
 
-const names = ['Alejandro Rodriguez', 'Juan Pérez', 'María García', 'Acme Corporation S.A.', 'John Doe', 'María Mantez', 'Carlos Gómez', 'Pedro Pascal', 'Inversiones C.A.', 'Luisa Fernández', 'Global Tech LLC'];
-const cedulas = ['V-12345678', 'V-87654321', 'J-00000000-1', 'E-11223344', 'V-99887766', 'J-12345678-9', 'E-55667788', 'V-22334455', 'V-11223344', 'J-98765432-1'];
+const firstNames = ['Alejandro', 'Juan', 'María', 'Carlos', 'Pedro', 'Luisa', 'José', 'Ana', 'Luis', 'Carmen', 'Jorge', 'Manuel', 'Rosa', 'Miguel', 'Francisco'];
+const lastNames = ['Rodriguez', 'Pérez', 'García', 'Gómez', 'Pascal', 'Fernández', 'López', 'Martínez', 'Sánchez', 'Díaz', 'Torres', 'Ruiz', 'Romero', 'Suárez', 'Mendoza'];
+
+const generateUniqueNames = (count: number): string[] => {
+  const namesSet = new Set<string>();
+  while (namesSet.size < count) {
+    const randomFirst = getRandomElement(firstNames);
+    const randomLast = getRandomElement(lastNames);
+    namesSet.add(`${randomFirst} ${randomLast}`);
+  }
+  return Array.from(namesSet);
+};
+
 const ips = ['192.168.1.10', '10.0.0.55', '203.0.113.4', '172.16.0.1', '192.168.1.10', '172.16.11.2', '203.0.11.1', '10.1.2.3', '192.168.2.20', '8.8.8.8'];
 const regions = ['Central', 'Capital', 'Occidente', 'Oriente', 'Los Andes', 'Zuliana'];
 const residencias = ['Caracas, Venezuela', 'Valencia, Venezuela', 'Maracaibo, Venezuela', 'Barquisimeto, Venezuela', 'Maracay, Venezuela'];
@@ -114,9 +125,34 @@ const asns = [
 const getRandomElement = <T>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
 
 export const generateProfiles = (count: number = 100): UserProfile[] => {
-  return Array.from({ length: count }, (_, index) => {
-    const name = index === 0 ? 'Global Tech LLC' : getRandomElement(names);
-    const cedula = index === 0 ? 'E-55667788' : getRandomElement(cedulas);
+  const profilesMap = new Map<string, UserProfile>();
+  const uniqueNames = generateUniqueNames(count);
+  let iteration = 0;
+  
+  // Nombres y cédulas base asignados a cada índice para garantizar unicidad
+  const assignedNames: string[] = [];
+  const assignedCedulas: string[] = [];
+  
+  for (let i = 0; i < count; i++) {
+    if (i === 0) {
+      assignedNames.push('Global Tech LLC');
+      assignedCedulas.push('J-00000000-1');
+    } else {
+      assignedNames.push(uniqueNames[i]);
+      assignedCedulas.push(`V-${10000000 + i}`);
+    }
+  }
+
+  // Generamos un total de count * 1.5 iteraciones para simular que algunos se conectan varias veces
+  const totalIterations = Math.floor(count * 1.5);
+
+  for (let i = 0; i < totalIterations; i++) {
+    // Escogemos un usuario aleatorio de la lista de los `count` posibles, o iteramos secuencialmente
+    // Para asegurar que todos los `count` se creen, los primeros `count` iteraciones serán secuenciales.
+    const userIndex = i < count ? i : Math.floor(Math.random() * count);
+    
+    const name = assignedNames[userIndex];
+    const cedula = assignedCedulas[userIndex];
     const huellaSegura = Math.random() > 0.3;
     const ipDesconocida = Math.random() > 0.5;
     const fueraDeGeolocalizacion = Math.random() > 0.8;
@@ -150,95 +186,105 @@ export const generateProfiles = (count: number = 100): UserProfile[] => {
 
     // Generar username basado en nombre
     const nameParts = name.toLowerCase().split(' ');
-    const username = index === 0 ? 'g11c' : (nameParts.length > 1 
+    const username = userIndex === 0 ? 'g11c' : (nameParts.length > 1 
       ? `${nameParts[0][0]}${nameParts[nameParts.length - 1]}`.replace(/[^a-z0-9]/g, '')
       : `${nameParts[0]}`.replace(/[^a-z0-9]/g, ''));
 
-    const idFormatted = index === 0 ? 'usr-4' : `usr-${index + 1}`;
-    const primaryIp = index === 0 ? '10.0.0.55' : getRandomElement(ips);
+    const idFormatted = userIndex === 0 ? 'usr-4' : `usr-${userIndex + 1}`;
+    const primaryIp = userIndex === 0 ? '10.0.0.55' : getRandomElement(ips);
     const primaryDevice = Math.random() > 0.5 ? 'Teléfono' : 'Laptop';
+    const primaryDeviceType = primaryDevice as DeviceType;
 
-    return {
-      id: idFormatted,
-      name,
-      cedula,
-      profileType,
-      riskScore: index === 0 ? 56 : riskScore,
-      lastIp: primaryIp,
-      device: primaryDevice as DeviceType,
-      huellaSegura,
-      ipDesconocida,
-      fueraDeGeolocalizacion,
-      securityLevel: index === 0 ? 'Medio' : securityLevel,
-      // Campos de detalle
-      username: username || `user${index + 1}`,
-      registrationYear: index === 0 ? '2020' : getRandomElement(years),
-      region: index === 0 ? 'Central' : getRandomElement(regions),
-      residencia: index === 0 ? 'Caracas, Venezuela' : getRandomElement(residencias),
-      geolocation: '10.48, -66.90',
-      email: `${username || 'usuario'}@example.com`,
-      digitalFingerprintStatus: huellaSegura ? 'Configurada' : 'No Configurada',
-      twoFactorAuth: huellaSegura ? 'Activado' : 'Desactivado',
-      securityQuestionsCount: '3 Configuradas',
-      huellaFaceId: huellaSegura ? 'Configurada' : 'No Configurada',
-      twoFactorAuthDetail: 'App Authenticator (Activo)',
-      ultimoCambioPass: 'Hace 45 días',
-      coordenadas: '10.48, -66.90 (Caracas)',
-      dispositivoHabitual: primaryDevice === 'Teléfono' ? 'Móvil (iOS 17.5)' : 'Laptop (macOS Sonoma)',
-      sesionActual: 'App Móvil Nativa',
-      devicesList: [
-        { id: 'dev-1', name: `${primaryDevice} Principal`, type: primaryDevice as DeviceType, lastAccess: 'Hace 10 min', ip: primaryIp, status: 'Activo' },
-        { id: 'dev-2', name: primaryDevice === 'Teléfono' ? 'Laptop Oficina' : 'Móvil Personal', type: (primaryDevice === 'Teléfono' ? 'Laptop' : 'Teléfono') as DeviceType, lastAccess: 'Ayer, 18:45', ip: getRandomElement(ips), status: 'Inactivo' },
-        { id: 'dev-3', name: 'Tablet Secundaria', type: 'Teléfono', lastAccess: 'Hace 3 días', ip: getRandomElement(ips), status: 'Inactivo' },
-        { id: 'dev-4', name: 'PC de Escritorio - Hogar', type: 'Laptop', lastAccess: 'Hace 1 semana', ip: getRandomElement(ips), status: 'Inactivo' },
-        { id: 'dev-5', name: 'Móvil de Trabajo', type: 'Teléfono', lastAccess: 'Hace 2 semanas', ip: getRandomElement(ips), status: 'Inactivo' },
-        { id: 'dev-6', name: 'Laptop Viajes', type: 'Laptop', lastAccess: 'Hace 1 mes', ip: getRandomElement(ips), status: 'Inactivo' },
-        { id: 'dev-7', name: 'Teléfono Antiguo', type: 'Teléfono', lastAccess: 'Hace 2 meses', ip: getRandomElement(ips), status: 'Inactivo' },
-        { id: 'dev-8', name: 'Estación de Trabajo', type: 'Laptop', lastAccess: 'Hace 3 meses', ip: getRandomElement(ips), status: 'Inactivo' },
-      ],
-      allowedIps: [
-        { id: 'ip-1', ip: primaryIp, label: 'Red Doméstica / Oficina', addedDate: '15/01/2023', status: 'Permitida' },
-        { id: 'ip-2', ip: getRandomElement(ips), label: 'VPN Corporativa', addedDate: '20/06/2023', status: 'Permitida' },
-        { id: 'ip-3', ip: getRandomElement(ips), label: 'Sucursal Altamira', addedDate: '10/08/2023', status: 'Permitida' },
-        { id: 'ip-4', ip: getRandomElement(ips), label: 'Servidor Staging', addedDate: '01/11/2023', status: 'Permitida' },
-        { id: 'ip-5', ip: getRandomElement(ips), label: 'IP Dinámica Residencial', addedDate: '05/02/2024', status: 'Permitida' },
-        { id: 'ip-6', ip: getRandomElement(ips), label: 'Acceso Remoto Contabilidad', addedDate: '14/04/2024', status: 'Permitida' },
-        { id: 'ip-7', ip: getRandomElement(ips), label: 'IP Bloqueada Sospechosa', addedDate: '19/07/2024', status: 'Bloqueada' },
-        { id: 'ip-8', ip: getRandomElement(ips), label: 'Gateway Backup', addedDate: '22/09/2024', status: 'Permitida' },
-      ],
-      allowedRegions: [
-        { id: 'reg-1', country: 'Estados Unidos', city: 'Miami, Florida', startDate: '01/09/2026', endDate: '15/09/2026', reason: 'Notificación de viaje de negocios', autoWhitelistIp: true, status: 'Vigente' },
-        { id: 'reg-2', country: 'España', city: 'Madrid', startDate: '20/10/2026', endDate: '05/11/2026', reason: 'Vacaciones familiares programadas', autoWhitelistIp: true, status: 'Programado' },
-        { id: 'reg-3', country: 'Colombia', city: 'Bogotá', startDate: '10/05/2026', endDate: '20/05/2026', reason: 'Conferencia técnica internacional', autoWhitelistIp: true, status: 'Vencido' },
-        { id: 'reg-4', country: 'Panamá', city: 'Ciudad de Panamá', startDate: '12/02/2026', endDate: '18/02/2026', reason: 'Reunión comercial de sucursal', autoWhitelistIp: true, status: 'Vencido' },
-      ],
-      auditLogs: [
-        { id: 'log-1', date: '01/09/2026 14:30', action: 'Inicio de sesión exitoso', ip: primaryIp, details: 'Autenticación 2FA completada' },
-        { id: 'log-2', date: '31/08/2026 09:15', action: 'Cambio de contraseña', ip: primaryIp, details: 'Actualización periódica requerida' },
-        { id: 'log-3', date: '28/08/2026 18:02', action: 'Validación de huella', ip: primaryIp, details: 'Dispositivo verificado correctamente' },
-        { id: 'log-4', date: '25/08/2026 11:20', action: 'Registro de nueva IP permitida', ip: primaryIp, details: 'IP agregada a lista blanca' },
-        { id: 'log-5', date: '20/08/2026 16:45', action: 'Consulta de saldo de cuenta', ip: primaryIp, details: 'Verificación de fondos disponible' },
-        { id: 'log-6', date: '15/08/2026 10:10', action: 'Actualización de datos personales', ip: primaryIp, details: 'Dirección de correo confirmada' },
-        { id: 'log-7', date: '10/08/2026 08:30', action: 'Cierre de sesión seguro', ip: primaryIp, details: 'Sesión finalizada por el usuario' },
-        { id: 'log-8', date: '05/08/2026 19:12', action: 'Intento de acceso bloqueado', ip: getRandomElement(ips), details: 'Intento desde IP desconocida' },
-      ],
-      kycKybData: {
-        razonSocial: name.toUpperCase(),
-        estatusListas: 'UNIFICADO: Sin Sanciones / OFAC: Limpio / GAFI: Limpio / Nacional: Limpio',
-        actividadCiiu: getRandomElement(ciiuOptions),
-        pepStatus: 'No Relacionado / Sin Coincidencias PEP',
-        representanteLegal: isJuridico ? 'Néstor Rodríguez - ID Confirmado' : `${name} - ID Confirmado`
-      },
-      networkIntegrityData: {
-        tipoConexion: 'Fija - Residencial',
-        asn: getRandomElement(asns),
-        vpnProxy: 'No Detectado / Proxy SSL Limpio',
-        viajeImposible: 'Velocidad Normal: Caracas -> Maracay',
-        trustedDeviceScore: 'Score: 94 - Alto (Confiable)',
-        estadoEntorno: 'Nativo / Seguro / No Rooteado / No Emulador'
-      }
-    };
-  });
+    if (profilesMap.has(cedula)) {
+      // Perfil ya existe, agregar el dispositivo a la lista de dispositivos del usuario
+      const existingProfile = profilesMap.get(cedula)!;
+      
+      const newDevice: DeviceInfo = {
+        id: `dev-${existingProfile.devicesList.length + 1}-${Date.now()}`,
+        name: `${primaryDevice} (Nuevo)`,
+        type: primaryDeviceType,
+        lastAccess: 'Justo ahora',
+        ip: primaryIp,
+        status: 'Activo'
+      };
+      
+      existingProfile.devicesList.push(newDevice);
+      // Actualizar la última IP y dispositivo si es necesario
+      existingProfile.lastIp = primaryIp;
+      existingProfile.device = primaryDeviceType;
+    } else {
+      // Crear nuevo perfil
+      const newProfile: UserProfile = {
+        id: idFormatted,
+        name,
+        cedula,
+        profileType,
+        riskScore: userIndex === 0 ? 56 : riskScore,
+        lastIp: primaryIp,
+        device: primaryDeviceType,
+        huellaSegura,
+        ipDesconocida,
+        fueraDeGeolocalizacion,
+        securityLevel: userIndex === 0 ? 'Medio' : securityLevel,
+        username: username || `user${userIndex + 1}`,
+        registrationYear: userIndex === 0 ? '2020' : getRandomElement(years),
+        region: userIndex === 0 ? 'Central' : getRandomElement(regions),
+        residencia: userIndex === 0 ? 'Caracas, Venezuela' : getRandomElement(residencias),
+        geolocation: '10.48, -66.90',
+        email: `${username || 'usuario'}@example.com`,
+        digitalFingerprintStatus: huellaSegura ? 'Configurada' : 'No Configurada',
+        twoFactorAuth: huellaSegura ? 'Activado' : 'Desactivado',
+        securityQuestionsCount: '3 Configuradas',
+        huellaFaceId: huellaSegura ? 'Configurada' : 'No Configurada',
+        twoFactorAuthDetail: 'App Authenticator (Activo)',
+        ultimoCambioPass: 'Hace 45 días',
+        coordenadas: '10.48, -66.90 (Caracas)',
+        dispositivoHabitual: primaryDevice === 'Teléfono' ? 'Móvil (iOS 17.5)' : 'Laptop (macOS Sonoma)',
+        sesionActual: 'App Móvil Nativa',
+        devicesList: [
+          { id: 'dev-1', name: `${primaryDevice} Principal`, type: primaryDeviceType, lastAccess: 'Hace 10 min', ip: primaryIp, status: 'Activo' },
+          { id: 'dev-2', name: primaryDevice === 'Teléfono' ? 'Laptop Oficina' : 'Móvil Personal', type: (primaryDevice === 'Teléfono' ? 'Laptop' : 'Teléfono') as DeviceType, lastAccess: 'Ayer, 18:45', ip: getRandomElement(ips), status: 'Inactivo' },
+        ],
+        allowedIps: [
+          { id: 'ip-1', ip: primaryIp, label: 'Red Doméstica / Oficina', addedDate: '15/01/2023', status: 'Permitida' },
+          { id: 'ip-2', ip: getRandomElement(ips), label: 'VPN Corporativa', addedDate: '20/06/2023', status: 'Permitida' },
+        ],
+        allowedRegions: userIndex < 5 ? [
+          { 
+            id: `reg-${userIndex}`, 
+            country: ['Estados Unidos', 'España', 'Francia', 'Japón', 'México'][userIndex], 
+            city: ['Miami', 'Madrid', 'París', 'Tokio', 'Ciudad de México'][userIndex], 
+            startDate: '01/09/2026', 
+            endDate: '15/11/2026', 
+            reason: ['Notificación de viaje de negocios', 'Vacaciones Familiares', 'Conferencia de Seguridad', 'Entrenamiento Corporativo', 'Auditoría Regional'][userIndex], 
+            autoWhitelistIp: true, 
+            status: 'Vigente' 
+          }
+        ] : [],
+        auditLogs: [
+          { id: 'log-1', date: '01/09/2026 14:30', action: 'Inicio de sesión exitoso', ip: primaryIp, details: 'Autenticación 2FA completada' },
+        ],
+        kycKybData: {
+          razonSocial: name.toUpperCase(),
+          estatusListas: 'UNIFICADO: Sin Sanciones / OFAC: Limpio / GAFI: Limpio / Nacional: Limpio',
+          actividadCiiu: getRandomElement(ciiuOptions),
+          pepStatus: 'No Relacionado / Sin Coincidencias PEP',
+          representanteLegal: isJuridico ? 'Néstor Rodríguez - ID Confirmado' : `${name} - ID Confirmado`
+        },
+        networkIntegrityData: {
+          tipoConexion: 'Fija - Residencial',
+          asn: getRandomElement(asns),
+          vpnProxy: 'No Detectado / Proxy SSL Limpio',
+          viajeImposible: 'Velocidad Normal: Caracas -> Maracay',
+          trustedDeviceScore: 'Score: 94 - Alto (Confiable)',
+          estadoEntorno: 'Nativo / Seguro / No Rooteado / No Emulador'
+        }
+      };
+      profilesMap.set(cedula, newProfile);
+    }
+  }
+
+  return Array.from(profilesMap.values());
 };
 
 export const profilesData: UserProfile[] = generateProfiles(100);

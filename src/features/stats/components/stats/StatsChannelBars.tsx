@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import type { ChannelBar } from '../../hooks/useStatsData';
+import type { ChannelStat } from '../../hooks/useStatsData';
 
 interface StatsChannelBarsProps {
-  data: ChannelBar[];
+  data: ChannelStat[];
 }
 
 const CHANNEL_COLORS: Record<string, string> = {
@@ -80,16 +80,7 @@ export const StatsChannelBars: React.FC<StatsChannelBarsProps> = ({ data }) => {
                     }}
                   />
                 )}
-                {/* En proceso */}
-                {channel.enProceso > 0 && (
-                  <div
-                    className="h-full transition-all duration-500"
-                    style={{
-                      width: `${(channel.enProceso / channel.total) * barWidth}%`,
-                      backgroundColor: '#12679A',
-                    }}
-                  />
-                )}
+
                 {/* Retenidas */}
                 {channel.retenidas > 0 && (
                   <div
@@ -119,8 +110,7 @@ export const StatsChannelBars: React.FC<StatsChannelBarsProps> = ({ data }) => {
       {/* Mini leyenda de colores de estado */}
       <div className="flex flex-wrap gap-3 mt-4 pt-3 border-t border-[#3A393C]">
         {[
-          { label: 'Válidas', color: '#0F9949' },
-          { label: 'En proceso', color: '#12679A' },
+          { label: 'Válidas (Bajo Riesgo)', color: '#0F9949' },
           { label: 'Retenidas', color: '#CE6733' },
           { label: 'Bloqueadas', color: '#CC3233' },
         ].map(item => (

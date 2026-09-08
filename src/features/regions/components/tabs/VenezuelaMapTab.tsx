@@ -78,8 +78,8 @@ const MapLegend: React.FC<{ mode: MapMode }> = ({ mode }) => {
     mode === 'transaccional'
       ? ['#2A292A', 'rgba(29,164,147,0.4)', 'rgba(29,164,147,0.7)', 'rgba(29,164,147,1)']
       : mode === 'riesgo'
-      ? ['#2A292A', 'rgba(251,191,36,0.6)', 'rgba(249,115,22,0.8)', 'rgba(239,68,68,1)']
-      : ['#2A292A', 'rgba(29,164,147,0.7)', 'rgba(249,115,22,0.8)', 'rgba(239,68,68,1)'];
+      ? ['#2A292A', 'rgba(245,158,11,0.35)', 'rgba(249,115,22,0.45)', 'rgba(239,68,68,0.45)']
+      : ['#2A292A', 'rgba(29,164,147,0.7)', 'rgba(249,115,22,0.45)', 'rgba(239,68,68,0.45)'];
   const label = mode === 'transaccional' ? 'Bajo → Alto volumen' : 'Bajo → Crítico';
   return (
     <div className="absolute bottom-3 right-3 z-10 bg-[#141316]/90 backdrop-blur-md px-3 py-2 rounded-lg border border-[#2A292A]/80 flex items-center gap-2 pointer-events-none shadow-md">
@@ -153,6 +153,20 @@ const VenezuelaMap: React.FC<{
         height={800}
         style={{ width: '100%', height: '100%' }}
       >
+        <defs>
+          <pattern id="lines-critico" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+            <rect width="8" height="8" fill="none" />
+            <line x1="4" y1="0" x2="4" y2="8" stroke="#EF4444" strokeWidth="5" strokeOpacity="0.5" />
+          </pattern>
+          <pattern id="lines-alto" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+            <rect width="8" height="8" fill="none" />
+            <line x1="4" y1="0" x2="4" y2="8" stroke="#F97316" strokeWidth="3" strokeOpacity="0.5" />
+          </pattern>
+          <pattern id="lines-medio" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+            <rect width="8" height="8" fill="none" />
+            <line x1="4" y1="0" x2="4" y2="8" stroke="#F59E0B" strokeWidth="1.5" strokeOpacity="0.5" />
+          </pattern>
+        </defs>
         <ZoomableGroup
           zoom={zoom}
           center={center}
@@ -173,34 +187,46 @@ const VenezuelaMap: React.FC<{
                 const fillDef    = getStateColor(stateData, mode);
                 const fillHover  = getStateColor(stateData, mode, true);
                 const strokeDef  = isSelected ? '#FFFFFF' : getStrokeColor(stateData, mode);
-                const sw         = isSelected ? 1.8 / zoom : 0.7 / zoom;
+                const sw         = isSelected ? 1.8 / zoom : 0.8 / zoom;
 
                 let shadowVal = 'none';
                 if ((mode === 'riesgo' || mode === 'ambos') && stateData) {
-                   if (stateData.risk === 'Crítico') shadowVal = 'drop-shadow(0px 0px 8px rgba(239, 68, 68, 0.9))';
-                   else if (stateData.risk === 'Alto') shadowVal = 'drop-shadow(0px 0px 6px rgba(249, 115, 22, 0.7))';
-                   else if (stateData.risk === 'Medio') shadowVal = 'drop-shadow(0px 0px 4px rgba(251, 191, 36, 0.4))';
+                   if (stateData.risk === 'Crítico') shadowVal = 'drop-shadow(0px 0px 4px rgba(239, 68, 68, 0.25))';
+                   else if (stateData.risk === 'Alto') shadowVal = 'drop-shadow(0px 0px 3px rgba(249, 115, 22, 0.2))';
                 }
 
+                const riskKey = stateData?.risk ? stateData.risk.toLowerCase().replace('í', 'i') : '';
+
                 return (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    style={{
-                      default: { fill: fillDef,   stroke: strokeDef, strokeWidth: sw,         outline: 'none', transition: 'all 250ms', filter: shadowVal },
-                      hover:   { fill: fillHover, stroke: '#FFFFFF', strokeWidth: 1.2 / zoom, outline: 'none', cursor: 'pointer', transition: 'all 250ms', filter: shadowVal },
-                      pressed: { fill: fillHover, stroke: '#FFFFFF', strokeWidth: 1.5 / zoom, outline: 'none', filter: shadowVal },
-                    }}
-                    onClick={() => onSelectState(isSelected ? null : (stateData?.name ?? rawName))}
-                    onMouseMove={e => {
-                      const extra = stateData
-                        ? ` · ${fmtNum(stateData.transactions)} tx · ${stateData.fraudRatio}% fraude`
-                        : '';
-                      handleMouseMove(e as unknown as React.MouseEvent<SVGPathElement>,
-                        `${stateData?.name ?? rawName}${extra}`);
-                    }}
-                    onMouseLeave={() => setTooltip(null)}
-                  />
+                  <g key={geo.rsmKey}>
+                    <Geography
+                      geography={geo}
+                      style={{
+                        default: { fill: fillDef,   stroke: strokeDef, strokeWidth: sw,         outline: 'none', transition: 'all 250ms', filter: shadowVal },
+                        hover:   { fill: fillHover, stroke: '#FFFFFF', strokeWidth: 1.2 / zoom, outline: 'none', cursor: 'pointer', transition: 'all 250ms', filter: shadowVal },
+                        pressed: { fill: fillHover, stroke: '#FFFFFF', strokeWidth: 1.5 / zoom, outline: 'none', filter: shadowVal },
+                      }}
+                      onClick={() => onSelectState(isSelected ? null : (stateData?.name ?? rawName))}
+                      onMouseMove={e => {
+                        const extra = stateData
+                          ? ` · ${fmtNum(stateData.transactions)} tx · ${stateData.fraudRatio}% fraude`
+                          : '';
+                        handleMouseMove(e as unknown as React.MouseEvent<SVGPathElement>,
+                          `${stateData?.name ?? rawName}${extra}`);
+                      }}
+                      onMouseLeave={() => setTooltip(null)}
+                    />
+                    {mode === 'ambos' && stateData && stateData.risk !== 'Bajo' && (
+                      <Geography
+                        geography={geo}
+                        style={{
+                          default: { fill: `url(#lines-${riskKey})`, stroke: 'none', outline: 'none', pointerEvents: 'none' },
+                          hover:   { fill: `url(#lines-${riskKey})`, stroke: 'none', outline: 'none', pointerEvents: 'none' },
+                          pressed: { fill: `url(#lines-${riskKey})`, stroke: 'none', outline: 'none', pointerEvents: 'none' },
+                        }}
+                      />
+                    )}
+                  </g>
                 );
               })
             }

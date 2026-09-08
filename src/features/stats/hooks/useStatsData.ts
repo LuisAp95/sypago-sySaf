@@ -139,10 +139,9 @@ export function useStatsData(period: string, metricType: string): StatsState {
     reports.forEach(r => {
       if (!map[r.channel]) map[r.channel] = { channel: r.channel, total: 0, validas: 0, retenidas: 0, bloqueadas: 0, enProceso: 0, pct: 0 };
       map[r.channel].total++;
-      if (r.status === 'Válidas')    map[r.channel].validas++;
+      if (r.status === 'Válidas' || r.status === 'En proceso') map[r.channel].validas++;
       if (r.status === 'Retenidas')  map[r.channel].retenidas++;
       if (r.status === 'Bloqueadas') map[r.channel].bloqueadas++;
-      if (r.status === 'En proceso') map[r.channel].enProceso++;
     });
     const max = Math.max(...Object.values(map).map(c => c.total));
     return Object.values(map)

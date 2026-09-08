@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal } from '@/components/ui/Modal';
 import { Button } from '@/components/ui/Button';
+import { Select } from '@/components/ui/Select';
 import { Plane, Calendar, MapPin, ShieldCheck } from 'lucide-react';
 import type { AllowedRegionInfo } from '../../../mocks/profilesData';
 
@@ -10,32 +11,43 @@ interface TravelNotificationModalProps {
   onSave: (regionData: Omit<AllowedRegionInfo, 'id' | 'status'>) => void;
 }
 
-const COUNTRY_OPTIONS = [
-  'Estados Unidos',
-  'España',
-  'Colombia',
-  'Panamá',
-  'Italia',
-  'México',
-  'Reino Unido',
-  'República Dominicana',
-  'Chile',
-  'Argentina',
-  'Otro'
-];
+import geoData from '../../regions/data/geoData.json';
+
+const COUNTRY_OPTIONS = geoData.countries.map((c) => c.name).sort();
+const COUNTRY_SELECT_OPTIONS = geoData.countries
+  .map((c) => ({ label: c.name, value: c.name }))
+  .sort((a, b) => a.label.localeCompare(b.label));
 
 export const TravelNotificationModal: React.FC<TravelNotificationModalProps> = ({
   isOpen,
   onClose,
   onSave,
 }) => {
-  const [country, setCountry] = useState('Estados Unidos');
+  const [country, setCountry] = useState(COUNTRY_OPTIONS[0] || 'Estados Unidos');
   const [city, setCity] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [reason, setReason] = useState('');
   const [autoWhitelistIp, setAutoWhitelistIp] = useState(true);
   const [errorMsg, setErrorMsg] = useState('');
+
+  React.useEffect(() => {
+    const selected = geoData.countries.find((c) => c.name === country);
+    if (selected && selected.cities.length > 0) {
+      // Ordenamos las ciudades alfabéticamente para mantener consistencia
+      const sortedCities = [...selected.cities].sort((a, b) => a.name.localeCompare(b.name));
+      setCity(sortedCities[0].name);
+    } else {
+      setCity('');
+    }
+  }, [country]);
+
+  const cityOptions = React.useMemo(() => {
+    return geoData.countries
+      .find((c) => c.name === country)
+      ?.cities.map((c) => ({ label: c.name, value: c.name }))
+      .sort((a, b) => a.label.localeCompare(b.label)) || [];
+  }, [country]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,8 +75,7 @@ export const TravelNotificationModal: React.FC<TravelNotificationModalProps> = (
     });
 
     // Reset Form
-    setCountry('Estados Unidos');
-    setCity('');
+    setCountry(COUNTRY_OPTIONS[0] || 'Estados Unidos');
     setStartDate('');
     setEndDate('');
     setReason('');
@@ -118,17 +129,12 @@ export const TravelNotificationModal: React.FC<TravelNotificationModalProps> = (
               <GlobeIcon className="w-4 h-4 text-[#1DA493]" />
               <span>País de Destino</span>
             </label>
-            <select
+            <Select
+              options={COUNTRY_SELECT_OPTIONS}
               value={country}
-              onChange={(e) => setCountry(e.target.value)}
-              className="w-full bg-[#2A292A] border border-[#3A393C] rounded-xl px-3.5 py-2 text-white focus:outline-none focus:border-[#1DA493]"
-            >
-              {COUNTRY_OPTIONS.map((c) => (
-                <option key={c} value={c} className="bg-[#2A292A] text-white">
-                  {c}
-                </option>
-              ))}
-            </select>
+              onChange={(val) => setCountry(val)}
+              placeholder="Seleccionar país..."
+            />
           </div>
 
           {/* Ciudad / Estado */}
@@ -137,13 +143,11 @@ export const TravelNotificationModal: React.FC<TravelNotificationModalProps> = (
               <MapPin className="w-4 h-4 text-[#1DA493]" />
               <span>Ciudad / Provincia / Estado</span>
             </label>
-            <input
-              type="text"
-              placeholder="Ej. Miami, Florida"
+            <Select
+              options={cityOptions}
               value={city}
-              onChange={(e) => setCity(e.target.value)}
-              className="w-full bg-[#2A292A] border border-[#3A393C] rounded-xl px-3.5 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-[#1DA493]"
-              required
+              onChange={(val) => setCity(val)}
+              placeholder="Seleccionar ciudad..."
             />
           </div>
         </div>

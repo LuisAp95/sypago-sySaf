@@ -58,7 +58,6 @@ export function getStateColor(
   }
 
   const txRatio = Math.max(0, Math.min(1, state.transactions / MAX_TRANSACTIONS));
-  const rrRatio = Math.max(0, Math.min(1, state.fraudRatio   / MAX_FRAUD_RATIO));
   
   const hBoost = hover ? 30 : 0;
   const clamp = (v: number) => Math.round(Math.min(255, Math.max(0, v)));
@@ -74,10 +73,10 @@ export function getStateColor(
   }
 
   if (mode === 'riesgo') {
-    // Para riesgo, usar colores directos según el nivel para que coincida con la leyenda
-    if (state.risk === 'Crítico') return hover ? '#F87171' : '#EF4444'; // Red
-    if (state.risk === 'Alto')    return hover ? '#FB923C' : '#F97316'; // Orange
-    if (state.risk === 'Medio')   return hover ? '#FCD34D' : '#FBBF24'; // Yellow
+    // Mismo nivel de intensidad translúcida (rgba 45% - 65%) que en el mapa de Whitelist Global / Zonas de Riesgo
+    if (state.risk === 'Crítico') return hover ? 'rgba(239, 68, 68, 0.65)' : 'rgba(239, 68, 68, 0.45)';
+    if (state.risk === 'Alto')    return hover ? 'rgba(249, 115, 22, 0.65)' : 'rgba(249, 115, 22, 0.45)';
+    if (state.risk === 'Medio')   return hover ? 'rgba(245, 158, 11, 0.55)' : 'rgba(245, 158, 11, 0.35)';
     return hover ? '#353436' : `rgb(${darkR}, ${darkG}, ${darkB})`;
   }
 
@@ -88,14 +87,14 @@ export function getStrokeColor(
   state: VenezuelaStateData | undefined,
   mode: 'transaccional' | 'riesgo' | 'ambos'
 ): string {
-  if (!state) return 'rgba(255, 255, 255, 0.05)';
+  if (!state) return '#3A393C';
   
   if (mode === 'riesgo' || mode === 'ambos') {
-    if (state.risk === 'Crítico') return 'rgba(239, 68, 68, 1)'; // Red
-    if (state.risk === 'Alto')    return 'rgba(249, 115, 22, 1)'; // Orange
-    if (state.risk === 'Medio')   return 'rgba(251, 191, 36, 0.4)'; // Yellow
-    return 'rgba(255, 255, 255, 0.15)';
+    if (state.risk === 'Crítico') return '#EF4444';
+    if (state.risk === 'Alto')    return '#F97316';
+    if (state.risk === 'Medio')   return '#F59E0B';
+    return '#3A393C';
   }
   
-  return 'rgba(255, 255, 255, 0.2)'; 
+  return '#3A393C'; 
 }

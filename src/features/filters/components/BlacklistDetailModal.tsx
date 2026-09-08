@@ -2,12 +2,9 @@ import React from 'react';
 import { Modal } from '@/components/ui/Modal';
 import { Badge } from '@/components/ui/Badge';
 import { 
-  Hash, 
-  FileText, 
   Settings,
   Calendar,
   Activity,
-  ShieldAlert,
   Download
 } from 'lucide-react';
 import { exportBlacklistToPdf } from '@/utils/pdfGenerator';
@@ -65,43 +62,25 @@ export const BlacklistDetailModal: React.FC<BlacklistDetailModalProps> = ({
     >
       <div className="flex flex-col gap-4">
         {/* Top Info Row */}
-        <div className="grid grid-cols-3 gap-4 p-4 rounded-xl border border-[#333235] bg-[#232225]">
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#2A2B3D]">
-              <Hash className="w-5 h-5 text-[#818CF8]" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[12px] text-[#9E9D9F] font-medium">ID</span>
-              <span className="text-sm font-bold text-white">{item.id}</span>
-            </div>
+        <div className="grid grid-cols-3 p-4 rounded-xl border border-[#333235] bg-[#232225] divide-x divide-[#333235]">
+          <div className="flex flex-col px-4 first:pl-2">
+            <span className="text-[12px] text-[#9E9D9F] font-medium mb-1">ID:</span>
+            <span className="text-sm font-bold text-white">{item.id}</span>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#2A2B3D]">
-              <FileText className="w-5 h-5 text-[#818CF8]" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[12px] text-[#9E9D9F] font-medium">{item.field}</span>
-              <span className="text-sm font-bold text-white font-mono">{item.value}</span>
-            </div>
+          <div className="flex flex-col px-4">
+            <span className="text-[12px] text-[#9E9D9F] font-medium mb-1">{item.field}:</span>
+            <span className="text-sm font-bold text-white font-mono">{item.value}</span>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#2A2B3D]">
-              <ShieldAlert className="w-5 h-5 text-[#818CF8]" />
-            </div>
-            <div className="flex flex-col items-start gap-1">
-              <span className="text-[12px] text-[#9E9D9F] font-medium">Acción a tomar</span>
-              <Badge variant={item.action as any}>{item.action}</Badge>
-            </div>
+          <div className="flex flex-col items-start px-4 last:pr-2">
+            <span className="text-[12px] text-[#9E9D9F] font-medium mb-1">Acción a tomar:</span>
+            <Badge variant={item.action as any}>{item.action}</Badge>
           </div>
         </div>
 
         {/* Status Row */}
-        <div className="flex items-center gap-4 p-4 rounded-xl border border-[#333235] bg-[#232225]">
-          <div className={`flex items-center justify-center w-10 h-10 rounded-lg ${isActive ? 'bg-[#265e56]/30' : 'bg-[#333235]'}`}>
-            <Activity className={`w-5 h-5 ${isActive ? 'text-[#52c6b4]' : 'text-[#9E9D9F]'}`} />
-          </div>
-          <div className="flex flex-col items-start gap-1">
-            <span className="text-[12px] text-[#9E9D9F] font-medium">Estado de la regla</span>
+        <div className="flex items-center p-4 rounded-xl border border-[#333235] bg-[#232225]">
+          <div className="flex flex-col items-start gap-2">
+            <span className="text-base text-gray-200 font-bold">Estado de la regla</span>
             <Badge variant={item.status as any}>{item.status}</Badge>
           </div>
         </div>
