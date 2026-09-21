@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ViewHeader } from '@/components/ui/ViewHeader';
 import { RuleDefinitionModal } from './RuleDefinitionModal';
 import { StepChart, parseHour } from './StepChart';
-import type { RuleDefinitionItem } from '../types/rule.types';
+import type { RuleDefinitionItem, RuleCategory } from '../types/rule.types';
 import { Loader } from '@/components/ui/Loader';
 import { exportRulesToPdf } from '@/utils/pdfGenerator';
 
@@ -13,6 +13,7 @@ export interface BaseRulesLayoutProps {
   renderStats: (rule: RuleDefinitionItem, currentOps: number, currentAmount: string) => React.ReactNode;
   modalTitle?: string;
   onExportPdf?: () => void;
+  ruleCategory?: RuleCategory;
 }
 
 export const BaseRulesLayout: React.FC<BaseRulesLayoutProps> = ({
@@ -22,6 +23,7 @@ export const BaseRulesLayout: React.FC<BaseRulesLayoutProps> = ({
   renderStats,
   modalTitle,
   onExportPdf,
+  ruleCategory = 'limits',
 }) => {
   const [selectedRule, setSelectedRule] = useState<RuleDefinitionItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -52,7 +54,6 @@ export const BaseRulesLayout: React.FC<BaseRulesLayoutProps> = ({
   return (
     <div className="flex flex-col h-full bg-secondary text-text-primary rounded-xl">
       <ViewHeader
-        selectOptions={[{ label: 'Todos los estados', value: 'todos' }]}
         showSearch
         showFilter
         showAdd
@@ -141,6 +142,7 @@ export const BaseRulesLayout: React.FC<BaseRulesLayoutProps> = ({
         existingRules={data}
         onSave={onSaveRule}
         title={modalTitle}
+        ruleCategory={ruleCategory}
       />
     </div>
   );

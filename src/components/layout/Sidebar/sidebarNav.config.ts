@@ -96,7 +96,7 @@ export const sidebarNavConfig: SidebarNavGroup[] = [
         moduloPermiso: 'Lista Negra',
         path: '/lista-negra',
       },
-      {
+     /* {
         id: 'region',
         label: 'Región',
         icon: Globe,
@@ -105,7 +105,7 @@ export const sidebarNavConfig: SidebarNavGroup[] = [
         path: '/region',
         badge: 'Proximamente',
       },
-      {
+    /*  {
         id: 'perfiles',
         label: 'Perfiles',
         icon: Smartphone,
@@ -113,7 +113,7 @@ export const sidebarNavConfig: SidebarNavGroup[] = [
         moduloPermiso: 'Perfiles',
         path: '/perfiles',
         badge: 'Proximamente',
-      },
+      },*/
     ],
   },
   {

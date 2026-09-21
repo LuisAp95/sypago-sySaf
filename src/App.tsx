@@ -169,7 +169,7 @@ function AppRoutes() {
             </ProtectedRoute>
           }
         />
-        <Route
+       {/* <Route
           path="region"
           element={
             <ProtectedRoute moduloPermiso="Región">
@@ -184,7 +184,7 @@ function AppRoutes() {
               <ProfilesView />
             </ProtectedRoute>
           }
-        />
+        />*/}
         <Route
           path="definicion-reglas"
           element={

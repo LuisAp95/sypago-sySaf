@@ -1,87 +1,94 @@
 import React, { useState, useEffect } from 'react';
-import { useQuery } from '@tanstack/react-query';
-import { api } from '@/mocks/api';
 import { ViewHeader } from '@/components/ui/ViewHeader';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Checkbox } from '@/components/ui/Checkbox';
-import { Eye } from 'lucide-react';
-import { RuleChannelModal, type ChannelItem } from './RuleChannelModal';
+import { Eye, Plus } from 'lucide-react';
+import { RuleChannelModal } from './RuleChannelModal';
 import { DataGrid, type ColumnDef } from '@/components/ui/DataGrid';
 import { auditService } from '@/features/administration';
 import { exportChannelRulesToPdf } from '@/utils/pdfGenerator';
+import type { ChannelRule } from '../types/channelRules.types';
+import { CHANNELS } from '../mocks/channelRules.mock';
+import { channelRulesService } from '../services/channelRules.service';
 
 export const RulesChannel: React.FC = () => {
-  const { data: fetchedChannels, isLoading } = useQuery({
-    queryKey: ['rulesChannel'],
-    queryFn: api.getRulesChannel
-  });
-
-  const [channels, setChannels] = useState<ChannelItem[]>([]);
+  const [rules, setRules] = useState<ChannelRule[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedChannel, setSelectedChannel] = useState<ChannelItem | null>(null);
+  const [selectedRule, setSelectedRule] = useState<ChannelRule | null>(null);
 
   useEffect(() => {
-    if (fetchedChannels) {
-      setChannels(fetchedChannels as ChannelItem[]);
-    }
-  }, [fetchedChannels]);
+    // Load from local storage
+    const loadedRules = channelRulesService.getRules();
+    setRules(loadedRules);
+    setIsLoading(false);
+  }, []);
 
-  const handleSaveChannel = (savedChannel: ChannelItem) => {
-    setChannels(prev => {
-      const exists = prev.some(c => c.id === savedChannel.id);
-      const previous = exists ? prev.find(c => c.id === savedChannel.id) : undefined;
-      if (exists) {
-        const updated = prev.map(c => c.id === savedChannel.id ? savedChannel : c);
-        auditService.logSync({
-          module: 'Reglas Canal',
-          action: 'UPDATE',
-          entityType: 'Canal',
-          entityId: savedChannel.id,
-          entityName: savedChannel.channel || savedChannel.id,
-          details: `Canal "${savedChannel.channel}" actualizado`,
-          previousValue: previous,
-          newValue: savedChannel,
-        });
-        return updated;
-      }
-      auditService.logSync({
-        module: 'Reglas Canal',
-        action: 'CREATE',
-        entityType: 'Canal',
-        entityId: savedChannel.id,
-        entityName: savedChannel.channel || savedChannel.id,
-        details: `Canal "${savedChannel.channel}" creado`,
-        newValue: savedChannel,
-      });
-      return [savedChannel, ...prev];
+  const handleSaveRule = (savedRule: ChannelRule) => {
+    const newRules = channelRulesService.saveRule(savedRule);
+    setRules(newRules);
+    
+    auditService.logSync({
+      module: 'Reglas Canal',
+      action: rules.some(r => r.id === savedRule.id) ? 'UPDATE' : 'CREATE',
+      entityType: 'Regla de Canal',
+      entityId: savedRule.id,
+      entityName: savedRule.channelId,
+      details: `Regla para el canal "${savedRule.channelId}" configurada`,
+      newValue: savedRule,
     });
   };
 
-  const handleOpenModal = (channel?: ChannelItem) => {
-    setSelectedChannel(channel || null);
+  const handleOpenModal = (rule?: ChannelRule) => {
+    setSelectedRule(rule || null);
     setIsModalOpen(true);
   };
 
-  const columns: ColumnDef<ChannelItem>[] = [
+  const columns: ColumnDef<ChannelRule>[] = [
     {
       header: undefined,
       className: 'w-[5%] pl-4',
       colProps: { onClick: e => e.stopPropagation() },
       cell: () => <Checkbox />
     },
-    { header: 'Canal', accessorKey: 'channel', className: 'w-[15%]' },
+    { 
+      header: 'Canal', 
+      accessorKey: 'channelId', 
+      className: 'w-[15%]',
+      cell: (item) => {
+        const channelName = CHANNELS.find(c => c.id === item.channelId)?.name || item.channelId;
+        return <span className="font-medium text-gray-200">{channelName}</span>;
+      }
+    },
+    {
+      header: 'Productos',
+      accessorKey: 'products',
+      className: 'w-[15%]',
+      cell: (item) => {
+        if (item.products.includes('Todos')) {
+          return <Badge variant="Success">General</Badge>;
+        }
+        return (
+          <div className="flex flex-wrap gap-1">
+            {item.products.map(p => (
+              <Badge key={p} variant="Warning">{p}</Badge>
+            ))}
+          </div>
+        );
+      }
+    },
     {
       header: 'Estado',
       accessorKey: 'status',
-      className: 'w-[12%]',
+      className: 'w-[10%]',
       cell: (item) => <Badge variant={item.status as any}>{item.status}</Badge>
     },
-    { header: 'Grupo', accessorKey: 'group', className: 'w-[12%]' },
     { header: 'Entre semana', accessorKey: 'weekday', className: 'w-[15%]' },
     { header: 'Fin de semana', accessorKey: 'weekend', className: 'w-[15%]' },
     { header: 'Feriados', accessorKey: 'holidays', className: 'w-[10%]' },
-    { header: 'Última modificación', accessorKey: 'lastModified', className: 'flex-1 min-w-[150px]' },
+    { header: 'Última modificación', accessorKey: 'lastModified', className: 'flex-1 min-w-[130px]' },
     {
       header: undefined,
       className: 'w-[33px] shrink-0 p-0 m-0',
@@ -107,30 +114,37 @@ export const RulesChannel: React.FC = () => {
   return (
     <div className="flex flex-col h-full bg-secondary text-text-primary rounded-xl">
       <ViewHeader
-        selectOptions={[{ label: 'Todos los grupos', value: 'todos' }]}
         showSearch
         showFilter
         showCopy
-        onCopyClick={() => exportChannelRulesToPdf(channels)}
+        onCopyClick={() => exportChannelRulesToPdf(rules)}
       />
 
       <div className="flex-1 overflow-hidden flex flex-col gap-6">
 
         {/* List Actions */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mt-2 px-4">
           <div className="flex items-center gap-3">
             <Checkbox id="selectAll" />
             <label htmlFor="selectAll" className="text-sm cursor-pointer text-text-primary">Seleccionar Todos</label>
           </div>
           <div className="flex items-center gap-2">
-            <Button variant="secondary">Editar</Button>
+            <Button 
+              variant="primary" 
+              className="flex items-center gap-2 bg-[#265e56] hover:bg-[#2c6e65] text-white border-transparent"
+              onClick={() => handleOpenModal()}
+              disabled={rules.length === 0}
+            >
+              <Plus className="w-4 h-4" />
+              Agregar Nueva Regla
+            </Button>
           </div>
         </div>
 
         {/* List */}
-        <div className="flex-1 overflow-y-auto pr-2">
+        <div className="flex-1 overflow-y-auto pr-2 px-4 pb-4">
           <DataGrid
-            data={channels}
+            data={rules}
             columns={columns}
             isLoading={isLoading}
             onRowClick={handleOpenModal}
@@ -141,8 +155,8 @@ export const RulesChannel: React.FC = () => {
       <RuleChannelModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        channel={selectedChannel}
-        onSave={handleSaveChannel}
+        rule={selectedRule}
+        onSave={handleSaveRule}
       />
     </div>
   );

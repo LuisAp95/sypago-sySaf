@@ -1,3 +1,5 @@
+export type RuleCategory = 'limits' | 'dispersion' | 'risk_entity';
+
 export interface RuleTimeBand {
   id: string;
   enabled: boolean;
@@ -6,6 +8,25 @@ export interface RuleTimeBand {
   endTime: string;
   opsPerMinute: number;
   maxAmount: string;
+}
+
+export interface DispersionTimeBand {
+  id: string;
+  enabled: boolean;
+  status: 'Activo' | 'Activa' | 'Inactivo';
+  startTime: string;
+  endTime: string;
+  maxDailyOps: number;
+  minAmount: string;
+}
+
+export interface RiskEntityTimeBand {
+  id: string;
+  enabled: boolean;
+  status: 'Activo' | 'Activa' | 'Inactivo';
+  startTime: string;
+  endTime: string;
+  maxDailyAccumulatedAmount: string;
 }
 
 export interface ChartPoint {
@@ -19,6 +40,7 @@ export interface RuleDefinitionItem {
   name?: string;
   channel?: string;
   title: string;
+  ruleCategory?: RuleCategory;
   ops: {
     max: number;
     current: number;
@@ -32,6 +54,9 @@ export interface RuleDefinitionItem {
     amount: ChartPoint[];
   };
   subRules?: RuleTimeBand[];
+  dispersionSubRules?: DispersionTimeBand[];
+  riskSubRules?: RiskEntityTimeBand[];
+  blacklistedBanks?: string[];
   maxOps?: number;
   maxAmt?: number;
 }

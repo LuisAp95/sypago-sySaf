@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { X, FileDown } from 'lucide-react';
 import { Modal } from '@/components/ui/Modal';
-import { Select } from '@/components/ui/Select';
 import { RuleModalChart } from './RuleModalChart';
-import type { RuleDefinitionItem, RuleTimeBand, ChartPoint } from '../types/rule.types';
+import { DispersionRuleForm } from './DispersionRuleForm';
+import { RiskEntityRuleForm } from './RiskEntityRuleForm';
+import type { RuleDefinitionItem, RuleTimeBand, DispersionTimeBand, RiskEntityTimeBand, ChartPoint, RuleCategory } from '../types/rule.types';
 import { Badge } from '@/components/ui/Badge';
 import { exportSingleRuleToPdf } from '@/utils/pdfGenerator';
 
@@ -90,6 +91,12 @@ export const parseRuleDetails = (
   return { code, name, channel };
 };
 
+const CATEGORY_LABELS: Record<RuleCategory, string> = {
+  limits: 'Límites Operativos',
+  dispersion: 'Control de Dispersión',
+  risk_entity: 'Entidades de Riesgo',
+};
+
 interface RuleDefinitionModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -97,6 +104,7 @@ interface RuleDefinitionModalProps {
   existingRules?: RuleDefinitionItem[];
   onSave?: (updatedRule: RuleDefinitionItem) => void;
   title?: string;
+  ruleCategory?: RuleCategory;
 }
 
 const DEFAULT_SUB_RULES: RuleTimeBand[] = [
@@ -104,28 +112,33 @@ const DEFAULT_SUB_RULES: RuleTimeBand[] = [
     id: 'sub-1',
     enabled: true,
     status: 'Activo',
-    startTime: '23:00',
-    endTime: '08:00',
+    startTime: '00:00',
+    endTime: '23:59',
     opsPerMinute: 4,
     maxAmount: '600 Mil Bs',
   },
+];
+
+const DEFAULT_DISPERSION_RULES: DispersionTimeBand[] = [
   {
-    id: 'sub-2',
-    enabled: true,
-    status: 'Activa',
-    startTime: '08:00',
-    endTime: '18:00',
-    opsPerMinute: 8,
-    maxAmount: '5 Millo Bs',
-  },
-  {
-    id: 'sub-3',
+    id: 'disp-1',
     enabled: true,
     status: 'Activo',
-    startTime: '18:00',
-    endTime: '23:00',
-    opsPerMinute: 8,
-    maxAmount: '2 Millo Bs',
+    startTime: '00:00',
+    endTime: '23:59',
+    maxDailyOps: 20,
+    minAmount: '500 Mil Bs',
+  },
+];
+
+const DEFAULT_RISK_RULES: RiskEntityTimeBand[] = [
+  {
+    id: 'risk-1',
+    enabled: true,
+    status: 'Activo',
+    startTime: '00:00',
+    endTime: '23:59',
+    maxDailyAccumulatedAmount: '2 Millo Bs',
   },
 ];
 
@@ -135,32 +148,51 @@ export const RuleDefinitionModal: React.FC<RuleDefinitionModalProps> = ({
   rule,
   existingRules = [],
   onSave,
+  ruleCategory = 'limits',
 }) => {
   const [code, setCode] = useState<string>('001');
   const [ruleName, setRuleName] = useState<string>('');
-  const [channel, setChannel] = useState<string>('App - N');
   const [subRules, setSubRules] = useState<RuleTimeBand[]>(DEFAULT_SUB_RULES);
+  const [dispersionSubRules, setDispersionSubRules] = useState<DispersionTimeBand[]>(DEFAULT_DISPERSION_RULES);
+  const [riskSubRules, setRiskSubRules] = useState<RiskEntityTimeBand[]>(DEFAULT_RISK_RULES);
+  const [blacklistedBanks, setBlacklistedBanks] = useState<string[]>([]);
 
   useEffect(() => {
     if (isOpen) {
       const details = parseRuleDetails(rule, existingRules);
       setCode(details.code);
       setRuleName(capitalizeFirstLetter(details.name));
-      setChannel(details.channel);
     }
     if (rule) {
+      // Limits
       if (rule.subRules && rule.subRules.length > 0) {
         setSubRules(rule.subRules);
       } else {
         setSubRules(DEFAULT_SUB_RULES);
       }
+      // Dispersion
+      if (rule.dispersionSubRules && rule.dispersionSubRules.length > 0) {
+        setDispersionSubRules(rule.dispersionSubRules);
+      } else {
+        setDispersionSubRules(DEFAULT_DISPERSION_RULES);
+      }
+      // Risk Entity
+      if (rule.riskSubRules && rule.riskSubRules.length > 0) {
+        setRiskSubRules(rule.riskSubRules);
+      } else {
+        setRiskSubRules(DEFAULT_RISK_RULES);
+      }
+      setBlacklistedBanks(rule.blacklistedBanks || []);
     } else {
       setSubRules(DEFAULT_SUB_RULES);
+      setDispersionSubRules(DEFAULT_DISPERSION_RULES);
+      setRiskSubRules(DEFAULT_RISK_RULES);
+      setBlacklistedBanks([]);
     }
   }, [rule, isOpen, existingRules]);
 
   const formattedRuleName = capitalizeFirstLetter(ruleName.trim());
-  const fullTitle = `${code} ${formattedRuleName || 'Nueva Regla'} ${channel}`;
+  const fullTitle = `${code} ${formattedRuleName || 'Nueva Regla'}`;
 
   // Helper to convert time string "HH:MM" to numeric decimal hour (0 - 24)
   const parseHour = (timeStr: string): number => {
@@ -185,6 +217,7 @@ export const RuleDefinitionModal: React.FC<RuleDefinitionModalProps> = ({
 
   // Calculate dynamic step chart points from active sub-rules
   const { opsPoints, amountPoints } = useMemo(() => {
+
     const activeRules = subRules.filter((sr) => sr.enabled);
     if (activeRules.length === 0) {
       return {
@@ -248,8 +281,9 @@ export const RuleDefinitionModal: React.FC<RuleDefinitionModalProps> = ({
       opsPoints: sortAndFilter(opsPointsArr),
       amountPoints: sortAndFilter(amtPointsArr),
     };
-  }, [subRules, rule]);
+  }, [subRules, rule, ruleCategory]);
 
+  // --- Limits handlers ---
   const handleToggleBand = (id: string) => {
     setSubRules((prev) =>
       prev.map((sr) =>
@@ -288,6 +322,73 @@ export const RuleDefinitionModal: React.FC<RuleDefinitionModalProps> = ({
     setSubRules((prev) => prev.filter((sr) => sr.id !== id));
   };
 
+  // --- Dispersion handlers ---
+  const handleToggleDispersion = (id: string) => {
+    setDispersionSubRules((prev) =>
+      prev.map((sr) =>
+        sr.id === id
+          ? { ...sr, enabled: !sr.enabled, status: !sr.enabled ? 'Activo' : 'Inactivo' }
+          : sr
+      )
+    );
+  };
+
+  const handleUpdateDispersion = (id: string, field: keyof DispersionTimeBand, value: any) => {
+    setDispersionSubRules((prev) =>
+      prev.map((sr) => (sr.id === id ? { ...sr, [field]: value } : sr))
+    );
+  };
+
+  const handleAddDispersion = () => {
+    const newBand: DispersionTimeBand = {
+      id: `disp-${Date.now()}`,
+      enabled: true,
+      status: 'Activo',
+      startTime: '09:00',
+      endTime: '17:00',
+      maxDailyOps: 10,
+      minAmount: '500 Mil Bs',
+    };
+    setDispersionSubRules((prev) => [...prev, newBand]);
+  };
+
+  const handleDeleteDispersion = (id: string) => {
+    setDispersionSubRules((prev) => prev.filter((sr) => sr.id !== id));
+  };
+
+  // --- Risk Entity handlers ---
+  const handleToggleRisk = (id: string) => {
+    setRiskSubRules((prev) =>
+      prev.map((sr) =>
+        sr.id === id
+          ? { ...sr, enabled: !sr.enabled, status: !sr.enabled ? 'Activo' : 'Inactivo' }
+          : sr
+      )
+    );
+  };
+
+  const handleUpdateRisk = (id: string, field: keyof RiskEntityTimeBand, value: any) => {
+    setRiskSubRules((prev) =>
+      prev.map((sr) => (sr.id === id ? { ...sr, [field]: value } : sr))
+    );
+  };
+
+  const handleAddRisk = () => {
+    const newBand: RiskEntityTimeBand = {
+      id: `risk-${Date.now()}`,
+      enabled: true,
+      status: 'Activo',
+      startTime: '09:00',
+      endTime: '17:00',
+      maxDailyAccumulatedAmount: '1 Millo Bs',
+    };
+    setRiskSubRules((prev) => [...prev, newBand]);
+  };
+
+  const handleDeleteRisk = (id: string) => {
+    setRiskSubRules((prev) => prev.filter((sr) => sr.id !== id));
+  };
+
   const handleSave = () => {
     const activeRules = subRules.filter((sr) => sr.enabled);
     const maxOpsValue = activeRules.length > 0
@@ -321,16 +422,19 @@ export const RuleDefinitionModal: React.FC<RuleDefinitionModalProps> = ({
     }
 
     const finalRuleName = capitalizeFirstLetter(ruleName.trim()) || 'Nueva Regla';
-    const finalTitle = `${code} ${finalRuleName} ${channel}`;
+    const finalTitle = `${code} ${finalRuleName}`;
 
     const updated: RuleDefinitionItem = {
       ...(rule || {}),
       id: rule?.id || Date.now().toString(),
       code,
       name: finalRuleName,
-      channel,
       title: finalTitle,
+      ruleCategory,
       subRules,
+      dispersionSubRules,
+      riskSubRules,
+      blacklistedBanks,
       ops: {
         max: maxOpsValue,
         current: currentOpsValue,
@@ -350,11 +454,13 @@ export const RuleDefinitionModal: React.FC<RuleDefinitionModalProps> = ({
     onClose();
   };
 
+  const categoryLabel = CATEGORY_LABELS[ruleCategory] || 'Regla';
+
   return (
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title={!rule ? 'Definición de Regla' : `Definición de Regla - ${fullTitle}`}
+      title={!rule ? `Definición de Regla — ${categoryLabel}` : `Definición de Regla — ${fullTitle}`}
       size="5xl"
       className="bg-secondary border border-[#2b2f3d]"
     >
@@ -384,16 +490,11 @@ export const RuleDefinitionModal: React.FC<RuleDefinitionModalProps> = ({
               />
             </div>
 
-            <div className="w-full md:w-60 flex flex-col">
-              <label className="text-[11px] text-gray-400 font-medium mb-1">
-                Canal
-              </label>
-              <Select
-                options={CHANNEL_OPTIONS.map((c) => ({ label: c, value: c }))}
-                value={channel}
-                onChange={(val) => setChannel(val)}
-                className="bg-[#2A292A] border-tertiary/60 text-sm text-gray-100 font-semibold"
-              />
+            <div className="flex flex-col justify-center shrink-0">
+              <span className="text-[10px] text-gray-400 font-medium mb-1">Categoría</span>
+              <span className="text-xs font-bold px-3 py-1.5 rounded-lg border text-center bg-[#1a2a2e] border-[#2a4a4e] text-[#52c6b4]">
+                {categoryLabel}
+              </span>
             </div>
           </div>
 
@@ -410,127 +511,150 @@ export const RuleDefinitionModal: React.FC<RuleDefinitionModalProps> = ({
         {/* Step Chart Section */}
         <RuleModalChart opsData={opsPoints} amountData={amountPoints} />
 
-        {/* Sub-rules Section */}
-        <div className="space-y-4">
-          {/* Sub-rules Header */}
-          <div className="flex items-center justify-between">
-            <h3 className="text-base font-semibold text-gray-200">Reglas</h3>
-            <button
-              type="button"
-              onClick={handleAddBand}
-              className="bg-tertiary border border-table-border hover:bg-[#393738] text-gray-200 text-xs font-medium px-4 py-1.5 rounded-lg transition-colors cursor-pointer"
-            >
-              Agregar
-            </button>
-          </div>
-
-          {/* Sub-rules List */}
-          <div className="space-y-3">
-            {subRules.map((sr) => (
-              <div
-                key={sr.id}
-                className="bg-tertiary border border-[#393738] rounded-xl p-4 flex flex-wrap items-center justify-between gap-4 shadow-sm hover:border-gray-500 transition-colors"
+        {/* Conditional Form Rendering */}
+        {ruleCategory === 'limits' && (
+          /* Sub-rules Section (Original Limits) */
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-base font-semibold text-gray-200">Reglas</h3>
+              <button
+                type="button"
+                onClick={handleAddBand}
+                className="bg-tertiary border border-table-border hover:bg-[#393738] text-gray-200 text-xs font-medium px-4 py-1.5 rounded-lg transition-colors cursor-pointer"
               >
-                {/* Toggle Switch */}
-                <div className="flex items-center gap-3">
+                Agregar
+              </button>
+            </div>
+
+            <div className="space-y-3">
+              {subRules.map((sr) => (
+                <div
+                  key={sr.id}
+                  className="bg-tertiary border border-[#393738] rounded-xl p-4 flex flex-wrap items-center justify-between gap-4 shadow-sm hover:border-gray-500 transition-colors"
+                >
+                  {/* Toggle Switch */}
+                  <div className="flex items-center gap-3">
+                    <button
+                      type="button"
+                      onClick={() => handleToggleBand(sr.id)}
+                      className={`relative inline-flex h-7 w-13 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${sr.enabled ? 'bg-[#10B981]' : 'bg-gray-600'
+                        }`}
+                    >
+                      <span
+                        className={`pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out ${sr.enabled ? 'translate-x-6' : 'translate-x-0'
+                          }`}
+                      />
+                    </button>
+
+                    {/* Estado Badge */}
+                    <div className="flex flex-col min-w-[70px]">
+                      <span className="text-[11px] text-gray-400 mb-0.5">Estado</span>
+                      <Badge variant={sr.enabled ? 'activo' : 'inactivo'}>
+                        {sr.enabled ? sr.status || 'Activo' : 'Inactivo'}
+                      </Badge>
+                    </div>
+                  </div>
+
+                  {/* Hora inicio */}
+                  <div className="flex flex-col">
+                    <label className="text-[11px] text-gray-400 mb-1">Hora inicio</label>
+                    <input
+                      type="text"
+                      value="00:00"
+                      readOnly
+                      className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-500 font-mono font-semibold text-center w-24 focus:outline-none focus:ring-0 cursor-not-allowed"
+                    />
+                  </div>
+
+                  {/* Hora fin */}
+                  <div className="flex flex-col">
+                    <label className="text-[11px] text-gray-400 mb-1">Hora fin</label>
+                    <input
+                      type="text"
+                      value="23:59"
+                      readOnly
+                      className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-500 font-mono font-semibold text-center w-24 focus:outline-none focus:ring-0 cursor-not-allowed"
+                    />
+                  </div>
+
+                  {/* Opm por minuto */}
+                  <div className="flex flex-col">
+                    <label className="text-[11px] text-gray-400 mb-1">Opm por minuto</label>
+                    <input
+                      type="number"
+                      min="0"
+                      step="1"
+                      value={sr.opsPerMinute}
+                      onKeyDown={(e) => {
+                        if (['-', '+', 'e', 'E', '.', ','].includes(e.key)) {
+                          e.preventDefault();
+                        }
+                      }}
+                      onChange={(e) => {
+                        const val = parseInt(e.target.value, 10);
+                        if (e.target.value === '') {
+                          handleUpdateBand(sr.id, 'opsPerMinute', '' as any);
+                        } else if (!isNaN(val)) {
+                          handleUpdateBand(sr.id, 'opsPerMinute', Math.max(0, val));
+                        }
+                      }}
+                      onBlur={(e) => {
+                        const val = parseInt(e.target.value, 10);
+                        if (isNaN(val) || val < 0) {
+                          handleUpdateBand(sr.id, 'opsPerMinute', 0);
+                        }
+                      }}
+                      className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-100 font-semibold text-center w-28 focus:outline-none focus:ring-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                    />
+                  </div>
+
+                  {/* Monto máximo */}
+                  <div className="flex flex-col">
+                    <label className="text-[11px] text-gray-400 mb-1">Monto máximo</label>
+                    <input
+                      type="text"
+                      value={sr.maxAmount}
+                      onChange={(e) => handleUpdateBand(sr.id, 'maxAmount', e.target.value)}
+                      className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-100 font-semibold text-center w-36 focus:outline-none focus:ring-0"
+                    />
+                  </div>
+
+                  {/* Delete button */}
                   <button
                     type="button"
-                    onClick={() => handleToggleBand(sr.id)}
-                    className={`relative inline-flex h-7 w-13 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${sr.enabled ? 'bg-[#10B981]' : 'bg-gray-600'
-                      }`}
+                    onClick={() => handleDeleteBand(sr.id)}
+                    className="w-8 h-8 rounded-full border border-table-border bg-secondary hover:bg-[#393738] text-gray-400 hover:text-gray-100 flex items-center justify-center transition-colors cursor-pointer"
+                    aria-label="Eliminar regla"
                   >
-                    <span
-                      className={`pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out ${sr.enabled ? 'translate-x-6' : 'translate-x-0'
-                        }`}
-                    />
+                    <X className="w-4 h-4" />
                   </button>
-
-                  {/* Estado Badge */}
-                  <div className="flex flex-col min-w-[70px]">
-                    <span className="text-[11px] text-gray-400 mb-0.5">Estado</span>
-                    <Badge variant={sr.enabled ? 'activo' : 'inactivo'}>
-                      {sr.enabled ? sr.status || 'Activo' : 'Inactivo'}
-                    </Badge>
-                  </div>
                 </div>
-
-                {/* Hora inicio */}
-                <div className="flex flex-col">
-                  <label className="text-[11px] text-gray-400 mb-1">Hora inicio</label>
-                  <input
-                    type="text"
-                    value={sr.startTime}
-                    onChange={(e) => handleUpdateBand(sr.id, 'startTime', e.target.value)}
-                    className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-100 font-mono font-semibold text-center w-24 focus:outline-none focus:ring-0"
-                  />
-                </div>
-
-                {/* Hora fin */}
-                <div className="flex flex-col">
-                  <label className="text-[11px] text-gray-400 mb-1">Hora fin</label>
-                  <input
-                    type="text"
-                    value={sr.endTime}
-                    onChange={(e) => handleUpdateBand(sr.id, 'endTime', e.target.value)}
-                    className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-100 font-mono font-semibold text-center w-24 focus:outline-none focus:ring-0"
-                  />
-                </div>
-
-                {/* Opm por minuto */}
-                <div className="flex flex-col">
-                  <label className="text-[11px] text-gray-400 mb-1">Opm por minuto</label>
-                  <input
-                    type="number"
-                    min="0"
-                    step="1"
-                    value={sr.opsPerMinute}
-                    onKeyDown={(e) => {
-                      if (['-', '+', 'e', 'E', '.', ','].includes(e.key)) {
-                        e.preventDefault();
-                      }
-                    }}
-                    onChange={(e) => {
-                      const val = parseInt(e.target.value, 10);
-                      if (e.target.value === '') {
-                        handleUpdateBand(sr.id, 'opsPerMinute', '' as any);
-                      } else if (!isNaN(val)) {
-                        handleUpdateBand(sr.id, 'opsPerMinute', Math.max(0, val));
-                      }
-                    }}
-                    onBlur={(e) => {
-                      const val = parseInt(e.target.value, 10);
-                      if (isNaN(val) || val < 0) {
-                        handleUpdateBand(sr.id, 'opsPerMinute', 0);
-                      }
-                    }}
-                    className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-100 font-semibold text-center w-28 focus:outline-none focus:ring-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                  />
-                </div>
-
-                {/* Monto máximo */}
-                <div className="flex flex-col">
-                  <label className="text-[11px] text-gray-400 mb-1">Monto máximo</label>
-                  <input
-                    type="text"
-                    value={sr.maxAmount}
-                    onChange={(e) => handleUpdateBand(sr.id, 'maxAmount', e.target.value)}
-                    className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-100 font-semibold text-center w-36 focus:outline-none focus:ring-0"
-                  />
-                </div>
-
-                {/* Delete button */}
-                <button
-                  type="button"
-                  onClick={() => handleDeleteBand(sr.id)}
-                  className="w-8 h-8 rounded-full border border-table-border bg-secondary hover:bg-[#393738] text-gray-400 hover:text-gray-100 flex items-center justify-center transition-colors cursor-pointer"
-                  aria-label="Eliminar regla"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
+
+        {ruleCategory === 'dispersion' && (
+          <DispersionRuleForm
+            subRules={dispersionSubRules}
+            onToggle={handleToggleDispersion}
+            onUpdate={handleUpdateDispersion}
+            onAdd={handleAddDispersion}
+            onDelete={handleDeleteDispersion}
+          />
+        )}
+
+        {ruleCategory === 'risk_entity' && (
+          <RiskEntityRuleForm
+            subRules={riskSubRules}
+            blacklistedBanks={blacklistedBanks}
+            onToggle={handleToggleRisk}
+            onUpdate={handleUpdateRisk}
+            onAdd={handleAddRisk}
+            onDelete={handleDeleteRisk}
+            onBanksChange={setBlacklistedBanks}
+          />
+        )}
 
         {/* Action Button Footer */}
         <div className="flex justify-center items-center gap-3 pt-2 pb-1">
@@ -541,7 +665,6 @@ export const RuleDefinitionModal: React.FC<RuleDefinitionModalProps> = ({
                 ...rule,
                 code,
                 name: ruleName,
-                channel,
                 title: fullTitle,
                 subRules,
               })}
@@ -563,4 +686,3 @@ export const RuleDefinitionModal: React.FC<RuleDefinitionModalProps> = ({
     </Modal>
   );
 };
-
