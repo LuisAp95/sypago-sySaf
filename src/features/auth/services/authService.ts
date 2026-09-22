@@ -107,6 +107,12 @@ export const authService = {
           }
         });
 
+        // Remove roles that no longer exist in db.json
+        const dbRoleIds = new Set(db.roles.map((r: any) => r.id));
+        const beforeLen = roles.length;
+        roles = roles.filter((r: any) => dbRoleIds.has(r.id));
+        if (roles.length !== beforeLen) updated = true;
+
         if (updated || roles.length === 0) {
           localStorage.setItem('sysaf_roles', JSON.stringify(roles));
         }
@@ -155,6 +161,12 @@ export const authService = {
               updated = true;
             }
           });
+
+          // Remove users that no longer exist in db.json
+          const dbUserIds = new Set(db.usuarios.map((u: any) => u.id));
+          const beforeUserLen = users.length;
+          users = users.filter((u: any) => dbUserIds.has(u.id));
+          if (users.length !== beforeUserLen) updated = true;
 
           if (updated) {
             localStorage.setItem('sysaf_usuarios', JSON.stringify(users));

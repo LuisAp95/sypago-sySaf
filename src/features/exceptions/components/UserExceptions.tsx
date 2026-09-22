@@ -4,10 +4,10 @@ import { api } from '@/mocks/api';
 import { ViewHeader } from '@/components/ui/ViewHeader';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { Checkbox } from '@/components/ui/Checkbox';
+
 import { DataRow, DataCol } from '@/components/ui/DataRow';
 import { Loader } from '@/components/ui/Loader';
-import { Eye } from 'lucide-react';
+import { Eye, Trash2 } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { UserExceptionModal } from './UserExceptionModal';
 import { auditService } from '@/features/administration';
@@ -29,7 +29,7 @@ export const UserExceptions: React.FC = () => {
   });
 
   const [localExceptions, setLocalExceptions] = useState<any[]>([]);
-  const [selectedUserIds, setSelectedUserIds] = useState<Set<string>>(new Set());
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [userToEdit, setUserToEdit] = useState<any | null>(null);
 
@@ -45,37 +45,23 @@ export const UserExceptions: React.FC = () => {
     }
   }, [exceptions]);
 
-  const handleSelectAll = (checked: boolean) => {
-    if (checked) {
-      setSelectedUserIds(new Set(localExceptions.map(e => e.id)));
-    } else {
-      setSelectedUserIds(new Set());
-    }
-  };
 
-  const handleSelectUser = (id: string, checked: boolean) => {
-    const newSelected = new Set(selectedUserIds);
-    if (checked) {
-      newSelected.add(id);
-    } else {
-      newSelected.delete(id);
-    }
-    setSelectedUserIds(newSelected);
-  };
 
-  const handleEdit = () => {
-    if (selectedUserIds.size === 1) {
-      const id = Array.from(selectedUserIds)[0];
-      const user = localExceptions.find(e => e.id === id);
-      if (user) {
-        setUserToEdit(user);
-        setIsModalOpen(true);
-      }
-    } else if (selectedUserIds.size > 1) {
-      alert("Por favor, seleccione solo un usuario para editar.");
-    } else {
-      alert("Por favor, seleccione un usuario para editar.");
-    }
+  const handleDelete = (item: any) => {
+    const newExceptions = localExceptions.filter(ex => ex.id !== item.id);
+    setLocalExceptions(newExceptions);
+    localStorage.setItem('userExceptions', JSON.stringify(newExceptions));
+
+    auditService.logSync({
+      module: 'Excepciones Usuario',
+      action: 'DELETE',
+      entityType: 'Excepción de Usuario',
+      entityId: item.id,
+      entityName: item.alias || item.document || item.id,
+      details: `Excepción de usuario "${item.alias}" eliminada`,
+      previousValue: item,
+      newValue: undefined,
+    });
   };
 
   const handleSaveException = (updatedUser: any) => {
@@ -124,20 +110,7 @@ export const UserExceptions: React.FC = () => {
 
       <div className="flex-1 overflow-hidden flex flex-col gap-6">
         
-        {/* List Actions */}
-        <div className="flex items-center justify-between px-6">
-          <div className="flex items-center gap-3">
-            <Checkbox 
-              id="selectAll" 
-              checked={selectedUserIds.size === localExceptions.length && localExceptions.length > 0}
-              onCheckedChange={handleSelectAll}
-            />
-            <label htmlFor="selectAll" className="text-sm cursor-pointer text-text-primary">Seleccionar Todos</label>
-          </div>
-          <div className="flex items-center gap-2">
-            <Button variant="secondary" onClick={handleEdit}>Editar</Button>
-          </div>
-        </div>
+
 
         {/* List */}
         <div className="flex-1 overflow-y-auto pr-2 px-6 pb-6">
@@ -153,12 +126,7 @@ export const UserExceptions: React.FC = () => {
                   setIsModalOpen(true);
                 }}
               >
-                <DataCol className="w-[5%] pl-4">
-                  <Checkbox 
-                    checked={selectedUserIds.has(item.id)}
-                    onCheckedChange={(checked) => handleSelectUser(item.id, checked as boolean)}
-                  />
-                </DataCol>
+
                 <DataCol className="w-[18%]">{item.alias}</DataCol>
                 <DataCol className="w-[15%]">{item.document}</DataCol>
                 <DataCol className="w-[12%]">
@@ -182,7 +150,7 @@ export const UserExceptions: React.FC = () => {
                 
                 <div className="w-[1px] h-12 bg-[#333235] mx-4" />
                 
-                <DataCol className="w-[8%] flex-row items-center h-full justify-center pr-2">
+                <DataCol className="w-[10%] flex-row items-center h-full justify-center pr-2 gap-1">
                   <Button 
                     variant="secondary" 
                     size="icon" 
@@ -194,6 +162,17 @@ export const UserExceptions: React.FC = () => {
                     }}
                   >
                     <Eye className="w-6 h-6" />
+                  </Button>
+                  <Button 
+                    variant="secondary" 
+                    size="icon" 
+                    className="w-10 h-10 rounded-full bg-transparent border-transparent hover:bg-[#333235] text-white hover:text-red-400"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleDelete(item);
+                    }}
+                  >
+                    <Trash2 className="w-5 h-5" />
                   </Button>
                 </DataCol>
               </DataRow>

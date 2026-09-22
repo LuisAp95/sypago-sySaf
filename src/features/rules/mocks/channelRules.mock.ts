@@ -6,19 +6,21 @@ export const CHANNELS: Channel[] = [
 ];
 
 export const PRODUCTS: Product[] = [
-  // Simf (Bajo Valor) - PROD-01 to PROD-05, we just use 01 to 05 as requested
-  { id: '01', name: 'Producto 01', channelId: 'Simf' },
-  { id: '02', name: 'Producto 02', channelId: 'Simf' },
-  { id: '03', name: 'Producto 03', channelId: 'Simf' },
-  { id: '04', name: 'Producto 04', channelId: 'Simf' },
-  { id: '05', name: 'Producto 05', channelId: 'Simf' },
-  // Sglpar (Alto Valor) - 06 to 11
-  { id: '06', name: 'Producto 06', channelId: 'Sglpar' },
-  { id: '07', name: 'Producto 07', channelId: 'Sglpar' },
-  { id: '08', name: 'Producto 08', channelId: 'Sglpar' },
-  { id: '09', name: 'Producto 09', channelId: 'Sglpar' },
-  { id: '10', name: 'Producto 10', channelId: 'Sglpar' },
-  { id: '11', name: 'Producto 11', channelId: 'Sglpar' },
+  // Simf (Bajo Valor)
+  { id: '223', name: 'Fideicomiso', channelId: 'Simf' },
+  { id: '225', name: 'Pago Tarjeta de Crédito', channelId: 'Simf' },
+  { id: '229', name: 'Retorno Pago Tarjeta de Crédito', channelId: 'Simf' },
+  { id: '222', name: 'Pago a Proveedores', channelId: 'Simf' },
+  { id: '150', name: 'Reverso Ordinario', channelId: 'Simf' },
+  { id: '220', name: 'Crédito Ordinario', channelId: 'Simf' },
+  { id: '221', name: 'Pago de Nómina', channelId: 'Simf' },
+  { id: '224', name: 'Bonificación Patria', channelId: 'Simf' },
+  // Sglpar (Alto Valor)
+  { id: '410', name: 'Por Instrucciones del Cliente', channelId: 'Sglpar' },
+  { id: '422', name: 'Liquidación operaciones Alto Valor', channelId: 'Sglpar' },
+  { id: '462', name: 'Traspaso de Fondos Organismos Públicos', channelId: 'Sglpar' },
+  { id: '548', name: 'Enteramiento Recaudado al Seniat', channelId: 'Sglpar' },
+  { id: '552', name: 'Enteramiento Recaudado por el BCV al Seniat', channelId: 'Sglpar' },
 ];
 
 export const INITIAL_CHANNEL_RULES: ChannelRule[] = [

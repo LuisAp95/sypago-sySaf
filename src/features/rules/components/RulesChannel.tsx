@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ViewHeader } from '@/components/ui/ViewHeader';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { Checkbox } from '@/components/ui/Checkbox';
-import { Eye, Plus } from 'lucide-react';
+import { Eye } from 'lucide-react';
 import { RuleChannelModal } from './RuleChannelModal';
 import { DataGrid, type ColumnDef } from '@/components/ui/DataGrid';
 import { auditService } from '@/features/administration';
@@ -47,12 +46,6 @@ export const RulesChannel: React.FC = () => {
   };
 
   const columns: ColumnDef<ChannelRule>[] = [
-    {
-      header: undefined,
-      className: 'w-[5%] pl-4',
-      colProps: { onClick: e => e.stopPropagation() },
-      cell: () => <Checkbox />
-    },
     { 
       header: 'Canal', 
       accessorKey: 'channelId', 
@@ -117,29 +110,12 @@ export const RulesChannel: React.FC = () => {
         showSearch
         showFilter
         showCopy
+        showAdd
+        onAddClick={() => handleOpenModal()}
         onCopyClick={() => exportChannelRulesToPdf(rules)}
       />
 
       <div className="flex-1 overflow-hidden flex flex-col gap-6">
-
-        {/* List Actions */}
-        <div className="flex items-center justify-between mt-2 px-4">
-          <div className="flex items-center gap-3">
-            <Checkbox id="selectAll" />
-            <label htmlFor="selectAll" className="text-sm cursor-pointer text-text-primary">Seleccionar Todos</label>
-          </div>
-          <div className="flex items-center gap-2">
-            <Button 
-              variant="primary" 
-              className="flex items-center gap-2 bg-[#265e56] hover:bg-[#2c6e65] text-white border-transparent"
-              onClick={() => handleOpenModal()}
-              disabled={rules.length === 0}
-            >
-              <Plus className="w-4 h-4" />
-              Agregar Nueva Regla
-            </Button>
-          </div>
-        </div>
 
         {/* List */}
         <div className="flex-1 overflow-y-auto pr-2 px-4 pb-4">

@@ -6,8 +6,9 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Checkbox } from '@/components/ui/Checkbox';
 import { DataGrid, type ColumnDef } from '@/components/ui/DataGrid';
-import { Eye } from 'lucide-react';
+import { Eye, Trash2 } from 'lucide-react';
 import { BlacklistDetailModal } from './BlacklistDetailModal';
+import { AddBlacklistModal } from './AddBlacklistModal';
 import { ConfirmDialog } from '@/components/ui/ConfirmDialog';
 import { auditService } from '@/features/administration';
 
@@ -19,6 +20,7 @@ interface BlacklistItem {
   action: string;
   lastModified: string;
   eventsRegistered: number;
+  description?: string;
 }
 
 const STATUS_OPTIONS = [
@@ -33,22 +35,43 @@ export const BlacklistView: React.FC = () => {
     queryFn: api.getBlacklist
   });
 
-  const [items, setItems] = useState<BlacklistItem[]>([]);
+  const [items, setItems] = useState<BlacklistItem[]>(() => {
+    const saved = localStorage.getItem('sysaf_blacklist');
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch (e) {
+        return [];
+      }
+    }
+    return [];
+  });
+  
   const [statusFilter, setStatusFilter] = useState<string>('todos');
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [selectedItemForDetail, setSelectedItemForDetail] = useState<BlacklistItem | null>(null);
   const [confirmDialog, setConfirmDialog] = useState<{
     isOpen: boolean;
-    type: 'activate' | 'deactivate';
+    type: 'activate' | 'deactivate' | 'delete';
     ids: string[];
   }>({ isOpen: false, type: 'activate', ids: [] });
 
   useEffect(() => {
-    if (initialBlacklist) {
+    const saved = localStorage.getItem('sysaf_blacklist');
+    if (!saved && initialBlacklist) {
       setItems(initialBlacklist);
+      localStorage.setItem('sysaf_blacklist', JSON.stringify(initialBlacklist));
     }
   }, [initialBlacklist]);
+
+  useEffect(() => {
+    // Solo guardamos si ya se han cargado datos (ya sea del local storage o de initialBlacklist)
+    if (items.length >= 0 && (items.length > 0 || localStorage.getItem('sysaf_blacklist'))) {
+      localStorage.setItem('sysaf_blacklist', JSON.stringify(items));
+    }
+  }, [items]);
 
   const filteredData = useMemo(() => {
     if (statusFilter === 'todos') {
@@ -91,31 +114,76 @@ export const BlacklistView: React.FC = () => {
 
   const handleConfirmAction = () => {
     const { type, ids } = confirmDialog;
-    const newStatus = type === 'activate' ? 'Activo' : 'Inactivo';
     
-    setItems(prev =>
-      prev.map(item =>
-        ids.includes(item.id) ? { ...item, status: newStatus } : item
-      )
-    );
-    setSelectedIds(prev => prev.filter(id => !ids.includes(id)));
+    if (type === 'delete') {
+      setItems(prev => prev.filter(item => !ids.includes(item.id)));
+      
+      // Registrar auditoría para cada entrada
+      for (const id of ids) {
+        const item = items.find(i => i.id === id);
+        auditService.logSync({
+          module: 'Lista Negra',
+          action: 'DELETE',
+          entityType: 'Entrada de Lista Negra',
+          entityId: id,
+          entityName: item ? `${item.field}: ${item.value}` : id,
+          details: `Entrada "${item?.value}" eliminada de la lista negra`,
+        });
+      }
+    } else {
+      const newStatus = type === 'activate' ? 'Activo' : 'Inactivo';
+      
+      setItems(prev =>
+        prev.map(item =>
+          ids.includes(item.id) ? { ...item, status: newStatus } : item
+        )
+      );
 
-    // Registrar auditoría para cada entrada
-    for (const id of ids) {
-      const item = items.find(i => i.id === id);
-      auditService.logSync({
-        module: 'Lista Negra',
-        action: type === 'activate' ? 'ACTIVATE' : 'DEACTIVATE',
-        entityType: 'Entrada de Lista Negra',
-        entityId: id,
-        entityName: item ? `${item.field}: ${item.value}` : id,
-        details: type === 'activate'
-          ? `Entrada "${item?.value}" activada en lista negra`
-          : `Entrada "${item?.value}" desactivada en lista negra`,
-        previousValue: { status: item?.status },
-        newValue: { status: newStatus },
-      });
+      // Registrar auditoría para cada entrada
+      for (const id of ids) {
+        const item = items.find(i => i.id === id);
+        auditService.logSync({
+          module: 'Lista Negra',
+          action: type === 'activate' ? 'ACTIVATE' : 'DEACTIVATE',
+          entityType: 'Entrada de Lista Negra',
+          entityId: id,
+          entityName: item ? `${item.field}: ${item.value}` : id,
+          details: type === 'activate'
+            ? `Entrada "${item?.value}" activada en lista negra`
+            : `Entrada "${item?.value}" desactivada en lista negra`,
+          previousValue: { status: item?.status },
+          newValue: { status: newStatus },
+        });
+      }
     }
+    
+    setSelectedIds(prev => prev.filter(id => !ids.includes(id)));
+    setConfirmDialog(prev => ({ ...prev, isOpen: false }));
+  };
+
+  const handleSaveAdd = (data: any) => {
+    const newItem: BlacklistItem = {
+      id: Date.now().toString(),
+      status: 'Activo',
+      field: data.field,
+      value: data.value,
+      action: data.action,
+      lastModified: new Date().toLocaleString('es-ES', { dateStyle: 'short', timeStyle: 'short' }),
+      eventsRegistered: 0,
+      description: data.description
+    };
+
+    setItems(prev => [newItem, ...prev]);
+    
+    auditService.logSync({
+      module: 'Lista Negra',
+      action: 'CREATE',
+      entityType: 'Entrada de Lista Negra',
+      entityId: newItem.id,
+      entityName: `${newItem.field}: ${newItem.value}`,
+      details: `Nueva entrada agregada a lista negra. Razón: ${data.description}`,
+      newValue: newItem,
+    });
   };
 
   const columns: ColumnDef<BlacklistItem>[] = [
@@ -161,20 +229,33 @@ export const BlacklistView: React.FC = () => {
     },
     {
       header: undefined,
-      className: 'w-[8%] flex-row items-center h-full justify-center pr-2',
+      className: 'w-[8%] flex flex-row items-center h-full justify-center pr-2 gap-1',
       cell: (item) => (
-        <Button
-          variant="secondary"
-          size="icon"
-          className="w-8 h-8 rounded-full bg-transparent border-transparent hover:bg-[#333235] text-[#9E9D9F] hover:text-white"
-          onClick={(e) => {
-            e.stopPropagation();
-            setSelectedItemForDetail(item);
-            setIsDetailModalOpen(true);
-          }}
-        >
-          <Eye className="w-4 h-4" />
-        </Button>
+        <>
+          <Button
+            variant="secondary"
+            size="icon"
+            className="w-8 h-8 rounded-full bg-transparent border-transparent hover:bg-[#333235] text-[#9E9D9F] hover:text-white shrink-0"
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedItemForDetail(item);
+              setIsDetailModalOpen(true);
+            }}
+          >
+            <Eye className="w-4 h-4" />
+          </Button>
+          <Button
+            variant="secondary"
+            size="icon"
+            className="w-8 h-8 rounded-full bg-transparent border-transparent hover:bg-[#333235] text-[#9E9D9F] hover:text-[#E5484D] shrink-0"
+            onClick={(e) => {
+              e.stopPropagation();
+              setConfirmDialog({ isOpen: true, type: 'delete', ids: [item.id] });
+            }}
+          >
+            <Trash2 className="w-4 h-4" />
+          </Button>
+        </>
       )
     }
   ];
@@ -188,6 +269,7 @@ export const BlacklistView: React.FC = () => {
         showSearch
         showFilter
         showAdd
+        onAddClick={() => setIsAddModalOpen(true)}
         showCopy
       />
 
@@ -245,18 +327,38 @@ export const BlacklistView: React.FC = () => {
         item={selectedItemForDetail}
       />
 
+      <AddBlacklistModal
+        isOpen={isAddModalOpen}
+        onClose={() => setIsAddModalOpen(false)}
+        onSave={handleSaveAdd}
+      />
+
       <ConfirmDialog
         isOpen={confirmDialog.isOpen}
         onClose={() => setConfirmDialog(prev => ({ ...prev, isOpen: false }))}
         onConfirm={handleConfirmAction}
-        title={confirmDialog.type === 'activate' ? 'Activar Regla' : 'Inactivar Regla'}
-        message={
-          confirmDialog.ids.length > 1
-            ? `¿Está seguro que desea ${confirmDialog.type === 'activate' ? 'activar' : 'inactivar'} las ${confirmDialog.ids.length} reglas seleccionadas en la lista negra?`
-            : `¿Está seguro que desea ${confirmDialog.type === 'activate' ? 'activar' : 'inactivar'} esta regla de la lista negra?`
+        title={
+          confirmDialog.type === 'delete' 
+            ? 'Eliminar de Lista Negra' 
+            : confirmDialog.type === 'activate' ? 'Activar Cuenta' : 'Inactivar Cuenta'
         }
-        confirmText={confirmDialog.type === 'activate' ? 'Sí, activar' : 'Sí, inactivar'}
-        intent={confirmDialog.type === 'activate' ? 'success' : 'warning'}
+        message={
+          confirmDialog.type === 'delete'
+            ? '¿Está seguro que desea eliminar esta cuenta de la lista negra? Esta acción no se puede deshacer.'
+            : confirmDialog.ids.length > 1
+              ? `¿Está seguro que desea ${confirmDialog.type === 'activate' ? 'activar' : 'inactivar'} las ${confirmDialog.ids.length} cuentas seleccionadas en la lista negra?`
+              : `¿Está seguro que desea ${confirmDialog.type === 'activate' ? 'activar' : 'inactivar'} esta cuenta de la lista negra?`
+        }
+        confirmText={
+          confirmDialog.type === 'delete'
+            ? 'Sí, eliminar'
+            : confirmDialog.type === 'activate' ? 'Sí, activar' : 'Sí, inactivar'
+        }
+        intent={
+          confirmDialog.type === 'delete' 
+            ? 'danger' 
+            : confirmDialog.type === 'activate' ? 'success' : 'warning'
+        }
       />
     </div>
   );

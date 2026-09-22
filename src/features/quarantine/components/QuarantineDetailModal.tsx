@@ -1,21 +1,7 @@
 import React from 'react';
 import { Modal } from '@/components/ui/Modal';
 import { Badge } from '@/components/ui/Badge';
-import { 
-  Hash, 
-  User, 
-  FileText, 
-  DollarSign, 
-  ShieldAlert, 
-  AlertTriangle, 
-  Link2, 
-  Settings, 
-  Globe, 
-  MapPin, 
-  Monitor, 
-  Clock,
-  Download
-} from 'lucide-react';
+import { Download } from 'lucide-react';
 import { exportQuarantineToPdf } from '@/utils/pdfGenerator';
 
 export interface QuarantineItem {
@@ -88,36 +74,24 @@ export const QuarantineDetailModal: React.FC<QuarantineDetailModalProps> = ({
         {/* Top Info Row */}
         <div className="grid grid-cols-4 gap-4 p-4 rounded-xl border border-[#333235] bg-[#232225]">
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#2A2B3D]">
-              <Hash className="w-5 h-5 text-[#818CF8]" />
-            </div>
             <div className="flex flex-col">
               <span className="text-[12px] text-[#9E9D9F] font-medium">ID</span>
               <span className="text-sm font-bold text-white">{item.id}</span>
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#2A2B3D]">
-              <User className="w-5 h-5 text-[#818CF8]" />
-            </div>
             <div className="flex flex-col">
               <span className="text-[12px] text-[#9E9D9F] font-medium">Usuario</span>
               <span className="text-sm font-bold text-white">{item.user}</span>
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#2A2B3D]">
-              <FileText className="w-5 h-5 text-[#818CF8]" />
-            </div>
             <div className="flex flex-col">
               <span className="text-[12px] text-[#9E9D9F] font-medium">Documento</span>
               <span className="text-sm font-bold text-white">{item.document}</span>
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#2A2B3D]">
-              <DollarSign className="w-5 h-5 text-[#818CF8]" />
-            </div>
             <div className="flex flex-col">
               <span className="text-[12px] text-[#9E9D9F] font-medium">Monto</span>
               <span className="text-sm font-bold text-white">
@@ -129,9 +103,6 @@ export const QuarantineDetailModal: React.FC<QuarantineDetailModalProps> = ({
 
         {/* Risk Level Row */}
         <div className="flex items-center gap-4 p-4 rounded-xl border border-[#333235] bg-[#232225]">
-          <div className={`flex items-center justify-center w-10 h-10 rounded-lg ${isCritical ? 'bg-[#3D2B2B]' : 'bg-[#333235]'}`}>
-            <ShieldAlert className={`w-5 h-5 ${isCritical ? 'text-[#EF4444]' : 'text-[#9E9D9F]'}`} />
-          </div>
           <div className="flex flex-col items-start gap-1">
             <span className="text-[12px] text-[#9E9D9F] font-medium">Nivel de Riesgo</span>
             <Badge variant={item.risk as any}>{item.risk}</Badge>
@@ -141,12 +112,10 @@ export const QuarantineDetailModal: React.FC<QuarantineDetailModalProps> = ({
         {/* Reason Box */}
         <div className={`flex flex-col gap-3 p-5 rounded-xl border ${isCritical ? 'border-[#EF4444]/50 bg-[#EF4444]/5' : 'border-[#333235] bg-[#232225]'}`}>
           <div className="flex items-center gap-2">
-            <AlertTriangle className={`w-5 h-5 ${isCritical ? 'text-[#EF4444]' : 'text-[#EAB308]'}`} />
             <span className={`text-base font-bold ${isCritical ? 'text-[#EF4444]' : 'text-[#EAB308]'}`}>Motivo del Bloqueo</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1.5 bg-[#1E3A8A]/30 text-[#60A5FA] px-3 py-1 rounded-full text-sm font-medium border border-[#1E3A8A]/50">
-              <Link2 className="w-4 h-4" />
               <span>{item.reason}</span>
             </div>
           </div>
@@ -156,42 +125,37 @@ export const QuarantineDetailModal: React.FC<QuarantineDetailModalProps> = ({
         </div>
 
         {/* Technical Details */}
-        <div className="flex flex-col gap-4 p-5 rounded-xl border border-[#333235] bg-[#232225]">
+        { /*   <div className="flex flex-col gap-4 p-5 rounded-xl border border-[#333235] bg-[#232225]">
           <div className="flex items-center gap-2">
-            <Settings className="w-5 h-5 text-[#818CF8]" />
             <span className="text-[15px] font-bold text-gray-200">Detalles técnicos</span>
           </div>
           <div className="grid grid-cols-4 gap-4 mt-2">
             <div className="flex items-center gap-3">
-              <Globe className="w-5 h-5 text-[#818CF8]" />
               <div className="flex flex-col">
                 <span className="text-[12px] text-[#9E9D9F] font-medium">IP</span>
                 <span className="text-sm font-bold text-white">192.168.1.XXX</span>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="w-5 h-5 text-[#818CF8]" />
               <div className="flex flex-col">
                 <span className="text-[12px] text-[#9E9D9F] font-medium">Ubicación</span>
                 <span className="text-sm font-bold text-white">[País/Ciudad]</span>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Monitor className="w-5 h-5 text-[#818CF8]" />
               <div className="flex flex-col">
                 <span className="text-[12px] text-[#9E9D9F] font-medium">Dispositivo</span>
                 <span className="text-sm font-bold text-white">[Tipo de dispositivo]</span>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Clock className="w-5 h-5 text-[#818CF8]" />
               <div className="flex flex-col">
                 <span className="text-[12px] text-[#9E9D9F] font-medium">Tiempo en espera</span>
                 <span className="text-sm font-bold text-white">{item.waitTime}</span>
               </div>
             </div>
           </div>
-        </div>
+        </div>*/}
 
       </div>
     </Modal>

@@ -96,6 +96,7 @@ export const ExceptionsDefinition: React.FC = () => {
 
   return (
     <BaseRulesLayout
+      ruleCategory="exceptions"
       data={exceptions}
       onSaveRule={handleSaveException}
       renderStats={(rule) => (

@@ -33,7 +33,7 @@
       "receiverAccount": "0114202607211015205240376",
       "amount": "8.070,12",
       "processTime": "6 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC602",
@@ -46,7 +46,7 @@
       "receiverAccount": "0114202607211017175627048",
       "amount": "11.398,74",
       "processTime": "15 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC603",
@@ -59,7 +59,7 @@
       "receiverAccount": "0114202607211016713205515",
       "amount": "4.960,12",
       "processTime": "14 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC604",
@@ -72,7 +72,7 @@
       "receiverAccount": "0114202607211019360537853",
       "amount": "45,54",
       "processTime": "13 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC605",
@@ -85,7 +85,7 @@
       "receiverAccount": "0114202607211012375400728",
       "amount": "13.754,21",
       "processTime": "2 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC606",
@@ -98,7 +98,7 @@
       "receiverAccount": "0114202607211017089841318",
       "amount": "5.308,33",
       "processTime": "15 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC607",
@@ -111,7 +111,7 @@
       "receiverAccount": "0114202607211019888601293",
       "amount": "8.183,07",
       "processTime": "3 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC608",
@@ -124,7 +124,7 @@
       "receiverAccount": "0114202607211012373288469",
       "amount": "5.886,82",
       "processTime": "2 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC609",
@@ -137,7 +137,7 @@
       "receiverAccount": "0114202607211016537343610",
       "amount": "14.129,53",
       "processTime": "5 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC610",
@@ -150,7 +150,7 @@
       "receiverAccount": "0114202607211017428468259",
       "amount": "2.814,19",
       "processTime": "2 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC611",
@@ -163,7 +163,7 @@
       "receiverAccount": "0114202607211013839703757",
       "amount": "10.886,72",
       "processTime": "4 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC612",
@@ -176,7 +176,7 @@
       "receiverAccount": "0114202607211015874690808",
       "amount": "11.546,19",
       "processTime": "8 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC613",
@@ -189,7 +189,7 @@
       "receiverAccount": "0114202607211017168992453",
       "amount": "11.307,19",
       "processTime": "3 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC614",
@@ -202,7 +202,7 @@
       "receiverAccount": "0114202607211018833545835",
       "amount": "3.668,96",
       "processTime": "1 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC615",
@@ -215,7 +215,7 @@
       "receiverAccount": "0114202607211016555284594",
       "amount": "16.759,75",
       "processTime": "7 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC616",
@@ -228,7 +228,7 @@
       "receiverAccount": "0114202607211015695771621",
       "amount": "859,33",
       "processTime": "14 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC617",
@@ -241,7 +241,7 @@
       "receiverAccount": "0114202607211019482114915",
       "amount": "5.875,24",
       "processTime": "6 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC618",
@@ -254,7 +254,7 @@
       "receiverAccount": "0114202607211017380512642",
       "amount": "19.598,67",
       "processTime": "4 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC619",
@@ -267,7 +267,7 @@
       "receiverAccount": "0114202607211015703165393",
       "amount": "1.959,29",
       "processTime": "10 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC620",
@@ -280,7 +280,7 @@
       "receiverAccount": "0114202607211017711277281",
       "amount": "3.594,26",
       "processTime": "11 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC621",
@@ -293,7 +293,7 @@
       "receiverAccount": "0114202607211011161754491",
       "amount": "5.396,17",
       "processTime": "1 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC622",
@@ -306,7 +306,7 @@
       "receiverAccount": "0114202607211015547917339",
       "amount": "749,03",
       "processTime": "7 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC623",
@@ -319,7 +319,7 @@
       "receiverAccount": "0114202607211018072169883",
       "amount": "14.750,76",
       "processTime": "12 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC624",
@@ -332,7 +332,7 @@
       "receiverAccount": "0114202607211012591302556",
       "amount": "18.643,13",
       "processTime": "8 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC625",
@@ -345,7 +345,7 @@
       "receiverAccount": "0114202607211014720371470",
       "amount": "12.847,16",
       "processTime": "4 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC626",
@@ -358,7 +358,7 @@
       "receiverAccount": "0114202607211014404085548",
       "amount": "15.674,45",
       "processTime": "7 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC627",
@@ -371,7 +371,7 @@
       "receiverAccount": "0114202607211013831068523",
       "amount": "4.991,99",
       "processTime": "10 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC628",
@@ -384,7 +384,7 @@
       "receiverAccount": "0114202607211015442067245",
       "amount": "1.372,95",
       "processTime": "6 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC629",
@@ -397,7 +397,7 @@
       "receiverAccount": "0114202607211013538217221",
       "amount": "17.178,93",
       "processTime": "13 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC630",
@@ -410,7 +410,7 @@
       "receiverAccount": "0114202607211014909032717",
       "amount": "10.138,71",
       "processTime": "3 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC631",
@@ -423,7 +423,7 @@
       "receiverAccount": "0114202607211015225339880",
       "amount": "3.686,51",
       "processTime": "14 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC632",
@@ -436,7 +436,7 @@
       "receiverAccount": "0114202607211015439115680",
       "amount": "1.809,34",
       "processTime": "7 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC633",
@@ -449,7 +449,7 @@
       "receiverAccount": "0114202607211019378360918",
       "amount": "18.558,18",
       "processTime": "12 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC634",
@@ -462,7 +462,7 @@
       "receiverAccount": "0114202607211014916090748",
       "amount": "5.655,65",
       "processTime": "3 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC635",
@@ -475,7 +475,7 @@
       "receiverAccount": "0114202607211011423079921",
       "amount": "13.362,73",
       "processTime": "2 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC636",
@@ -488,7 +488,7 @@
       "receiverAccount": "0114202607211015039711800",
       "amount": "3.592,86",
       "processTime": "5 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC637",
@@ -501,7 +501,7 @@
       "receiverAccount": "0114202607211013481133044",
       "amount": "847,90",
       "processTime": "5 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC638",
@@ -514,7 +514,7 @@
       "receiverAccount": "0114202607211018019377960",
       "amount": "13.947,18",
       "processTime": "7 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC639",
@@ -527,7 +527,7 @@
       "receiverAccount": "0114202607211015577344785",
       "amount": "11.023,50",
       "processTime": "1 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC640",
@@ -540,7 +540,7 @@
       "receiverAccount": "0114202607211011482026940",
       "amount": "1.206,54",
       "processTime": "13 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC641",
@@ -553,7 +553,7 @@
       "receiverAccount": "0114202607211013056438560",
       "amount": "16.344,32",
       "processTime": "8 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC642",
@@ -566,7 +566,7 @@
       "receiverAccount": "0114202607211016393708442",
       "amount": "18.215,95",
       "processTime": "12 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC643",
@@ -579,7 +579,7 @@
       "receiverAccount": "0114202607211012255818289",
       "amount": "11.286,26",
       "processTime": "4 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC644",
@@ -592,7 +592,7 @@
       "receiverAccount": "0114202607211017842515647",
       "amount": "7.074,78",
       "processTime": "6 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC645",
@@ -605,7 +605,7 @@
       "receiverAccount": "0114202607211011334917031",
       "amount": "1.077,55",
       "processTime": "2 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC646",
@@ -618,7 +618,7 @@
       "receiverAccount": "0114202607211015043884688",
       "amount": "14.584,91",
       "processTime": "8 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC647",
@@ -631,7 +631,7 @@
       "receiverAccount": "0114202607211012954960050",
       "amount": "8.484,79",
       "processTime": "5 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC648",
@@ -644,7 +644,7 @@
       "receiverAccount": "0114202607211015238075049",
       "amount": "9.742,07",
       "processTime": "11 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC649",
@@ -657,7 +657,7 @@
       "receiverAccount": "0114202607211018258518726",
       "amount": "1.695,65",
       "processTime": "4 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC650",
@@ -670,7 +670,7 @@
       "receiverAccount": "0114202607211013976948015",
       "amount": "10.302,54",
       "processTime": "3 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC651",
@@ -683,7 +683,7 @@
       "receiverAccount": "0114202607211018399971726",
       "amount": "80,14",
       "processTime": "12 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC652",
@@ -696,7 +696,7 @@
       "receiverAccount": "0114202607211015108556347",
       "amount": "3.146,33",
       "processTime": "2 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC653",
@@ -709,7 +709,7 @@
       "receiverAccount": "0114202607211016135207199",
       "amount": "8.068,28",
       "processTime": "7 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC654",
@@ -722,7 +722,7 @@
       "receiverAccount": "0114202607211011879109116",
       "amount": "5.259,80",
       "processTime": "6 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC655",
@@ -735,7 +735,7 @@
       "receiverAccount": "0114202607211019751581247",
       "amount": "18.498,29",
       "processTime": "1 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC656",
@@ -748,7 +748,7 @@
       "receiverAccount": "0114202607211015603903319",
       "amount": "3.495,96",
       "processTime": "15 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC657",
@@ -761,7 +761,7 @@
       "receiverAccount": "0114202607211018326600752",
       "amount": "18.341,91",
       "processTime": "6 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC658",
@@ -774,7 +774,7 @@
       "receiverAccount": "0114202607211017411729508",
       "amount": "1.212,67",
       "processTime": "1 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC659",
@@ -787,7 +787,7 @@
       "receiverAccount": "0114202607211015863877254",
       "amount": "11.614,75",
       "processTime": "12 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC660",
@@ -800,7 +800,7 @@
       "receiverAccount": "0114202607211016213549818",
       "amount": "1.488,15",
       "processTime": "1 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC661",
@@ -813,7 +813,7 @@
       "receiverAccount": "0114202607211011805304423",
       "amount": "11.859,34",
       "processTime": "7 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC662",
@@ -826,7 +826,7 @@
       "receiverAccount": "0114202607211018095446564",
       "amount": "19.164,04",
       "processTime": "11 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC663",
@@ -839,7 +839,7 @@
       "receiverAccount": "0114202607211012170709494",
       "amount": "12.559,72",
       "processTime": "13 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC664",
@@ -852,7 +852,7 @@
       "receiverAccount": "0114202607211012204884160",
       "amount": "4.760,82",
       "processTime": "8 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC665",
@@ -865,7 +865,7 @@
       "receiverAccount": "0114202607211015256960575",
       "amount": "19.249,70",
       "processTime": "10 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC666",
@@ -878,7 +878,7 @@
       "receiverAccount": "0114202607211011055015824",
       "amount": "411,28",
       "processTime": "3 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC667",
@@ -891,7 +891,7 @@
       "receiverAccount": "0114202607211013369996416",
       "amount": "2.968,76",
       "processTime": "10 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC668",
@@ -904,7 +904,7 @@
       "receiverAccount": "0114202607211017695898167",
       "amount": "19.094,03",
       "processTime": "9 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC669",
@@ -917,7 +917,7 @@
       "receiverAccount": "0114202607211011437866247",
       "amount": "3.977,04",
       "processTime": "2 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC670",
@@ -930,7 +930,7 @@
       "receiverAccount": "0114202607211013335263819",
       "amount": "11.778,52",
       "processTime": "1 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC671",
@@ -943,7 +943,7 @@
       "receiverAccount": "0114202607211014111223438",
       "amount": "12.428,72",
       "processTime": "9 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC672",
@@ -956,7 +956,7 @@
       "receiverAccount": "0114202607211013922304508",
       "amount": "834,97",
       "processTime": "15 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC673",
@@ -969,7 +969,7 @@
       "receiverAccount": "0114202607211019668608761",
       "amount": "11.562,72",
       "processTime": "7 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC674",
@@ -982,7 +982,7 @@
       "receiverAccount": "0114202607211016749122878",
       "amount": "2.861,14",
       "processTime": "12 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC675",
@@ -995,7 +995,7 @@
       "receiverAccount": "0114202607211013594525579",
       "amount": "17.663,97",
       "processTime": "2 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC676",
@@ -1008,7 +1008,7 @@
       "receiverAccount": "0114202607211017967128777",
       "amount": "15.371,57",
       "processTime": "10 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC677",
@@ -1021,7 +1021,7 @@
       "receiverAccount": "0114202607211018438742334",
       "amount": "12.155,45",
       "processTime": "3 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC678",
@@ -1034,7 +1034,7 @@
       "receiverAccount": "0114202607211019976265889",
       "amount": "6.173,96",
       "processTime": "1 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC679",
@@ -1047,7 +1047,7 @@
       "receiverAccount": "0114202607211011152806428",
       "amount": "4.301,96",
       "processTime": "7 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC680",
@@ -1060,7 +1060,7 @@
       "receiverAccount": "0114202607211013547787901",
       "amount": "8.948,75",
       "processTime": "14 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC681",
@@ -1073,7 +1073,7 @@
       "receiverAccount": "0114202607211015857496330",
       "amount": "1.438,74",
       "processTime": "6 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC682",
@@ -1086,7 +1086,7 @@
       "receiverAccount": "0114202607211014765424911",
       "amount": "15.549,75",
       "processTime": "2 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC683",
@@ -1099,7 +1099,7 @@
       "receiverAccount": "0114202607211016126581443",
       "amount": "5.252,15",
       "processTime": "2 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC684",
@@ -1112,7 +1112,7 @@
       "receiverAccount": "0114202607211017328890305",
       "amount": "13.005,38",
       "processTime": "13 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC685",
@@ -1125,7 +1125,7 @@
       "receiverAccount": "0114202607211013255511182",
       "amount": "8.643,74",
       "processTime": "4 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC686",
@@ -1138,7 +1138,7 @@
       "receiverAccount": "0114202607211018145455273",
       "amount": "1.271,87",
       "processTime": "10 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC687",
@@ -1151,7 +1151,7 @@
       "receiverAccount": "0114202607211012205119314",
       "amount": "11.670,14",
       "processTime": "14 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC688",
@@ -1164,7 +1164,7 @@
       "receiverAccount": "0114202607211017341294211",
       "amount": "12.989,07",
       "processTime": "7 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC689",
@@ -1177,7 +1177,7 @@
       "receiverAccount": "0114202607211015624276229",
       "amount": "6.094,03",
       "processTime": "13 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC690",
@@ -1190,7 +1190,7 @@
       "receiverAccount": "0114202607211017074758003",
       "amount": "18.046,68",
       "processTime": "10 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC691",
@@ -1203,7 +1203,7 @@
       "receiverAccount": "0114202607211018317464927",
       "amount": "7.383,91",
       "processTime": "12 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC692",
@@ -1216,7 +1216,7 @@
       "receiverAccount": "0114202607211012379668016",
       "amount": "16.837,23",
       "processTime": "2 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC693",
@@ -1229,7 +1229,7 @@
       "receiverAccount": "0114202607211018944737121",
       "amount": "12.290,04",
       "processTime": "15 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC694",
@@ -1242,7 +1242,7 @@
       "receiverAccount": "0114202607211011324845851",
       "amount": "3.195,99",
       "processTime": "5 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC695",
@@ -1255,7 +1255,7 @@
       "receiverAccount": "0114202607211012695129309",
       "amount": "11.064,97",
       "processTime": "9 ms",
-      "channel": "Web - Jurídico"
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC696",
@@ -1268,7 +1268,7 @@
       "receiverAccount": "0114202607211017874460306",
       "amount": "1.124,25",
       "processTime": "5 ms",
-      "channel": "Otro - Jurídico"
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC697",
@@ -1281,7 +1281,7 @@
       "receiverAccount": "0114202607211018364738379",
       "amount": "14.509,42",
       "processTime": "8 ms",
-      "channel": "App - Natural"
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC698",
@@ -1294,7 +1294,7 @@
       "receiverAccount": "0114202607211012787797144",
       "amount": "18.275,47",
       "processTime": "11 ms",
-      "channel": "Web - Natural"
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC699",
@@ -1307,7 +1307,7 @@
       "receiverAccount": "0114202607211015752786787",
       "amount": "16.854,46",
       "processTime": "4 ms",
-      "channel": "Otro - Natural"
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC700",
@@ -1320,7 +1320,7 @@
       "receiverAccount": "0114202607211017527138376",
       "amount": "2.936,88",
       "processTime": "12 ms",
-      "channel": "App - Jurídico"
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     }
   ],
   "quarantine": [
@@ -1331,7 +1331,8 @@
       "document": "V87654321",
       "reason": "Incumplimiento de reglas",
       "waitTime": "2,15 min",
-      "amount": "5.500,00"
+      "amount": "5.500,00",
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC640",
@@ -1340,7 +1341,8 @@
       "document": "V11223344",
       "reason": "Lista negra",
       "waitTime": "10,42 min",
-      "amount": "25.000,00"
+      "amount": "25.000,00",
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
       "id": "1599GA8AC641",
@@ -1349,7 +1351,8 @@
       "document": "V12345678",
       "reason": "IP sospechosa",
       "waitTime": "5,03 min",
-      "amount": "14.132,70"
+      "amount": "14.132,70",
+      "channel": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
       "id": "1599GA8AC642",
@@ -1358,7 +1361,8 @@
       "document": "V12345678",
       "reason": "Dispositivo nuevo",
       "waitTime": "5,03 min",
-      "amount": "14.132,70"
+      "amount": "14.132,70",
+      "channel": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     },
     {
       "id": "1599GA8AC643",
@@ -1367,7 +1371,8 @@
       "document": "V12345678",
       "reason": "Dispositivo nuevo",
       "waitTime": "5,03 min",
-      "amount": "14.132,70"
+      "amount": "14.132,70",
+      "channel": "Simf - 222 Pago a Proveedores"
     },
     {
       "id": "1599GA8AC644",
@@ -1376,7 +1381,8 @@
       "document": "V12345678",
       "reason": "Dispositivo nuevo",
       "waitTime": "5,03 min",
-      "amount": "14.132,70"
+      "amount": "14.132,70",
+      "channel": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
       "id": "1599GA8AC645",
@@ -1385,7 +1391,8 @@
       "document": "V12345678",
       "reason": "IP sospechosa",
       "waitTime": "5,03 min",
-      "amount": "14.132,70"
+      "amount": "14.132,70",
+      "channel": "Simf - 223 Fideicomiso"
     },
     {
       "id": "1599GA8AC646",
@@ -1394,7 +1401,8 @@
       "document": "V12345678",
       "reason": "IP sospechosa",
       "waitTime": "5,03 min",
-      "amount": "14.132,70"
+      "amount": "14.132,70",
+      "channel": "Simf - 225 Pago Tarjeta de Crédito"
     }
   ],
   "riskStats": {
@@ -1421,7 +1429,7 @@
       "status": "Activo",
       "field": "Documento",
       "value": "V12345678",
-      "action": "Bloquear",
+      "action": "Bloqueado",
       "lastModified": "27/07/2026 10:37",
       "eventsRegistered": 16
     },
@@ -1430,7 +1438,7 @@
       "status": "Activo",
       "field": "Cuenta",
       "value": "0114****123",
-      "action": "Cuarentena",
+      "action": "Bloqueado",
       "lastModified": "27/07/2026 10:37",
       "eventsRegistered": 7
     },
@@ -1439,7 +1447,7 @@
       "status": "Inactivo",
       "field": "Teléfono",
       "value": "0412-1234567",
-      "action": "Bloquear",
+      "action": "Bloqueado",
       "lastModified": "27/07/2026 10:37",
       "eventsRegistered": 34
     },
@@ -1448,7 +1456,7 @@
       "status": "Inactivo",
       "field": "Cuenta",
       "value": "0114****123",
-      "action": "Cuarentena",
+      "action": "Bloqueado",
       "lastModified": "27/07/2026 10:37",
       "eventsRegistered": 88
     },
@@ -1457,7 +1465,7 @@
       "status": "Activo",
       "field": "Teléfono",
       "value": "0412-1234567",
-      "action": "Bloquear",
+      "action": "Bloqueado",
       "lastModified": "27/07/2026 10:37",
       "eventsRegistered": 3
     },
@@ -1466,7 +1474,7 @@
       "status": "Activo",
       "field": "Cuenta",
       "value": "0114****123",
-      "action": "Cuarentena",
+      "action": "Bloqueado",
       "lastModified": "27/07/2026 10:37",
       "eventsRegistered": 9
     },
@@ -1475,7 +1483,7 @@
       "status": "Inactivo",
       "field": "Teléfono",
       "value": "0412-1234567",
-      "action": "Bloquear",
+      "action": "Bloqueado",
       "lastModified": "27/07/2026 10:37",
       "eventsRegistered": 47
     },
@@ -1484,7 +1492,7 @@
       "status": "Activo",
       "field": "Cuenta",
       "value": "0114****123",
-      "action": "Cuarentena",
+      "action": "Bloqueado",
       "lastModified": "27/07/2026 10:37",
       "eventsRegistered": 1
     }
@@ -1871,7 +1879,7 @@
   "dashboardStats": {
     "periods": [
       {
-        "label": "Últimas 24 horas",
+        "label": "Ãšltimas 24 horas",
         "value": "24h"
       }
     ],
@@ -2416,1638 +2424,6 @@
           "solicitar": false
         }
       }
-    },
-    {
-      "id": "role-003",
-      "nombre": "Coord Análisis Económico Gcia EE GGF",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "26-11-2024 23:20:39.861",
-      "fechaActualizacion": "26-11-2024 23:20:39.861",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": true,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
-    },
-    {
-      "id": "role-004",
-      "nombre": "Coord Compensación GG SOB",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "26-11-2024 23:20:39.861",
-      "fechaActualizacion": "15-01-2026 16:12:33.144",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": true,
-          "agregar": true,
-          "borrar": false,
-          "imprimir": false,
-          "editar": true,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
-    },
-    {
-      "id": "role-005",
-      "nombre": "Coord de G y S a Nominas Externas de SS Esp GGSOB",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "26-11-2024 23:20:39.861",
-      "fechaActualizacion": "29-04-2025 10:56:04.351",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": true,
-          "agregar": true,
-          "borrar": false,
-          "imprimir": true,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
-    },
-    {
-      "id": "role-006",
-      "nombre": "Coord FF y OP M/E Gcia Tesoreria GGF",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "26-11-2024 23:20:39.861",
-      "fechaActualizacion": "26-11-2024 23:20:39.861",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": true,
-          "agregar": true,
-          "borrar": false,
-          "imprimir": true,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
-    },
-    {
-      "id": "role-007",
-      "nombre": "Coord FF y OP M/N Gcia Tesoreria GG Finanzas",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "26-11-2024 23:20:39.861",
-      "fechaActualizacion": "20-04-2026 16:11:14.986",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
-    },
-    {
-      "id": "role-008",
-      "nombre": "Coord M/M e I/F Gcia Tesoreria GG Finanzas",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "26-11-2024 23:20:39.861",
-      "fechaActualizacion": "26-11-2024 23:20:39.861",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
-    },
-    {
-      "id": "role-009",
-      "nombre": "Coord Otros Medios de Pago GG Soporte OB",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "26-11-2024 23:20:39.861",
-      "fechaActualizacion": "15-01-2026 16:13:53.845",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
-    },
-    {
-      "id": "role-010",
-      "nombre": "Coordinador comun med de pago Gcia SOF GG Finanzas",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "26-11-2024 23:20:39.861",
-      "fechaActualizacion": "26-11-2024 23:20:39.861",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
-    },
-    {
-      "id": "role-011",
-      "nombre": "Coordinador Reg Oper Financ Gcia SOF GG Finanzas",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "26-11-2024 23:20:39.861",
-      "fechaActualizacion": "26-11-2024 23:20:39.861",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
-    },
-    {
-      "id": "role-012",
-      "nombre": "Esp I de Compensacion GG Soporte OB",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "26-11-2024 23:20:39.861",
-      "fechaActualizacion": "06-03-2025 10:32:54.361",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
-    },
-    {
-      "id": "role-013",
-      "nombre": "Esp I de G y S a Nomina Externa de SS Esp GGSOB",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "06-03-2025 10:44:49.106",
-      "fechaActualizacion": "06-03-2025 10:44:49.106",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
-    },
-    {
-      "id": "role-014",
-      "nombre": "Esp I FF y OP M/E Gcia Tesoreria GG Finanzas",
-      "estado": "Activo",
-      "plantilla": null,
-      "fechaCreacion": "26-11-2024 23:20:39.861",
-      "fechaActualizacion": "26-11-2024 23:20:39.861",
-      "permisos": {
-        "Vista Principal": {
-          "ver": true,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Versiones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reportes": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Cuarentena": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Estadísticas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Lista Negra": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Región": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Perfiles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Reglas": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Reglas por Canal": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Definición de Excepciones": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Excepciones por Usuario": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Usuarios / Roles": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        },
-        "Auditoría": {
-          "ver": false,
-          "agregar": false,
-          "borrar": false,
-          "imprimir": false,
-          "editar": false,
-          "notificar": false,
-          "solicitar": false
-        }
-      }
     }
   ],
   "usuarios": [
@@ -4065,32 +2441,6 @@
       "fechaActualizacion": "26-11-2024 08:00:00.000"
     },
     {
-      "id": "usr-002",
-      "nombre": "Carlos Rodríguez",
-      "usuario": "c.rodriguez",
-      "email": "c.rodriguez@sypago.com",
-      "password": "Xk9mP2vL",
-      "telefono": "+58 414-6291037",
-      "estado": "Activo",
-      "rol": "Auditoría",
-      "rolId": "role-002",
-      "fechaCreacion": "26-11-2024 09:15:00.000",
-      "fechaActualizacion": "15-01-2026 10:00:00.000"
-    },
-    {
-      "id": "usr-003",
-      "nombre": "María López",
-      "usuario": "m.lopez",
-      "email": "m.lopez@sypago.com",
-      "password": "Qr7tN4wB3s",
-      "telefono": "+58 416-3508274",
-      "estado": "Activo",
-      "rol": "Coord FF y OP M/E Gcia Tesoreria GGF",
-      "rolId": "role-006",
-      "fechaCreacion": "01-12-2024 10:30:00.000",
-      "fechaActualizacion": "01-12-2024 10:30:00.000"
-    },
-    {
       "id": "usr-004",
       "nombre": "Oscar",
       "usuario": "oscar",
@@ -4098,88 +2448,10 @@
       "password": "12345678",
       "telefono": "+58 424-9172643",
       "estado": "Activo",
-      "rol": "Coord Compensación GG SOB",
-      "rolId": "role-004",
-      "fechaCreacion": "05-01-2025 11:00:00.000",
-      "fechaActualizacion": "20-04-2026 09:00:00.000"
-    },
-    {
-      "id": "usr-005",
-      "nombre": "Laura Pérez",
-      "usuario": "l.perez",
-      "email": "l.perez@sypago.com",
-      "password": "Zt3bF6nR",
-      "telefono": "+58 426-8045391",
-      "estado": "Inactivo",
       "rol": "Auditoría",
       "rolId": "role-002",
-      "fechaCreacion": "10-02-2025 14:00:00.000",
-      "fechaActualizacion": "10-02-2025 14:00:00.000"
-    },
-    {
-      "id": "usr-006",
-      "nombre": "Ricardo Torres",
-      "usuario": "r.torres",
-      "email": "r.torres@sypago.com",
-      "password": "Mv4pD9sK7x",
-      "telefono": "+58 412-5463910",
-      "estado": "Activo",
-      "rol": "Coord Otros Medios de Pago GG Soporte OB",
-      "rolId": "role-009",
-      "fechaCreacion": "15-03-2025 08:45:00.000",
-      "fechaActualizacion": "15-01-2026 12:00:00.000"
-    },
-    {
-      "id": "usr-007",
-      "nombre": "Sofía Ramírez",
-      "usuario": "s.ramirez",
-      "email": "s.ramirez@sypago.com",
-      "password": "Ln8eC2qW5j",
-      "telefono": "+58 414-2037864",
-      "estado": "Activo",
-      "rol": "Esp I de Compensacion GG Soporte OB",
-      "rolId": "role-012",
-      "fechaCreacion": "06-03-2025 10:00:00.000",
-      "fechaActualizacion": "06-03-2025 10:00:00.000"
-    },
-    {
-      "id": "usr-008",
-      "nombre": "Pedro Vásquez",
-      "usuario": "p.vasquez",
-      "email": "p.vasquez@sypago.com",
-      "password": "Bg6yA3hT9r",
-      "telefono": "+58 416-7129485",
-      "estado": "Activo",
-      "rol": "Coord Análisis Económico Gcia EE GGF",
-      "rolId": "role-003",
-      "fechaCreacion": "20-04-2025 15:30:00.000",
-      "fechaActualizacion": "20-04-2025 15:30:00.000"
-    },
-    {
-      "id": "usr-009",
-      "nombre": "Elena Morales",
-      "usuario": "e.morales",
-      "email": "e.morales@sypago.com",
-      "password": "Wf2uG7iO4d",
-      "telefono": "+58 424-3896102",
-      "estado": "Activo",
-      "rol": "Coord M/M e I/F Gcia Tesoreria GG Finanzas",
-      "rolId": "role-008",
-      "fechaCreacion": "01-05-2025 09:00:00.000",
-      "fechaActualizacion": "01-05-2025 09:00:00.000"
-    },
-    {
-      "id": "usr-010",
-      "nombre": "Fernando Díaz",
-      "usuario": "f.diaz",
-      "email": "f.diaz@sypago.com",
-      "password": "Ys5kE1rN8v",
-      "telefono": "+58 426-1574832",
-      "estado": "Inactivo",
-      "rol": "Coordinador comun med de pago Gcia SOF GG Finanzas",
-      "rolId": "role-010",
-      "fechaCreacion": "10-06-2025 11:00:00.000",
-      "fechaActualizacion": "10-06-2025 11:00:00.000"
+      "fechaCreacion": "05-01-2025 11:00:00.000",
+      "fechaActualizacion": "20-04-2026 09:00:00.000"
     }
   ],
   "operationChannels": [
@@ -4188,28 +2460,28 @@
       "value": "todos"
     },
     {
-      "label": "App - Natural",
-      "value": "App - Natural"
+      "label": "Simf - 223 Fideicomiso",
+      "value": "Simf - 223 Fideicomiso"
     },
     {
-      "label": "Web - Natural",
-      "value": "Web - Natural"
+      "label": "Simf - 222 Pago a Proveedores",
+      "value": "Simf - 222 Pago a Proveedores"
     },
     {
-      "label": "Otro - Natural",
-      "value": "Otro - Natural"
+      "label": "Simf - 225 Pago Tarjeta de Crédito",
+      "value": "Simf - 225 Pago Tarjeta de Crédito"
     },
     {
-      "label": "App - Jurídico",
-      "value": "App - Jurídico"
+      "label": "Sglpar - 410 Por Instrucciones del Cliente",
+      "value": "Sglpar - 410 Por Instrucciones del Cliente"
     },
     {
-      "label": "Web - Jurídico",
-      "value": "Web - Jurídico"
+      "label": "Sglpar - 422 Liquidación operaciones Alto Valor",
+      "value": "Sglpar - 422 Liquidación operaciones Alto Valor"
     },
     {
-      "label": "Otro - Jurídico",
-      "value": "Otro - Jurídico"
+      "label": "Sglpar - 462 Traspaso de Fondos Organismos Públicos",
+      "value": "Sglpar - 462 Traspaso de Fondos Organismos Públicos"
     }
   ]
 }

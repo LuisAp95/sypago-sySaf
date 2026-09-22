@@ -1,4 +1,4 @@
-export type RuleCategory = 'limits' | 'dispersion' | 'risk_entity';
+export type RuleCategory = 'limits' | 'dispersion' | 'risk_entity' | 'exceptions';
 
 export interface RuleTimeBand {
   id: string;

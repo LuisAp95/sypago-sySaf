@@ -53,6 +53,7 @@ export const ReportsView: React.FC = () => {
       cell: (item) => <Badge variant={item.status}>{item.status}</Badge>
     },
     { header: 'ID', accessorKey: 'id' },
+    { header: 'Canal', accessorKey: 'channel' },
     { header: 'Fe Creación', accessorKey: 'creationDate' },
     { header: 'Documento Emisor', accessorKey: 'issuerDocument' },
     { 

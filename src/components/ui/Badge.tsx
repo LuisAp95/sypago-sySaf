@@ -32,6 +32,7 @@ const getVariantColor = (variant: string) => {
       return 'bg-[#3D2517] text-[#FB923C] border-[#5C3620]';
     case 'bloqueadas':
     case 'bloqueada':
+    case 'bloqueado':
     case 'crítico':
     case 'critico':
     case 'bloquear':

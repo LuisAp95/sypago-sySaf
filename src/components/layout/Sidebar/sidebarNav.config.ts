@@ -74,15 +74,16 @@ export const sidebarNavConfig: SidebarNavGroup[] = [
         moduloPermiso: 'Cuarentena',
         path: '/cuarentena',
       },
-      {
-        id: 'estadisticas',
-        label: 'Estadísticas',
-        icon: TrendingUp,
-        feature: 'reports',
-        moduloPermiso: 'Estadísticas',
-        path: '/estadisticas',
-        badge: 'Proximamente',
-      },
+      /* {
+         id: 'estadisticas',
+         label: 'Estadísticas',
+         icon: TrendingUp,
+         feature: 'reports',
+         moduloPermiso: 'Estadísticas',
+         path: '/estadisticas',
+         badge: 'Proximamente',
+       },
+       */
     ],
   },
   {
@@ -96,24 +97,24 @@ export const sidebarNavConfig: SidebarNavGroup[] = [
         moduloPermiso: 'Lista Negra',
         path: '/lista-negra',
       },
-     /* {
-        id: 'region',
-        label: 'Región',
-        icon: Globe,
-        feature: 'filters',
-        moduloPermiso: 'Región',
-        path: '/region',
-        badge: 'Proximamente',
-      },
-    /*  {
-        id: 'perfiles',
-        label: 'Perfiles',
-        icon: Smartphone,
-        feature: 'filters',
-        moduloPermiso: 'Perfiles',
-        path: '/perfiles',
-        badge: 'Proximamente',
-      },*/
+      /* {
+         id: 'region',
+         label: 'Región',
+         icon: Globe,
+         feature: 'filters',
+         moduloPermiso: 'Región',
+         path: '/region',
+         badge: 'Proximamente',
+       },
+     /*  {
+         id: 'perfiles',
+         label: 'Perfiles',
+         icon: Smartphone,
+         feature: 'filters',
+         moduloPermiso: 'Perfiles',
+         path: '/perfiles',
+         badge: 'Proximamente',
+       },*/
     ],
   },
   {

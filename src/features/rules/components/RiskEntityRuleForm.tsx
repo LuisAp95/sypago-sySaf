@@ -218,9 +218,9 @@ export const RiskEntityRuleForm: React.FC<RiskEntityRuleFormProps> = ({
                 <label className="text-[11px] text-gray-400 mb-1">Hora inicio</label>
                 <input
                   type="text"
-                  value={sr.startTime}
-                  onChange={(e) => onUpdate(sr.id, 'startTime', e.target.value)}
-                  className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-100 font-mono font-semibold text-center w-24 focus:outline-none focus:ring-0"
+                  value="00:00"
+                  readOnly
+                  className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-500 font-mono font-semibold text-center w-24 focus:outline-none focus:ring-0 cursor-not-allowed"
                 />
               </div>
 
@@ -229,9 +229,9 @@ export const RiskEntityRuleForm: React.FC<RiskEntityRuleFormProps> = ({
                 <label className="text-[11px] text-gray-400 mb-1">Hora fin</label>
                 <input
                   type="text"
-                  value={sr.endTime}
-                  onChange={(e) => onUpdate(sr.id, 'endTime', e.target.value)}
-                  className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-100 font-mono font-semibold text-center w-24 focus:outline-none focus:ring-0"
+                  value="23:59"
+                  readOnly
+                  className="bg-transparent border-transparent px-3 py-1 text-sm text-gray-500 font-mono font-semibold text-center w-24 focus:outline-none focus:ring-0 cursor-not-allowed"
                 />
               </div>
 

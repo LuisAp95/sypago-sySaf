@@ -250,7 +250,6 @@ export function useRolesStore(initialData: Rol[] = []) {
       const stored = readStorage<Rol[]>(STORAGE_KEYS.ROLES, []);
       
       // Si no hay roles guardados O si los roles guardados tienen todos los permisos en false
-      // (lo cual ocurre por el seed viejo que ponía todos los permisos en false por defecto)
       const hasAnyPermissionActive = stored.some(rol => 
         Object.values(rol.permisos || {}).some(perm => perm.ver)
       );
@@ -258,6 +257,14 @@ export function useRolesStore(initialData: Rol[] = []) {
       if (stored.length === 0 || !hasAnyPermissionActive) {
         setRoles(initialData);
         writeStorage(STORAGE_KEYS.ROLES, initialData);
+      } else {
+        // Limpiar roles que ya no existen en el seed
+        const seedIds = new Set(initialData.map(r => r.id));
+        const cleaned = stored.filter(r => seedIds.has(r.id));
+        if (cleaned.length !== stored.length) {
+          setRoles(cleaned);
+          writeStorage(STORAGE_KEYS.ROLES, cleaned);
+        }
       }
       setHydrated(true);
     }
@@ -351,12 +358,19 @@ export function useUsuariosStore(initialData: Usuario[] = []) {
       const stored = readStorage<any[]>(STORAGE_KEYS.USUARIOS, []);
       
       // Si no hay usuarios guardados O si los usuarios guardados no tienen password definido
-      // (lo cual ocurre por ejecuciones viejas que no tenían la clave password)
       const hasPasswords = stored.length > 0 && stored.every(u => u.password !== undefined);
 
       if (stored.length === 0 || !hasPasswords) {
         setUsuarios(initialData);
         writeStorage(STORAGE_KEYS.USUARIOS, initialData);
+      } else {
+        // Limpiar usuarios que ya no existen en el seed
+        const seedIds = new Set(initialData.map(u => u.id));
+        const cleaned = stored.filter(u => seedIds.has(u.id));
+        if (cleaned.length !== stored.length) {
+          setUsuarios(cleaned);
+          writeStorage(STORAGE_KEYS.USUARIOS, cleaned);
+        }
       }
       setHydrated(true);
     }
