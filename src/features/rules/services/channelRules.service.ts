@@ -32,5 +32,12 @@ export const channelRulesService = {
     
     localStorage.setItem(STORAGE_KEY, JSON.stringify(newRules));
     return newRules;
+  },
+
+  deleteRule: (ruleId: string): ChannelRule[] => {
+    const rules = channelRulesService.getRules();
+    const newRules = rules.filter(r => r.id !== ruleId);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(newRules));
+    return newRules;
   }
 };

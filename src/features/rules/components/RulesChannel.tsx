@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { ViewHeader } from '@/components/ui/ViewHeader';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { Eye } from 'lucide-react';
+import { Eye, Trash2 } from 'lucide-react';
 import { RuleChannelModal } from './RuleChannelModal';
 import { DataGrid, type ColumnDef } from '@/components/ui/DataGrid';
+import { ConfirmDialog } from '@/components/ui/ConfirmDialog';
 import { auditService } from '@/features/administration';
 import { exportChannelRulesToPdf } from '@/utils/pdfGenerator';
 import type { ChannelRule } from '../types/channelRules.types';
@@ -14,9 +15,12 @@ import { channelRulesService } from '../services/channelRules.service';
 export const RulesChannel: React.FC = () => {
   const [rules, setRules] = useState<ChannelRule[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedRule, setSelectedRule] = useState<ChannelRule | null>(null);
+
+  const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
+  const [ruleToDelete, setRuleToDelete] = useState<ChannelRule | null>(null);
 
   useEffect(() => {
     // Load from local storage
@@ -28,7 +32,7 @@ export const RulesChannel: React.FC = () => {
   const handleSaveRule = (savedRule: ChannelRule) => {
     const newRules = channelRulesService.saveRule(savedRule);
     setRules(newRules);
-    
+
     auditService.logSync({
       module: 'Reglas Canal',
       action: rules.some(r => r.id === savedRule.id) ? 'UPDATE' : 'CREATE',
@@ -45,10 +49,34 @@ export const RulesChannel: React.FC = () => {
     setIsModalOpen(true);
   };
 
+  const confirmDelete = (rule: ChannelRule) => {
+    setRuleToDelete(rule);
+    setIsDeleteDialogOpen(true);
+  };
+
+  const handleDeleteRule = () => {
+    if (ruleToDelete) {
+      const newRules = channelRulesService.deleteRule(ruleToDelete.id);
+      setRules(newRules);
+
+      auditService.logSync({
+        module: 'Reglas Canal',
+        action: 'DELETE',
+        entityType: 'Regla de Canal',
+        entityId: ruleToDelete.id,
+        entityName: ruleToDelete.channelId,
+        details: `Regla para el canal "${ruleToDelete.channelId}" eliminada`,
+      });
+
+      setIsDeleteDialogOpen(false);
+      setRuleToDelete(null);
+    }
+  };
+
   const columns: ColumnDef<ChannelRule>[] = [
-    { 
-      header: 'Canal', 
-      accessorKey: 'channelId', 
+    {
+      header: 'Canal',
+      accessorKey: 'channelId',
       className: 'w-[15%]',
       cell: (item) => {
         const channelName = CHANNELS.find(c => c.id === item.channelId)?.name || item.channelId;
@@ -89,17 +117,30 @@ export const RulesChannel: React.FC = () => {
     },
     {
       header: undefined,
-      className: 'w-[8%] flex-row items-center h-full justify-center pr-2',
+      className: 'w-[10%] flex-row items-center h-full justify-center pr-2 gap-4',
       colProps: { onClick: e => e.stopPropagation() },
       cell: (item) => (
-        <Button 
-          variant="secondary" 
-          size="icon" 
-          className="w-8 h-8 rounded-full bg-transparent border-transparent hover:bg-[#333235] text-[#9E9D9F] hover:text-white" 
-          onClick={() => handleOpenModal(item)}
-        >
-          <Eye className="w-4 h-4" />
-        </Button>
+        <div className="flex gap-4">
+          <Button
+            variant="secondary"
+            size="icon"
+            className="w-8 h-8 rounded-full bg-transparent border-transparent hover:bg-[#333235] text-[#9E9D9F] hover:text-white"
+            onClick={() => handleOpenModal(item)}
+          >
+            <Eye className="w-4 h-4" />
+          </Button>
+          <Button
+            variant="secondary"
+            size="icon"
+            className="w-8 h-8 rounded-full bg-transparent border-transparent hover:bg-red-500/20 text-[#9E9D9F] hover:text-white"
+            onClick={(e) => {
+              e.stopPropagation();
+              confirmDelete(item);
+            }}
+          >
+            <Trash2 className="w-4 h-4 text-white" />
+          </Button>
+        </div>
       )
     }
   ];
@@ -133,6 +174,19 @@ export const RulesChannel: React.FC = () => {
         onClose={() => setIsModalOpen(false)}
         rule={selectedRule}
         onSave={handleSaveRule}
+      />
+
+      <ConfirmDialog
+        isOpen={isDeleteDialogOpen}
+        onClose={() => setIsDeleteDialogOpen(false)}
+        onConfirm={handleDeleteRule}
+        title="Eliminar regla de canal"
+        message={`¿Estás seguro que deseas eliminar la regla para el canal "${
+          ruleToDelete ? (CHANNELS.find(c => c.id === ruleToDelete.channelId)?.name || ruleToDelete.channelId) : ''
+        }"?`}
+        confirmText="Eliminar"
+        cancelText="Cancelar"
+        intent="danger"
       />
     </div>
   );

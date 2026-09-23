@@ -46,7 +46,7 @@ export const BlacklistView: React.FC = () => {
     }
     return [];
   });
-  
+
   const [statusFilter, setStatusFilter] = useState<string>('todos');
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
@@ -114,10 +114,10 @@ export const BlacklistView: React.FC = () => {
 
   const handleConfirmAction = () => {
     const { type, ids } = confirmDialog;
-    
+
     if (type === 'delete') {
       setItems(prev => prev.filter(item => !ids.includes(item.id)));
-      
+
       // Registrar auditoría para cada entrada
       for (const id of ids) {
         const item = items.find(i => i.id === id);
@@ -132,7 +132,7 @@ export const BlacklistView: React.FC = () => {
       }
     } else {
       const newStatus = type === 'activate' ? 'Activo' : 'Inactivo';
-      
+
       setItems(prev =>
         prev.map(item =>
           ids.includes(item.id) ? { ...item, status: newStatus } : item
@@ -156,7 +156,7 @@ export const BlacklistView: React.FC = () => {
         });
       }
     }
-    
+
     setSelectedIds(prev => prev.filter(id => !ids.includes(id)));
     setConfirmDialog(prev => ({ ...prev, isOpen: false }));
   };
@@ -174,7 +174,7 @@ export const BlacklistView: React.FC = () => {
     };
 
     setItems(prev => [newItem, ...prev]);
-    
+
     auditService.logSync({
       module: 'Lista Negra',
       action: 'CREATE',
@@ -338,13 +338,13 @@ export const BlacklistView: React.FC = () => {
         onClose={() => setConfirmDialog(prev => ({ ...prev, isOpen: false }))}
         onConfirm={handleConfirmAction}
         title={
-          confirmDialog.type === 'delete' 
-            ? 'Eliminar de Lista Negra' 
+          confirmDialog.type === 'delete'
+            ? 'Eliminar de Lista Negra'
             : confirmDialog.type === 'activate' ? 'Activar Cuenta' : 'Inactivar Cuenta'
         }
         message={
           confirmDialog.type === 'delete'
-            ? '¿Está seguro que desea eliminar esta cuenta de la lista negra? Esta acción no se puede deshacer.'
+            ? '¿Está seguro que desea eliminar esta cuenta de la lista negra?'
             : confirmDialog.ids.length > 1
               ? `¿Está seguro que desea ${confirmDialog.type === 'activate' ? 'activar' : 'inactivar'} las ${confirmDialog.ids.length} cuentas seleccionadas en la lista negra?`
               : `¿Está seguro que desea ${confirmDialog.type === 'activate' ? 'activar' : 'inactivar'} esta cuenta de la lista negra?`
@@ -355,8 +355,8 @@ export const BlacklistView: React.FC = () => {
             : confirmDialog.type === 'activate' ? 'Sí, activar' : 'Sí, inactivar'
         }
         intent={
-          confirmDialog.type === 'delete' 
-            ? 'danger' 
+          confirmDialog.type === 'delete'
+            ? 'danger'
             : confirmDialog.type === 'activate' ? 'success' : 'warning'
         }
       />
