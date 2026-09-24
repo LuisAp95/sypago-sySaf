@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { User, Lock, Eye, EyeOff, AlertCircle } from 'lucide-react';
 import { useAuthStore } from '../hooks/useAuthStore';
-import logo from '../../../../public/Logo.png';
-import fondo from '../../../../public/SySaf_Fondo1.png'
+import logoUrl from '/Logo.png?url';
+import fondoUrl from '/SySaf_Fondo1.png?url';
 
 // ─── Componente de campo de entrada ─────────────────────────────────────────
 
@@ -85,7 +85,7 @@ export const LoginView: React.FC = () => {
     <div className="relative z-0  w-full h-screen flex items-center justify-center min-h-screen  overflow-hidden bg-[linear-gradient(145deg,#0d0d0f_0%,#131315_40%,#1a1a1e_100%)]">
       {/* Background Image */}
       <img
-        src={fondo}
+        src={fondoUrl}
         alt="Fondo SySAF"
         className="absolute inset-0 w-full h-full -object-fill object-cover -z-10 pointer-events-none"
       />
@@ -101,7 +101,7 @@ export const LoginView: React.FC = () => {
       <div className="relative z-10 w-full max-w-105 p-10 bg-login-card backdrop-blur-[1px] border border-chart-menu/30 rounded-3xl shadow-[0_0_40px_rgba(29,164,147,0.15),0_4px_6px_-1px_rgba(0,0,0,0.3),0_10px_30px_-5px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.03)] animate-fade-in-up">
         {/* Logo */}
         <div className="flex items-center justify-center mb-2">
-          <img src={logo} alt="SySAF Logo" className="w-40 h-auto object-contain mb-10 -ml-2 " />
+          <img src={logoUrl} alt="SySAF Logo" className="w-40 h-auto object-contain mb-10 -ml-2 " />
         </div>
 
         {/* Formulario */}
