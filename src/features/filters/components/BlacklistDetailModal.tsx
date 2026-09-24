@@ -28,7 +28,7 @@ export const BlacklistDetailModal: React.FC<BlacklistDetailModalProps> = ({
 }) => {
   if (!item) return null;
 
-  const isActive = item.status === 'Activo';
+
 
   const handleDownloadReport = () => {
     if (item) {

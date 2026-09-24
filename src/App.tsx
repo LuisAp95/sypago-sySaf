@@ -9,7 +9,7 @@ import { Loader } from './components/ui/Loader';
 import { DashboardView, VersionsView } from '@/features/dashboard';
 import { RulesDefinition, RulesChannel } from '@/features/rules';
 import { QuarantineView } from '@/features/quarantine';
-import { BlacklistView, RegionView, ProfilesView } from '@/features/filters';
+import { BlacklistView } from '@/features/filters';
 import { ExceptionsDefinition, UserExceptions } from '@/features/exceptions';
 import { ReportsView, StatsView } from '@/features/reports';
 import { UserRolesView, AuditView } from '@/features/administration';
