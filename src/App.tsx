@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthStore, LoginView, LogoutNotice } from './features/auth';
 import { MainLayout } from './components/layout/MainLayout';
 import { Loader } from './components/ui/Loader';
@@ -245,11 +245,12 @@ function AppRoutes() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <HashRouter>
         <AppRoutes />
-      </BrowserRouter>
+      </HashRouter>
     </QueryClientProvider>
   );
 }
 
 export default App;
+
