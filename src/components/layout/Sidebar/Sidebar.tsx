@@ -5,7 +5,7 @@ import { sidebarNavConfig, type SidebarNavGroup } from './sidebarNav.config';
 import { useSidebarStore } from './useSidebarStore';
 import { useAuthStore } from '@/features/auth/hooks/useAuthStore';
 import { cn } from '@/utils/cn';
-import logo from '../../../../public/logo.png';
+
 
 export const Sidebar: React.FC = () => {
   const { isCollapsed, toggleCollapsed, setActiveItemId } = useSidebarStore();
@@ -55,7 +55,7 @@ export const Sidebar: React.FC = () => {
       <div className="flex items-center justify-between h-16 px-4 ">
         <div className="flex items-center gap-3 overflow-hidden">
           <div className="flex items-center justify-center min-w-10 h-10 ">
-            <img src={logo} alt="logo" className='object-cover' />
+            <img src="/logo.png" alt="logo" className='object-cover' />
           </div>
         </div>
 
